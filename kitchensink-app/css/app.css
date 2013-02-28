@@ -1,0 +1,36 @@
+html, body, form {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 1.2em;
+}
+input {
+	font-size: 1.1em;
+	-moz-box-sizing: border-box;
+	padding: 0.6em 0.4em;
+	width: 100%;
+	display: inline-block;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul a {
+	font-size: 1.1em;
+	display: block;
+	margin: 0.6em 0.4em;
+}
+div#DEBUG {
+	color: #777;
+	border-top: 1px solid #aaa;
+	position: absolute;
+	bottom: 0px;
+	z-index: 999;
+	background: #fafafa;
+	width: 100%;
+	max-height: 150px;
+	overflow: scroll;
+}
