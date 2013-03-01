@@ -5,6 +5,9 @@ html, body, form {
 }
 h1 {
 	font-size: 1.2em;
+	padding: 5px;
+	margin: 0;
+	background: #fafafa;
 }
 input {
 	font-size: 1.1em;
@@ -33,4 +36,16 @@ div#DEBUG {
 	width: 100%;
 	max-height: 150px;
 	overflow: scroll;
+}
+#apis {
+	width: 100%;
+}
+#apis li {
+	clear: both;
+	padding: 3px 5px;
+	border-top: 1px solid #eee;
+}
+#apis span {
+	margin-left: 1em;
+	float: right;
 }
