@@ -11,38 +11,43 @@ define(function(require) {
 
   for (id in apis) {
     var api = apis[id];
+    var prepared = api.noPreparation;
 
     // add li
     var apiHTML = '<li id="' + id + '">' + api.name + '</span></li>';
     testElement.append(apiHTML);
 
     // check if DOM is prepared
-    if (api.isPrepared) {
-      var prepared = api.isPrepared()
+    if (!prepared && api.isPrepared) {
+      prepared = api.isPrepared()
       $('#' + id).append('<span class="' + 
                          (prepared ? 'success' : 'fail') + '">' + 
                          (prepared ? '+' : '-') + '</span>');
       if (prepared) {
-        // run tests only id DOM prepared
-        if (api.tests) {
-          api.tests.forEach(function(test) {
-            test.run(function callback(result) {
-              $('#' + id).append('<span class="' + 
-                                 (result ? 'success' : 'fail') + '">' + 
-                                 (result ? '.' : '!') + '</span>');
-              if (!result) {
-                log.error(api.name + ' ' + test.name + ' failed');
-              }  
-            });
-          });
-        }
+        $('#' + id).addClass('success');
       } else {
-        var message = api.name + ' is not prepared';
         if (api.tests) {
-          message += ' (tests not run)';
+          log.error(api.name + ' is not prepared (tests not run)');
         }
-        log.error(message);
+        $('#' + id).addClass('fail');
       }
+    } else if (!prepared) {
+      // if should be prepared and failed
+      $('#' + id).append('<span class="notest">?</span>');
+      $('#' + id).addClass('notest');
+      log.error('No test for ' + api.name);
+    }
+
+    // run tests only id DOM prepared or no need for the preparation
+    if (prepared && api.tests) {
+      api.tests.forEach(function(test) {
+        test.run(function callback(result) {
+          $('#' + id).append('<span class="' + 
+                             (result ? 'success' : 'fail') + '">' + 
+                             (result ? '.' : '!') + '</span>');
+          $('#' + id).addClass((result ? 'success' : 'fail')); 
+        });
+      });
     }
   }
 });
