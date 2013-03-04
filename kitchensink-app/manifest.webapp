@@ -1,11 +1,27 @@
 {
   "version": "0.1.3",
   "name": "KitchenSink",
-  "description": "WTH",
+  "description": "Tests and report APIs available on the device",
   "launch_path": "/index.html",
-  "type": "privileged",
   "developer": {
-    "name": "Mozilla Labs",
+    "name": "Piotr Zalewa",
     "url": "http://www.mozillalabs.com"
+  },
+  "type": "privileged",
+  "permissions": {
+    "alarms": {},
+    "browser": {},
+    "geolocation": {},
+    "contacts": {
+      "access": "readwrite"
+    },
+    "device-storage:sdcard": {
+      "access": "readwrite"
+    },
+    "fmradio": {},
+    "storage": {},
+    "systemXHR": {},
+    "tcp-socket": {},
+    "wifi-manage": {}
   }
 }

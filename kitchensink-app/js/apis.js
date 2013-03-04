@@ -1,5 +1,6 @@
 define(function(require){
 
+  var log = require('logger');
   var apis = {
     webtelephony: {
       name: 'WebTelephony',
@@ -292,6 +293,75 @@ define(function(require){
       description: 'Device proximity sensor support',
       bugs: [738131],
       info: 'http://www.w3.org/TR/2012/WD-proximity-20120712/',
+    },
+
+    cors: {
+      name: 'CORS Xhr',
+      description: "",
+      bugs: [],
+      info: "",
+      noPreparation: true,
+      tests: [
+      {
+        name: '',
+        run: function (callback, id, name, testName) {
+          var req = new XMLHttpRequest();
+          req.open('GET', 'http://example.com', true);
+          req.onload = function() {
+            if (req.responseText) {
+                callback(true, id, name, testName);
+            } else {
+                callback(false, id, name, testName, 'no responseText');
+            }
+          };
+          req.onerror = req.onabort = function(e) {
+            callback(false, id, name, testName, e.type + ' in response');
+          };
+          try {
+            req.send();
+          } catch(e) {
+            callback(false, id, name, testName, e.type + ' in send');
+          }
+        }
+      }],
+    },
+    systemxhr: {
+      name: 'System Xhr',
+      description: "",
+      bugs: [],
+      info: "",
+      noPreparation: true,
+      tests: [
+      {
+        name: '',
+        run: function(callback, id, name, testName) {
+          var req = new XMLHttpRequest({
+              mozSystem: true,
+              mozAnon: true
+          });
+          req.open('GET',
+                   'http://maps.googleapis.com/maps/api/geocode/json?address=Castro+Str,+Mountain+View,+CA&sensor=false', true);
+          req.onload = function() {
+            var resp = req.responseText;
+            try {
+              resp = JSON.parse(resp);
+            } catch(e) {}
+            if (resp) {
+              callback(true, id, name, testName);
+            } else {
+              callback(false, id, name, testName, 'no response');
+            }
+          };
+          req.onerror = req.onabort = function(e) {
+            callback(false, id, name, testName, e.type + ' in response');
+          };
+          try {
+            req.send();
+          } catch(e) {
+            callback(false, id, name, testName, e.type + ' in send');
+          }
+        }
+      }],
     }
   };
 

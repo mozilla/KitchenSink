@@ -41,12 +41,17 @@ define(function(require) {
     // run tests only id DOM prepared or no need for the preparation
     if (prepared && api.tests) {
       api.tests.forEach(function(test) {
-        test.run(function callback(result) {
-          $('#' + id).append('<span class="' + 
+        test.run(function(result, inID, apiName, testName, message) {
+          $('#' + inID).append('<span class="' + 
                              (result ? 'success' : 'fail') + '">' + 
-                             (result ? '.' : '!') + '</span>');
-          $('#' + id).addClass((result ? 'success' : 'fail')); 
-        });
+                             (result ? '*' : 'F') + '</span>');
+          $('#' + inID).addClass((result ? 'success' : 'fail')); 
+          if (!result) {
+            var response = '[FAIL] ' + apiName + '.' + testName;
+            if (message) response += ': ' + message;
+            log.info(response);
+          }
+        }, id, api.name, test.name);
       });
     }
   }
