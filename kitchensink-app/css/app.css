@@ -3,12 +3,14 @@ html, body, form {
 	margin: 0;
 	padding: 0;
 }
+
 h1 {
 	font-size: 1.2em;
 	padding: 5px;
 	margin: 0;
 	background: #fafafa;
 }
+
 input {
 	font-size: 1.1em;
 	-moz-box-sizing: border-box;
@@ -16,16 +18,19 @@ input {
 	width: 100%;
 	display: inline-block;
 }
+
 ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
+
 ul a {
 	font-size: 1.1em;
 	display: block;
 	margin: 0.6em 0.4em;
 }
+
 #DEBUG {
 	color: #777;
 	border-bottom: 1px solid #aaa;
@@ -36,37 +41,52 @@ ul a {
 	font-size: 0.8em;
 	top: 0px;
 }
+
 #DEBUG p {
 	padding: 0px 5px;
 }
+
 #DEBUG .error {
 	color: red;
 }
+
 #apis {
 	width: 100%;
 	overflow: scroll;
 }
+
 #apis li {
 	clear: both;
 	padding: 3px 5px;
 	border-top: 1px solid #eee;
 }
+
 #apis li.clickable {
 	background: #dfd;
 }
+
+#apis li.certified {
+	color: #777;
+	background-color: #fafafa;
+}
+
 #apis span {
 	margin-left: 3px;
 	float: right;
 }
+
 #apis span.fail {
 	color: red;
 }
+
 #apis span.success {
 	color: green;
 }
+
 #apis li.notest {
 	background: #ffd;
 }
+
 #apis li.fail {
 	background: #fdd;
 }

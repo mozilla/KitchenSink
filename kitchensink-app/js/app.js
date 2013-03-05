@@ -16,6 +16,12 @@ define(function(require) {
     // add li
     var apiHTML = '<li id="' + id + '">' + api.name + '</span></li>';
     testElement.append(apiHTML);
+    var apiElement = $('#' + id);
+
+    if (api.isCertified) {
+      $('#' + id).append('<span class="certified">[C]</span>');
+      $('#' + id).addClass('certified');
+    }
 
     // check if DOM is prepared
     if (!prepared && api.isPrepared) {

@@ -7,6 +7,7 @@ define(function(require){
       description: 'Allow placing and answering phone calls as well as build in-call UI.',
       info: 'https://wiki.mozilla.org/WebAPI/Security/WebTelephony',
       bugs: [674726],
+      isCertified: true,
       isPrepared: function() {
         return ('mozTelephony' in navigator);
       },
@@ -31,6 +32,7 @@ define(function(require){
       description: 'Send/receive SMS messages as well as manage messages stored on device.',
       info: 'https://wiki.mozilla.org/WebAPI/WebSMS',
       bugs: [674725],
+      isCertified: true,
       isPrepared: function() {
         return ('mozSms' in navigator);
       }
@@ -41,6 +43,7 @@ define(function(require){
       name: 'Idle API',
       description: 'Get notifications when user is idle.',
       bugs: [715041],
+      isCertified: true,
       info: 'https://developer.mozilla.org/en-US/docs/DOM/window.navigator.addIdleObserver',
       isPrepared: function () {
         return ('addIdleObserver' in navigator && 'removeIdleObserver' in navigator);
@@ -75,30 +78,51 @@ define(function(require){
       name: 'Settings API',
       description: 'Set system-wide configurations that are saved permanently on the device. ',
       bugs: [678695],
+      isCertified: true,
       info: 'https://wiki.mozilla.org/WebAPI/SettingsAPI',
       isPrepared: function() {
-        return (!!SettingsManager && !!SettingsLock);
-      }
+        return ('SettingsManager' in window && 'SettingsLock' in window);
+      },
+      
+      /* this can be tested in certified apps only
+      
+      tests: [
+        function(callback) {
+          var id = 'settings',
+              name = 'Settings API',
+              test = 'SettingsManager is not empty';
+
+          for (key in window.SettingsManager) {
+            callback(true, id, name, test); 
+          }
+          callback(false, id, name, test, 'no key found in object');
+        }
+      ]
+      */
     },
 
     powermanagement: {
       name: 'Power Management API',
       description: 'Turn on/off screen, cpu, device power, etc. Listen and inspect resource lock events. ',
       bugs: [708964],
+      isCertified: true,
       info: 'https://wiki.mozilla.org/WebAPI/PowerManagementAPI',
       isPrepared: function() {
         return (('mozPower' in navigator) && ('requestWakeLock' in navigator));
       }
+      // this can be tested in certified apps only
     },
 
     mobileconnection: {
       name: 'Mobile Connection API',
       description: 'Expose signal strength, operator, etc for GSM and other mobile connections. This does not cover WiFi. ',
       bugs: [729173],
+      isCertified: true,
       info: 'https://wiki.mozilla.org/WebAPI/WebMobileConnection',
       isPrepared: function() {
         return ('mozMobileConnection' in navigator);
       }
+      // this can be tested in certified apps only
     },
 
     tcpsocket: {
@@ -106,8 +130,18 @@ define(function(require){
       description: 'Low-level TCP socket API. Will also include SSL support.',
       bugs: [733573],
       isPrepared: function() {
-        return (!!TCPSocket);
-      }
+        return ('TCPSocket' in window);
+      },
+      /* TODO:
+      tests: [
+        function(callback) {
+          var id = 'settings',
+              name = 'Settings API',
+              test = 'SettingsManager is not empty';
+
+        }
+      ]
+      */
     },
 
     geolocation: {

@@ -5,7 +5,16 @@ define(function(require) {
 
   var send = function(type, message) {
     debugElement.append('<p class="' + type + '">' + type.toUpperCase() + ': ' + message + '</p>')
-  }
+  };
+
+  var strip = function(stripObject) {
+    var content = '';
+    for (key in stripObject) {
+      content += key + ': ' + stripObject[key] + '\n';
+    }
+    alert(content);
+  };
+
   return {
     debug: function(message) {
       send('debug', message);
@@ -15,7 +24,8 @@ define(function(require) {
     },
     error: function(message) {
       send('error', message);
-    }
+    },
+    'strip': strip
   };
 
 });
