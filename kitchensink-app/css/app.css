@@ -51,6 +51,9 @@ ul a {
 	padding: 3px 5px;
 	border-top: 1px solid #eee;
 }
+#apis li.clickable {
+	background: #dfd;
+}
 #apis span {
 	margin-left: 3px;
 	float: right;

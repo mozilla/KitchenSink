@@ -41,7 +41,7 @@ define(function(require) {
     // run tests only id DOM prepared or no need for the preparation
     if (prepared && api.tests) {
       api.tests.forEach(function(test) {
-        test.run(function(result, inID, apiName, testName, message) {
+        test(function(result, inID, apiName, testName, message) {
           $('#' + inID).append('<span class="' + 
                              (result ? 'success' : 'fail') + '">' + 
                              (result ? '*' : 'F') + '</span>');
@@ -51,8 +51,13 @@ define(function(require) {
             if (message) response += ': ' + message;
             log.info(response);
           }
-        }, id, api.name, test.name);
+        });
       });
+    }
+    // if there's a touch action - assign it to onclick event
+    if (api.action) {
+      $('#' + id).on('click', api.action)
+                 .addClass('clickable');
     }
   }
 });

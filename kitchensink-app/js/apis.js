@@ -10,6 +10,7 @@ define(function(require){
       isPrepared: function() {
         return ('mozTelephony' in navigator);
       },
+      // this can be tested in certified apps only
     },
 
     vibration: {
@@ -19,6 +20,9 @@ define(function(require){
       bugs: [679966],
       isPrepared: function() {
         return ('vibrate' in navigator);
+      },
+      action: function() {
+        navigator.vibrate(300);
       }
     },
 
@@ -30,6 +34,7 @@ define(function(require){
       isPrepared: function() {
         return ('mozSms' in navigator);
       }
+      // this can be tested in certified apps only
     },
 
     idle: {
@@ -40,6 +45,7 @@ define(function(require){
       isPrepared: function () {
         return ('addIdleObserver' in navigator && 'removeIdleObserver' in navigator);
       }
+      // this can be tested in certified apps only
     },
 
     screenorientation: {
@@ -49,7 +55,20 @@ define(function(require){
       info: 'https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/deviceorientation',
       isPrepared: function() {
         return ('ondeviceorientation' in window);
-      }
+      },
+      tests: [
+        function(callback) {
+          var id = 'screenorientation',
+              name = 'Screen Orientation',
+              test = 'value of the orientation attribute';
+
+          var callbackListener = function(orientData) {
+            callback(true, id, name, test);
+            window.removeEventListener('deviceorientation', callbackListener, false);
+          };
+          window.addEventListener('deviceorientation', callbackListener, false);
+        }
+      ]
     },
 
     settings: {
@@ -302,29 +321,32 @@ define(function(require){
       info: "",
       noPreparation: true,
       tests: [
-      {
-        name: '',
-        run: function (callback, id, name, testName) {
+        function (callback) {
+          var id = 'cors',
+              name = 'CORS Xhr',
+              test = '';
+
           var req = new XMLHttpRequest();
           req.open('GET', 'http://example.com', true);
           req.onload = function() {
             if (req.responseText) {
-                callback(true, id, name, testName);
+                callback(true, id, name, test);
             } else {
-                callback(false, id, name, testName, 'no responseText');
+                callback(false, id, name, test, 'no responseText');
             }
           };
           req.onerror = req.onabort = function(e) {
-            callback(false, id, name, testName, e.type + ' in response');
+            callback(false, id, name, test, e.type + ' in response');
           };
           try {
             req.send();
           } catch(e) {
-            callback(false, id, name, testName, e.type + ' in send');
+            callback(false, id, name, test, e.type + ' in send');
           }
         }
-      }],
+      ],
     },
+
     systemxhr: {
       name: 'System Xhr',
       description: "",
@@ -332,9 +354,11 @@ define(function(require){
       info: "",
       noPreparation: true,
       tests: [
-      {
-        name: '',
-        run: function(callback, id, name, testName) {
+        function(callback) {
+          var id = 'systemxhr',
+              name = 'System Xhr',
+              test = '';
+
           var req = new XMLHttpRequest({
               mozSystem: true,
               mozAnon: true
@@ -347,21 +371,21 @@ define(function(require){
               resp = JSON.parse(resp);
             } catch(e) {}
             if (resp) {
-              callback(true, id, name, testName);
+              callback(true, id, name, test);
             } else {
-              callback(false, id, name, testName, 'no response');
+              callback(false, id, name, test, 'no response');
             }
           };
           req.onerror = req.onabort = function(e) {
-            callback(false, id, name, testName, e.type + ' in response');
+            callback(false, id, name, test, e.type + ' in response');
           };
           try {
             req.send();
           } catch(e) {
-            callback(false, id, name, testName, e.type + ' in send');
+            callback(false, id, name, test, e.type + ' in send');
           }
         }
-      }],
+      ],
     }
   };
 
