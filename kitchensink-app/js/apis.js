@@ -84,7 +84,7 @@ define(function(require){
         return ('SettingsManager' in window && 'SettingsLock' in window);
       },
       
-      /* this can be tested in certified apps only
+      // this can be tested in certified apps only
       
       tests: [
         function(callback) {
@@ -98,7 +98,6 @@ define(function(require){
           callback(false, id, name, test, 'no key found in object');
         }
       ]
-      */
     },
 
     powermanagement: {
