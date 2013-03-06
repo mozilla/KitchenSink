@@ -6,17 +6,17 @@ device/system.
 
 Possible signs:
 
- * ``[C]`` - available for certified apps only
+* ``[C]`` - available for certified apps only
 
- * ``+`` - DOM is prepared (parameter does exist in ``window`` or ``navigator``)
+* ``+`` - DOM is prepared (parameter does exist in ``window`` or ``navigator``)
 
- * ``-`` - DOM isn't prepared
+* ``-`` - DOM isn't prepared
 
- * ``*`` - test successful
+* ``*`` - test successful
 
- * ``F`` - test failed
+* ``F`` - test failed
 
- * ``?`` - no idea how/if to implement the preparation test
+* ``?`` - no idea how/if to implement the preparation test
 
 Green background indicates that the list item will react on click.
 
@@ -24,8 +24,7 @@ Green background indicates that the list item will react on click.
 INSTALL
 #######
 `
-.. note:: 
-   This app will be installed in Marketplace when ready
+  This app will be installed in Marketplace when ready
 
 ``make install`` to make a zip and install in the phone for development
 https://github.com/digitarald/make-fxos-install/ to read more about that.

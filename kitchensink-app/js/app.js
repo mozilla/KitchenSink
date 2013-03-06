@@ -19,28 +19,34 @@ define(function(require) {
     var apiElement = $('#' + id);
 
     if (api.isCertified) {
-      $('#' + id).append('<span class="certified">[C]</span>');
-      $('#' + id).addClass('certified');
+      apiElement.append('<span class="certified">[C]</span>');
+      apiElement.addClass('certified');
+    }
+
+    // if there's a touch action - assign it to onclick event
+    if (api.action) {
+      apiElement.on('click', api.action)
+                 .addClass('clickable');
     }
 
     // check if DOM is prepared
     if (!prepared && api.isPrepared) {
       prepared = api.isPrepared()
-      $('#' + id).append('<span class="' + 
-                         (prepared ? 'success' : 'fail') + '">' + 
-                         (prepared ? '+' : '-') + '</span>');
+      apiElement.append('<span class="' + 
+                        (prepared ? 'success' : 'fail') + '">' + 
+                        (prepared ? '+' : '-') + '</span>');
       if (prepared) {
-        $('#' + id).addClass('success');
+        apiElement.addClass('success');
       } else {
         if (api.tests) {
           log.error(api.name + ' is not prepared (tests not run)');
         }
-        $('#' + id).addClass('fail');
+        apiElement.addClass('fail');
       }
     } else if (!prepared) {
       // if should be prepared and failed
-      $('#' + id).append('<span class="notest">?</span>');
-      $('#' + id).addClass('notest');
+      apiElement.append('<span class="notest">?</span>');
+      apiElement.addClass('notest');
       log.error('No test for ' + api.name);
     }
 
@@ -59,11 +65,6 @@ define(function(require) {
           }
         });
       });
-    }
-    // if there's a touch action - assign it to onclick event
-    if (api.action) {
-      $('#' + id).on('click', api.action)
-                 .addClass('clickable');
     }
   }
 });

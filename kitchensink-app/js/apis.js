@@ -147,8 +147,36 @@ define(function(require){
       name: 'Geolocation API',
       description: 'Same API since Firefox 3.5',
       isPrepared: function() {
-        return ('geolocation' in navigator);
-      }
+        return ('geolocation' in navigator && 'getCurrentPosition' in navigator.geolocation);
+      },
+      // XXX: for some reason getCurrentPosition is failing (timeout). 
+      //      Action and test is workin on desktop Firefox, but not on Unagi 
+      //      please confirm.
+      action: function() {
+          var displayLocation = function(position) {
+            log.strip(position.coords);
+
+          };
+          navigator.geolocation.getCurrentPosition(displayLocation);
+      },
+      tests: [
+        function(callback) {
+          var id = 'geolocation',
+              name = 'Geolocation API',
+              test = '';
+
+          navigator.geolocation.getCurrentPosition(
+              function(position) {
+                if ('coords' in position) {
+                  return callback(true, id, name, test);
+                }
+                callback(false, id, name, test, 'wrong response in callback');
+              }, 
+              function() {
+                callback(false, id, name, test, 'errorCallback called');
+              }, {timeout: 2000});
+        }
+      ] 
     },
 
     wifiinfo: {
@@ -168,7 +196,43 @@ define(function(require){
       info: 'https://wiki.mozilla.org/WebAPI/Security/DeviceStorage',
       isPrepared: function() {
         return ('getDeviceStorage' in navigator);
-      }
+      },
+      tests: [
+        function(callback) {
+          var id = 'devicestorage',
+              name = 'Device Storage API',
+              test = 'create and delete';
+
+          try {
+            var storage = navigator.getDeviceStorage('sdcard');
+          } catch (e) {
+            return callback(false, id, name, test, 'error in getDeviceStorage');
+          }
+          var blobData = new Blob(['<p>Hello World</p>'], 
+                                  { "type" : "text\/xml" });
+          try {
+            var addResponse = storage.addNamed(blobData, 'filename');
+          } catch(e) {
+            return callback(false, id, name, test, 'error in add file');
+          }
+          addResponse.onsuccess = function(response) {
+            try {
+              var delResponse = storage.delete('filename');
+            } catch (e) {
+              callback(false, id, name, test, 'error in delete');
+            }
+            delResponse.onsuccess = function() {
+              callback(true, id, name, test);
+            }
+            delResponse.onerror = function(response) {
+              callback(false, id, name, test, 'callbackError in add file');
+            };
+          };
+          addResponse.onerror = function(response) {
+            callback(false, id, name, test, 'callbackError in add file');
+          };
+        }
+      ]
     },
 
     contacts: {
@@ -178,7 +242,30 @@ define(function(require){
       info: 'https://wiki.mozilla.org/WebAPI/ContactsAPI',
       isPrepared: function() {
         return ('mozContacts' in navigator);
-      }
+      },
+      tests: [
+        function(callback) {
+          var id = 'contacts',
+              name = 'Contacts API',
+              test = '';
+
+          var contact = new mozContact();
+          contact.init({name: "Tom"}); // Bug 723206
+          var addRequest = navigator.mozContacts.save(contact);
+          addRequest.onsuccess = function() {
+            var delRequest = navigator.mozContacts.remove(contact);
+            delRequest.onsuccess = function() {
+              callback(true, id, name, test);
+            };
+            delRequest.onerror = function() {
+              callback(false, id, name, test, 'remove contact failed');
+            };
+          };
+          addRequest.onerror = function() {
+            callback(false, id, name, test, 'create contact failed');
+          };
+        }
+      ]
     },
 
     openwebapps: {

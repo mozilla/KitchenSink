@@ -7,15 +7,7 @@ define(function(require) {
     debugElement.append('<p class="' + type + '">' + type.toUpperCase() + ': ' + message + '</p>')
   };
 
-  var strip = function(stripObject) {
-    var content = '';
-    for (key in stripObject) {
-      content += key + ': ' + stripObject[key] + '\n';
-    }
-    alert(content);
-  };
-
-  return {
+  var methods = {
     debug: function(message) {
       send('debug', message);
     },
@@ -24,8 +16,25 @@ define(function(require) {
     },
     error: function(message) {
       send('error', message);
-    },
-    'strip': strip
+    }
   };
+  var strip = function(stripObject, type) {
+    var content = '';
+    var inside = false;
+    for (key in stripObject) {
+      inside = true;
+      content += key + ': ' + stripObject[key] + '\n';
+    }
+    display = (!!type ? methods[type] : alert);
+
+    if (inside) {
+      display(content);
+    } else {
+      display(stripObject);
+    }
+  };
+
+  methods['strip'] = strip;
+  return methods;
 
 });
