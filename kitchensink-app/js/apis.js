@@ -57,6 +57,8 @@ define(function(require){
         return ('ondeviceorientation' in window);
       },
       tests: [
+        /* Check if onDeviceOrientation event is working
+         */
         function(callback) {
           var id = 'screenorientation',
               name = 'Screen Orientation',
@@ -81,15 +83,18 @@ define(function(require){
         return ('SettingsManager' in window && 'SettingsLock' in window);
       },
       tests: [
+        /* 
+         * Check if SettingsManager isn't empty for privileged app
+         */
         function(callback) {
           var id = 'settings',
               name = 'Settings API',
-              test = 'SettingsManager is not empty';
+              test = 'SettingsManager is empty';
 
           for (key in window.SettingsManager) {
-            callback(true, id, name, test); 
+            return callback(false, id, name, test, 'keys found in object'); 
           }
-          callback(false, id, name, test, 'no key found in object');
+          callback(true, id, name, test);
         }
       ]
     },
@@ -435,6 +440,12 @@ define(function(require){
       description: 'Set current time. Timezone will go in the Settings API.',
       bugs: [714357, 714358],
       isPrepared: function() {
+        // accessing mozTime is stopping the app even if in try/catch block
+        // try {
+        //   log.debug(navigator.mozTime);
+        // } catch(e) {
+        //   log.strip(e);
+        // }
         return ('mozTime' in navigator);
       }
     },
@@ -472,6 +483,24 @@ define(function(require){
       info: 'https://groups.google.com/forum/?fromgroups#!topic/mozilla.dev.webapi/PraULCQntqA',
       isPrepared: function() {
         return (('mozFM' in navigator) || ('mozFMRadio' in navigator)); 
+      },
+      action: function() {
+        var radio = navigator.mozFMRadio;
+        log.debug(radio);
+        radio.enable(96.7);
+        var seekRequest = radio.seekUp();
+        seekRequest.onsuccess = function(e) {
+          log.debug(e.target.result);
+        }
+        seekRequest.onerror = function() {
+          log.debug('seek failed');
+        }
+        var message = 'Webradio:\n'
+                      + (radio.enabled ? 'enabled' : 'disabled') + '\n'
+                      + 'antenna: ' + radio.antennaAvailable + '\n'
+                      + 'frequency: ' + radio.frequency;
+        alert(message);
+        radio.disable(); 
       }
     },
 
