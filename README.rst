@@ -4,6 +4,11 @@ KitchenSink
 Displays a list of APIs along with some information about ability on current
 device/system.
 
+List of APIs is taken from 
+https://wiki.mozilla.org/WebAPI#Planned_for_initial_release_of_B2G_.28aka_Basecamp.29 
+There is an idea to use 
+https://developer.mozilla.org/en-US/docs/Apps/Reference#Firefox_OS_device_APIs instead
+
 Possible signs:
 
 * ``[C]`` - available for certified apps only

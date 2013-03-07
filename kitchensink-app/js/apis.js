@@ -11,7 +11,6 @@ define(function(require){
       isPrepared: function() {
         return ('mozTelephony' in navigator);
       },
-      // this can be tested in certified apps only
     },
 
     vibration: {
@@ -36,7 +35,6 @@ define(function(require){
       isPrepared: function() {
         return ('mozSms' in navigator);
       }
-      // this can be tested in certified apps only
     },
 
     idle: {
@@ -48,7 +46,6 @@ define(function(require){
       isPrepared: function () {
         return ('addIdleObserver' in navigator && 'removeIdleObserver' in navigator);
       }
-      // this can be tested in certified apps only
     },
 
     screenorientation: {
@@ -83,9 +80,6 @@ define(function(require){
       isPrepared: function() {
         return ('SettingsManager' in window && 'SettingsLock' in window);
       },
-      
-      // this can be tested in certified apps only
-      
       tests: [
         function(callback) {
           var id = 'settings',
@@ -109,7 +103,6 @@ define(function(require){
       isPrepared: function() {
         return (('mozPower' in navigator) && ('requestWakeLock' in navigator));
       }
-      // this can be tested in certified apps only
     },
 
     mobileconnection: {
@@ -121,7 +114,6 @@ define(function(require){
       isPrepared: function() {
         return ('mozMobileConnection' in navigator);
       }
-      // this can be tested in certified apps only
     },
 
     tcpsocket: {
@@ -134,9 +126,9 @@ define(function(require){
       /* TODO:
       tests: [
         function(callback) {
-          var id = 'settings',
-              name = 'Settings API',
-              test = 'SettingsManager is not empty';
+          var id = 'tcpsocket',
+              name = 'TCP Socket API',
+              test = '';
 
         }
       ]
@@ -190,7 +182,7 @@ define(function(require){
     },
 
     devicestorage: {
-      name: 'Device Storage API',
+      name: 'Device Storage (sdcard)',
       description: 'Add/Read/Modify files stored on a central location on the device. For example the "pictures" folder on modern desktop platforms or the photo storage in mobile devices.',
       bugs: [717103],
       info: 'https://wiki.mozilla.org/WebAPI/Security/DeviceStorage',
@@ -200,7 +192,7 @@ define(function(require){
       tests: [
         function(callback) {
           var id = 'devicestorage',
-              name = 'Device Storage API',
+              name = 'Device Storage (scdard)',
               test = 'create and delete';
 
           try {
@@ -241,7 +233,7 @@ define(function(require){
       bugs: [674720],
       info: 'https://wiki.mozilla.org/WebAPI/ContactsAPI',
       isPrepared: function() {
-        return ('mozContacts' in navigator);
+        return ('mozContacts' in navigator && navigator.mozContacts);
       },
       tests: [
         function(callback) {
@@ -275,13 +267,41 @@ define(function(require){
       info: 'https://developer.mozilla.org/en/OpenWebApps/The_JavaScript_API',
       isPrepared: function() {
         return ('mozApps' in navigator && 'mgmt' in navigator.mozApps);
-      }
+      },
+      tests: [
+        function(callback) {
+          var id = 'openwebapps',
+              name = 'Open WebApps',
+              test = '';
+
+          try {
+            var request = navigator.mozApps.getSelf();
+          } catch(e) {
+            return callback(false, id, name, test, 'error in getSelf');
+          }
+          request.onsuccess = function() {
+            try {
+              if (request.result.manifest.name) {
+                callback(true, id, name, test);
+              } else {
+                callback(false, id, name, test, 'no name returned');
+              }
+            } catch(e) {
+              callback(false, id, name, test, 'error in retrieving name');
+            }
+          };
+          request.onerror = function() {
+            callback(false, id, name, test, 'errorCallback called');// request.error.name);
+          };
+        }
+      ]
     },
 
     bluetooth: {
       name: 'WebBluetooth',
       description: 'Low level access to Bluetooth hardware.',
       bugs: [674737],
+      isCertified: true,
       info: 'https://wiki.mozilla.org/WebAPI/WebBluetooth',
       isPrepared: function() {
         return ('mozBluetooth' in navigator);
@@ -294,7 +314,21 @@ define(function(require){
       bugs: [677166, 713199],
       info: ' http://dvcs.w3.org/hg/dap/raw-file/tip/network-api/Overview.html',
       isPrepared: function() {
-        return ('mozConnection' in navigator);
+        return ('mozConnection' in navigator && (navigator.mozConnection.metered === true || navigator.mozConnection.metered === false));
+      },
+      action: function() {
+        var message = "Network Info:\nmetered: " 
+                      + navigator.mozConnection.metered
+                      + '\nbandwith: ';
+        var bandwidth = navigator.mozConnection.bandwidth;
+        if (bandwidth === 0) {
+          message += 'offline';
+        } else if (bandwidth === Infinity) {
+          message += 'unknown';
+        } else {
+          message += bandwidth + 'MB/s';
+        }
+        alert(message);
       }
     },
 
@@ -305,6 +339,19 @@ define(function(require){
       info: 'http://dvcs.w3.org/hg/dap/raw-file/tip/battery/Overview.html',
       isPrepared: function() {
         return ('battery' in navigator);
+      },
+      action: function() {
+        var battery = navigator.battery;
+        var dischargingTime = battery.dischargingTime;
+        if (dischargingTime === Infinity) {
+          dischargingTime = 'unknown';
+        } else {
+          dischargingTime = dischargingTime * 60 + 'min';
+        }
+        var message = 'Battery Status:\n'
+                      + 'discharging time: ' + dischargingTime + '\n'
+                      + 'level: ' + parseInt(battery.level * 100) + '%\n';
+        alert(message);
       }
     },
 
@@ -314,8 +361,63 @@ define(function(require){
       bugs: [749551],
       info: 'https://wiki.mozilla.org/WebAPI/AlarmAPI',
       isPrepared: function() {
-        return ('mozAlarms' in navigator);
-      }
+        return ('mozAlarms' in navigator && navigator.mozAlarms);
+      },
+      tests: [
+        function(callback) {
+          var id = 'alarm',
+              name = 'Alarm API',
+              test = 'add/remove alarms';
+
+          var today = new Date();
+          var tomorrow = new Date(today.getTime() + (24 * 60 * 60 * 1000));
+          var alarmId1;
+          // add new alarm
+          var addRequest = navigator.mozAlarms.add(tomorrow, 'ignoreTimezone', 
+                                              {mydata: 'bar'});
+          addRequest.onsuccess = function(e) {
+            // assign alarm to alarmId1
+            alarmId1 = e.target.result;
+            // get All
+            var getRequest = navigator.mozAlarms.getAll();
+            getRequest.onsuccess = function(e) {
+              // check if alarmId1 is added
+              var found = false;
+              e.target.result.forEach(function(item) {
+                if (item.id == alarmId1) {
+                  found = true;
+                }
+              });
+              if (!found) {
+                return callback(false, id, name, test, 'alarm not found');
+              }
+              // delete alarmId1
+              navigator.mozAlarms.remove(alarmId1);
+              // check if removed
+              var secGetRequest = navigator.mozAlarms.getAll();
+              secGetRequest.onsuccess = function(e) {
+                // check if alarmId1 is added
+                var found = false;
+                e.target.result.forEach(function(item) {
+                  if (item.id == alarmId1.id) {
+                    found = true;
+                  }
+                });
+                if (found) {
+                  return callback(false, id, name, test, 'alarm still exists');
+                }
+                callback(true, id, name, test);
+              }
+            };
+            getRequest.onerror = function(e) {
+              callback(false, id, name, test, 'errorCallback called in getAll');
+            };
+          };
+          addRequest.onerror = function (e) {
+            callback(false, id, name, test, 'errorCallback called on add');
+          };
+        }
+      ]
     },
 
     browser: {
