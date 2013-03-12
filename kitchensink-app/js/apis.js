@@ -641,7 +641,6 @@ define(function(require){
               test = '';
 
           var general_error_handler = function(event) {
-            
             callback(false, id, name, test, 
                      'error callback: ' + event.target.error.name);
           }
@@ -654,7 +653,7 @@ define(function(require){
           idbrequest.onerror = general_error_handler;
 
           idbrequest.onupgradeneeded = function(event) {
-            log.debig('-111');
+            log.debug('-111');
             var db = event.target.result;
             var objectStore = db.createObjectStore('someData', {keyPath: 'someKey'});
           }
