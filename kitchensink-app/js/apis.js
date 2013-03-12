@@ -1,6 +1,8 @@
 define(function(require){
 
+  var $ = require('zepto');
   var log = require('logger');
+
   var apis = {
     webtelephony: {
       name: 'WebTelephony',
@@ -357,7 +359,18 @@ define(function(require){
                       + 'discharging time: ' + dischargingTime + '\n'
                       + 'level: ' + parseInt(battery.level * 100) + '%\n';
         alert(message);
-      }
+      },
+      tests: [
+        function(callback) {
+          var dischargingTime = navigator.battery.dischargingTime;
+          var isValid = (dischargingTime === Infinity || parseInt(dischargingTime));
+          callback(!!isValid, 'battery', 'Battery Status API', 'check discharging time value');
+        },
+        function(callback) {
+          var level = navigator.battery.level * 100;
+          callback(!!parseInt(level), 'battery', 'Battery Status API', 'check level value', level);
+        }
+      ]
     },
 
     alarm: {
@@ -430,9 +443,28 @@ define(function(require){
       description: 'Enables implementing a browser completely in web technologies.',
       bugs: [693515],
       info: 'https://wiki.mozilla.org/WebAPI/BrowserAPI',
-      isPrepared: function() {
-        return ('browser' in navigator);
-      }
+      noPreparation: true,
+      tests: [
+        function(callback) {
+          var id = 'browser',
+              name = 'Browser API',
+              test = 'methods present in browser tag';
+          var failed = false;
+          var fail = [];
+          var methods = ['stop', 'reload', 'go', 'getScreenShot'];
+          $('body').append('<browser id="testBrowser">');
+          var browser = $('#testBrowser');
+
+          methods.forEach(function(method) {
+            if (!(method in browser)) {
+              failed = true;
+              fail.push(method);
+            }
+          });
+          callback(!failed, id, name, test, fail.join(', '));
+          browser.remove();
+        }
+      ]
     },
 
     timeclock: {
@@ -456,8 +488,25 @@ define(function(require){
       bugs: [715814, 776027],
       info: 'https://wiki.mozilla.org/WebAPI/WebActivities',
       isPrepared: function() {
-        return ('registerActivityHandler' in navigator);
-      }
+        return ('MozActivity' in window);
+      },
+      tests: [
+        /* TODO: find a way to not call activity on test
+        function(callback) {
+          var id = 'activities',
+              name = 'Web Activities',
+              test = 'listeners defined in new Activity';
+          try {
+            var activ = new MozActivity({ 
+              name: "pick", data: { type: "image/png", multiple: false }});
+          } catch(e) {
+            return callback(false, id, name, test, 'error: ' + e);
+          }
+          var isValid = ('onsuccess' in active && 'onerror' in active);
+          callback(isValid, id, name, test);
+        }
+         */
+      ]
     },
 
     pushnotifications: {
@@ -466,7 +515,7 @@ define(function(require){
       bugs: [747907],
       info: 'https://wiki.mozilla.org/WebAPI/PushAPI',
       isPrepared: function() {
-        return ('mozPush' in navigator);
+        return ('mozPush' in navigator || 'push' in navigator);
       }
     },
 
@@ -474,6 +523,7 @@ define(function(require){
       name: 'Permissions API',
       description: 'Allow Settings app to manage all app permissions in a centralized location',
       bugs: [707625],
+      isCertified: true
     },
 
     webfm: {
@@ -510,12 +560,56 @@ define(function(require){
       bugs: [726593],
       info: 'FileHandle API',
       noPreparation: true,
+      tests: [
+        function(callback) {
+          var id = 'filehandleapi',
+              name = 'FileHandle API',
+              test = 'create test file';
+          // create myDatabase instance
+          // http://people.mozilla.com/~tglek/velocity2012/#/step-16
+          var general_idb_error_handler = function(event) {
+            callback(false, id, name, test, 
+                     'error callback: ' + event.target.error.name);
+          }
+          var indexedDB = window.mozIndexedDB || window.indexedDB
+          try {
+            var idbrequest = indexedDB.open("someDatabase", 1);  
+          } catch(e) {
+            return callback(false, id, name, test, 'opening indexedDB failed');
+          }
+          idbrequest.onerror = general_idb_error_handler;
+
+          idbrequest.onupgradeneeded = function(event) {
+            var db = event.target.result;
+            var objectStore = db.createObjectStore("files");
+          }
+
+          idbrequest.onsuccess = function(event) {
+            var myDatabase = event.target.result;
+            var request = {};
+          /*
+           * XXX: this crashes KitchenSinkApp
+            var request = myDatabase.mozCreateFileHandle("test.bin", "binary");
+          */
+            request.onsuccess = function(event) {
+              if ('result' in event.target && event.target.result) {
+                log.debug(event.target.result);
+                callback(true, id, name, test);
+              } else {
+                callback(false, id, name, test, 'no result in event');
+              }
+            };
+            request.onerror = general_idb_error_handler;
+          }
+        }
+      ]
     },
 
     networkstats: {
       name: 'Network Stats API',
       description: 'Monitor data usage and expose data to privileged apps',
       bugs: [746069],
+      isCertified: true,
       isPrepared: function() {
         return ('mozNetworkStats' in navigator);
       }
@@ -538,7 +632,58 @@ define(function(require){
       info: 'http://www.w3.org/TR/IndexedDB/',
       isPrepared: function() {
         return ('mozIndexedDB' in window);
-      }
+      },
+      tests: [
+        function(callback) {
+          // TODO: fix that
+          var id = 'indexeddb',
+              name = 'IndexedDB',
+              test = '';
+
+          var general_error_handler = function(event) {
+            
+            callback(false, id, name, test, 
+                     'error callback: ' + event.target.error.name);
+          }
+          var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+          try {
+            var idbrequest = indexedDB.open('someDatabase', 1);  
+          } catch(e) {
+            return callback(false, id, name, test, 'opening indexedDB failed');
+          }
+          idbrequest.onerror = general_error_handler;
+
+          idbrequest.onupgradeneeded = function(event) {
+            log.debig('-111');
+            var db = event.target.result;
+            var objectStore = db.createObjectStore('someData', {keyPath: 'someKey'});
+          }
+
+          idbrequest.onsuccess = function(event) {
+            log.debug('000');
+            var db = event.target.result;
+            log.debug(db);
+            var transaction = db.transaction(['someData'], 'readwrite');
+            log.debug(transaction);
+            transaction.onerror = general_error_handler;
+            var objectStore = transaction.objectStore('someData');
+            log.debug(objectStore);
+            var addRequest = objectStore.add({someKey: 'a key', someValue: 'a value'});
+            addRequest.onerror = general_error_handler;
+            addRequest.onsuccess = function(event) {
+              log.debug('111');
+              if (event.target.result !== 'a key') {
+                callback(false, id, name, test, 'wrong key added');
+              }
+              delRequest = objectStore.delete('a key');
+              delRequest.onerror = general_error_handler;
+              delRequest.onsuccess = function() {
+                callback(true, id, name, test);
+              }
+            }
+          }
+        }
+      ]
     },
 
     archive: {
@@ -624,7 +769,7 @@ define(function(require){
             if (resp) {
               callback(true, id, name, test);
             } else {
-              callback(false, id, name, test, 'no response');
+              callback(false, id, name, test, 'no response. Is device connected to the internet?');
             }
           };
           req.onerror = req.onabort = function(e) {

@@ -7,6 +7,9 @@ define(function(require) {
   var apis = require('./apis');
   var log = require('logger');
 
+  // navigation
+  $('#reload').on('click', function() { window.location.reload(); });
+
   var testElement = $('#apis');
 
   for (id in apis) {

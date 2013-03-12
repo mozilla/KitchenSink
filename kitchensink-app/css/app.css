@@ -90,3 +90,8 @@ ul a {
 #apis li.fail {
 	background: #fdd;
 }
+#reload {
+	width: 100%;
+	padding: 8px;
+	margin: 5px 0;
+}
