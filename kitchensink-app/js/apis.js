@@ -536,15 +536,8 @@ define(function(require){
       },
       action: function() {
         var radio = navigator.mozFMRadio;
-        log.debug(radio);
         radio.enable(96.7);
         var seekRequest = radio.seekUp();
-        seekRequest.onsuccess = function(e) {
-          log.debug(e.target.result);
-        }
-        seekRequest.onerror = function() {
-          log.debug('seek failed');
-        }
         var message = 'Webradio:\n'
                       + (radio.enabled ? 'enabled' : 'disabled') + '\n'
                       + 'antenna: ' + radio.antennaAvailable + '\n'
@@ -586,11 +579,9 @@ define(function(require){
 
           idbrequest.onsuccess = function(event) {
             var myDatabase = event.target.result;
-            var request = {};
           /*
-           * XXX: this crashes KitchenSinkApp
+           * XXX: creating file handle crashes KitchenSinkApp
             var request = myDatabase.mozCreateFileHandle("test.bin", "binary");
-          */
             request.onsuccess = function(event) {
               if ('result' in event.target && event.target.result) {
                 log.debug(event.target.result);
@@ -600,6 +591,7 @@ define(function(require){
               }
             };
             request.onerror = general_idb_error_handler;
+          */
           }
         }
       ]
@@ -653,15 +645,14 @@ define(function(require){
           idbrequest.onerror = general_error_handler;
 
           idbrequest.onupgradeneeded = function(event) {
-            log.debug('-111');
             var db = event.target.result;
             var objectStore = db.createObjectStore('someData', {keyPath: 'someKey'});
           }
 
           idbrequest.onsuccess = function(event) {
-            log.debug('000');
             var db = event.target.result;
             log.debug(db);
+            // XXX: DEBUG - throws after this command
             var transaction = db.transaction(['someData'], 'readwrite');
             log.debug(transaction);
             transaction.onerror = general_error_handler;
@@ -670,7 +661,7 @@ define(function(require){
             var addRequest = objectStore.add({someKey: 'a key', someValue: 'a value'});
             addRequest.onerror = general_error_handler;
             addRequest.onsuccess = function(event) {
-              log.debug('111');
+              log.debug('THIS IS NOT CALLED');
               if (event.target.result !== 'a key') {
                 callback(false, id, name, test, 'wrong key added');
               }
@@ -693,6 +684,7 @@ define(function(require){
       isPrepared: function() {
         return ('ArchiveReader' in window);
       }
+      // test will download .zip and check if it's fine
     },
 
     ambientlight: {
@@ -700,13 +692,47 @@ define(function(require){
       description: 'Device light sensor support',
       bugs: [738465],
       info: 'http://www.w3.org/TR/ambient-light/',
+      isPrepared: function() {
+        return('ondevicelight' in window);
+      },
+      tests: [
+        function(callback) {
+          var id = 'ambientlight',
+              name = 'Ambient Ligth Sensor',
+              test = '';
+          var ambientCallback = function(event) {
+            if (event.value > 0) {
+              callback(true, id);
+            } else {
+              callback(false, id, name, test, 'Wrong value returned');
+            }
+            window.removeEventListener('devicelight', ambientCallback, false);
+          };
+
+          window.addEventListener('devicelight', ambientCallback, false);
+        }
+      ]
     },
 
     proximity: {
       name: 'Proximity sensor',
-      description: 'Device proximity sensor support',
+      description: 'Provides information about the distance of a nearby physical object using the proximity sensor of a device.',
       bugs: [738131],
       info: 'http://www.w3.org/TR/2012/WD-proximity-20120712/',
+      isPrepared: function() {
+        return ('ondeviceproximity' in window);
+      },
+      tests: [
+        // XXX: This worked once...
+        function(callback) {
+          var id = 'proximity',
+              name = 'Proximity sensor',
+              test = '';
+          window.addEventListener('deviceproximity', function(event) {
+            callback(true, id);
+          });
+        }
+      ]
     },
 
     cors: {
