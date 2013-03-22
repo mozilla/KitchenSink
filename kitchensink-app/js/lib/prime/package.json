@@ -1,0 +1,60 @@
+{
+  "name": "prime",
+  "homepage": "https://github.com/mootools/prime",
+  "version": "0.1.0",
+  "main": "./index.js",
+  "description": "prime, an OOP javascript library for node and the web.",
+  "keywords": [
+    "library",
+    "framework",
+    "es5",
+    "class",
+    "array",
+    "object"
+  ],
+  "author": {
+    "name": "Valerio Proietti",
+    "email": "@kamicane",
+    "url": "http://mad4milk.net"
+  },
+  "contributors": [
+    {
+      "name": "Arian Stolwijk",
+      "email": "@arian",
+      "url": "http://aryweb.nl"
+    },
+    {
+      "name": "Cristian Carlesso",
+      "email": "@kentaromiura",
+      "url": "http://github.com/kentaromiura"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/mootools/prime/issues"
+  },
+  "license": "MIT (http://mootools.net/license.txt)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mootools/prime.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "1.8",
+    "expect.js": "0.1",
+    "wrapup": "0.10",
+    "procs": "0.0.4"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "_id": "prime@0.1.0",
+  "_engineSupported": true,
+  "_npmVersion": "1.1.4",
+  "_nodeVersion": "v0.6.19",
+  "_defaultsLoaded": true,
+  "dist": {
+    "shasum": "ee1a8c08f884fe23dab69e8b0dcbb18bfa9d2dba"
+  },
+  "_from": "prime"
+}
