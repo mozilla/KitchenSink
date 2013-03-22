@@ -1,10 +1,11 @@
 define(function(require) {
+  // TODO: add ability to change the log level
 
   var $ = require('zepto');
   var debugElement = $('#DEBUG');
 
   var send = function(type, message) {
-    debugElement.append('<p class="' + type + '">' + type.toUpperCase() + ': ' + message + '</p>')
+    debugElement.append('<p class="' + type + '">' + type.toUpperCase() + ': ' + message + '</p>');
   };
 
   var methods = {
@@ -18,10 +19,11 @@ define(function(require) {
       send('error', message);
     }
   };
+
   var strip = function(stripObject, type) {
     var content = '';
     var inside = false;
-    for (key in stripObject) {
+    for (var key in stripObject) {
       inside = true;
       content += key + ': ' + stripObject[key] + '\n';
     }
@@ -34,7 +36,7 @@ define(function(require) {
     }
   };
 
-  methods['strip'] = strip;
+  methods.strip = strip;
   return methods;
 
 });
