@@ -11,6 +11,32 @@ define(function(require) {
     isPrepared: function() {
       return ('mozFM' in navigator || 'mozFMRadio' in navigator); 
     },
+    tests: [
+      function(callback) {
+        var test = 'swith on and off';
+        var radio = navigator.mozFMRadio;
+
+        if (radio) {
+          var enableRequest = radio.enable(96.7);
+          enableRequest.onsuccess = function() {
+            if (!radio.enabled) {
+              return callback(false, test, 'radio is not enabled');
+            }
+            radio.disable();
+            if (radio.enabled) {
+              callback(false, test, 'radio is still enabled');
+            } else {
+              callback(true, test);
+            }
+          };
+          enableRequest.onerror = function() {
+            callback(false, test, 'error callback called on enabling radio');
+          };
+        } else {
+          callback(false, test, 'mozFMRadio is falsy');
+        }
+      }
+    ],
     action: function() {
       var radio = navigator.mozFMRadio;
       if (radio) {
