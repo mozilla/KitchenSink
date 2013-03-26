@@ -13,7 +13,7 @@ define(function(require) {
     },
     tests: [
       function(callback) {
-        var test = 'swith on and off';
+        var test = 'switch on and off';
         var radio = navigator.mozFMRadio;
 
         if (radio) {
