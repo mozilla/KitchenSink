@@ -25,7 +25,7 @@ ul {
 	padding: 0;
 }
 
-ul a {
+#apis > li > a {
 	font-size: 1.1em;
 	display: block;
 	margin: 0.6em 0.4em;
@@ -55,19 +55,40 @@ ul a {
 	overflow: scroll;
 }
 
-#apis li {
+#apis dt {
 	clear: both;
-	padding: 3px 5px;
+	padding: 6px 5px;
 	border-top: 1px solid #eee;
+	cursor: pointer;
 }
 
-#apis li.clickable {
+#apis dt.clickable {
 	background: #dfd;
 }
 
-#apis li.certified {
+#apis dt.certified {
 	color: #777;
 	background-color: #fafafa;
+}
+
+#apis dt.open {
+	font-weight: bold;
+	border-top: 2px solid #ccc;
+}
+
+#apis dd {
+	padding: 5px;
+	margin: 0;
+}
+
+#apis dd p {
+	margin: 5px 0;
+}
+
+#apis dd button.action {
+	width: 100%;
+	padding: 6px;
+	margin: 5px 0;
 }
 
 #apis span {
@@ -83,15 +104,27 @@ ul a {
 	color: green;
 }
 
-#apis li.notest {
+#apis dt.notest {
 	background: #ffd;
 }
 
-#apis li.fail {
+#apis dt.fail {
 	background: #fdd;
 }
 #reload {
 	width: 100%;
 	padding: 8px;
 	margin: 5px 0;
+}
+.hidden {
+	display: none;
+}
+#apis .bugs li {
+	display: inline;
+}
+#apis .bugs li+li:before {
+	content: ", ";
+}
+#apis .bugs > li:before {
+	content: "";
 }

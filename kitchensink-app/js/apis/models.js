@@ -5,6 +5,7 @@
 define(function(require) {
   var prime = require('prime/index');
   var $ = require('zepto');
+  //var accordion = require('accordion');
   var log = require('logger');
 
   // definition of signs to display
@@ -48,6 +49,7 @@ define(function(require) {
      */
     constructor: function(options) {
       this.setOptions(options);
+      this.visible = false;
     },
 
     setOptions: function(options) {
@@ -67,17 +69,58 @@ define(function(require) {
      * assign ``action`` if provided
      */
     render: function(parentEl) {
-      parentEl.append('<li id="{id}">{name}</li>'.format(this));
+      // build the content
+      var itemHTML = '<dt id="{id}">{name}</dt>'
+                   + '<dd class="hidden">'
+                   + '<p>{description}</p>'
+                   + '</dd>';
+      parentEl.append(itemHTML.format(this));
       this.apiElement = $('#' + this.id);
+      this.contentElement = this.apiElement.next();
+      var descriptionElement = this.contentElement.find('p');
       if (this.isCertified) {
         this.apiElement.append('<span class="certified">{certified}</span>'.format(signs));
         this.apiElement.addClass('certified');
       }
+      this.apiElement.on('click', this.toggle.bind(this));
+      if (this.info) {
+        descriptionElement.append(' <a class="info" href="{info}">More info...</a>'.format(this));
+      }
       // assign action to onclick event
       if (this.action) {
-        this.apiElement.on('click', this.action.bind(this));
-        this.apiElement.addClass('clickable');
+        descriptionElement.before('<button class="action">RUN</button>');
+        var actionElement = this.contentElement.find('button');
+        actionElement.on('click', this.action.bind(this));
       }
+      if (this.bugs.length > 0) {
+        this.contentElement.append('<ul class="bugs"></ul>');
+        var bugsElement = this.contentElement.find('.bugs');
+        this.bugs.forEach(function(bug) {
+          bugsElement.append(
+            '<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id={bug}">{bug}'.format({bug: bug})
+          );
+        });
+      }
+    },
+
+    toggle: function() {
+      if (this.visible) {
+        this.hide();
+      } else {
+        this.show();
+      }
+      this.visible = !this.visible;
+    },
+
+    hide: function() {
+      this.contentElement.hide();
+      this.apiElement.removeClass('open');
+    },
+
+    show: function() {
+      // hideAll if full featured accordion is needed
+      this.contentElement.show(120);
+      this.apiElement.addClass('open');
     },
 
     /*
