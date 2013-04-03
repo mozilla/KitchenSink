@@ -7,7 +7,7 @@ define(function(require) {
     name: 'Alarm API',
     description: 'Schedule a notification, or for an application to be started, at a specific time.',
     bugs: [749551],
-    info: 'https://wiki.mozilla.org/WebAPI/AlarmAPI',
+    info: 'https://developer.mozilla.org/docs/WebAPI/Alarm',
     isPrepared: function() {
       return ('mozAlarms' in navigator && navigator.mozAlarms);
     },

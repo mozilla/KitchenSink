@@ -5,7 +5,7 @@ define(function(require) {
   return new API({
     id: 'mobileconnection',
     name: 'Mobile Connection API',
-    description: 'Expose signal strength, operator, etc for GSM and other mobile connections. This does not cover WiFi. ',
+    description: 'Expose signal strength, operator, etc for GSM and other mobile connections. This does not cover WiFi.',
     bugs: [729173],
     isCertified: true,
     info: 'https://wiki.mozilla.org/WebAPI/WebMobileConnection',

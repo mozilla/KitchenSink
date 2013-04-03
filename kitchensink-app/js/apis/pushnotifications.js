@@ -6,10 +6,11 @@ define(function(require) {
     id: 'pushnotifications',
     name: 'Push Notifications API',
     description: 'Allow the platform to send notification messages to specific applications.',
+    info: 'https://wiki.mozilla.org/WebAPI/SimplePush',
     bugs: [747907],
-    info: 'https://wiki.mozilla.org/WebAPI/PushAPI',
-    isPrepared: function() {
-      return ('mozPush' in navigator || 'push' in navigator);
-    }
+    noPreparation: true
+    // isPrepared: function() {
+    //   return ('mozPush' in navigator || 'push' in navigator);
+    // }
   });
 });

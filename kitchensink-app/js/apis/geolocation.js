@@ -5,24 +5,24 @@ define(function(require) {
   return new API({
     id: 'geolocation',
     name: 'Geolocation API',
-    description: 'API for locating a user using lat/long coordinates',
+    description: 'API for locating a user using latitude and longitude coordinates.',
+    info: 'https://developer.mozilla.org/en-US/docs/Using_geolocation',
     isPrepared: function() {
       return ('geolocation' in navigator && 'getCurrentPosition' in navigator.geolocation);
     },
     // XXX: for some reason getCurrentPosition is failing (timeout). 
-    //      Action and test is workin on desktop Firefox, but not on Unagi 
+    //      Action and test is working on desktop Firefox, but not on Unagi 
     //      please confirm.
     action: function() {
+      var message = 'Geolocation: \n'
+                  + 'latitude: {latitude}\n'
+                  + 'longitude: {longitude}\n'
+                  + 'altitude: {altitude}\n'
+                  + 'accuracy: {accuracy}\n'
+                  + 'altitudeAccuracy: {altitudeAccuracy}\n'
+                  + 'heading: {heading}\n'
+                  + 'speed: {speed}\n';
       var displayLocation = function(position) {
-        var message = 'Geolocation: \n'
-                      + 'latitude: {latitude}\n'
-                      + 'longitude: {longitude}\n'
-                      + 'altitude: {altitude}\n'
-                      + 'accuracy: {accuracy}\n'
-                      + 'altitudeAccuracy: {altitudeAccuracy}\n'
-                      + 'heading: {heading}\n'
-                      + 'speed: {speed}\n';
-
         alert(message.format(position.coords));
       };
       navigator.geolocation.getCurrentPosition(displayLocation);
