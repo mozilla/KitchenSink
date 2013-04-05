@@ -4,19 +4,22 @@ define(function(require) {
   var $ = require('zepto');
   var debugElement = $('#DEBUG');
 
-  var send = function(type, message) {
-    debugElement.append('<p class="' + type + '">' + type.toUpperCase() + ': ' + message + '</p>');
+  var send = function(type, message, el) {
+    if (!el) {
+      el = debugElement;
+    }
+    el.append('<p class="' + type + '">' + type.toUpperCase() + ': ' + message + '</p>');
   };
 
   var methods = {
-    debug: function(message) {
-      send('debug', message);
+    debug: function(message, el) {
+      send('debug', message, el);
     },
-    info: function(message) {
-      send('info', message);
+    info: function(message, el) {
+      send('info', message, el);
     },
-    error: function(message) {
-      send('error', message);
+    error: function(message, el) {
+      send('error', message, el);
     }
   };
 

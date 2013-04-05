@@ -24,7 +24,7 @@ define(function(require) {
   if ('MozActivity' in window) {
     // change all links to webactivities
     var viewUrl = function(event) {
-      event.stopPropagation();
+      event.preventDefault();
       new MozActivity({
         name: 'view',
         data: {

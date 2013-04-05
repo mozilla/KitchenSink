@@ -2,6 +2,7 @@ html, body, form {
 	margin: 0;
 	padding: 0;
 	width: 100%;
+	font-family: 'MozTT', Sans-serif;
 }
 
 h1 {
@@ -25,41 +26,32 @@ ul {
 	margin: 0;
 }
 
-#apis > li > a {
+#apis > dt > a {
 	display: block;
 	font-size: 1.1em;
-	margin: 0.6em 0.4em;
+	margin: 0em 0.4em 0.6em;
 }
 
-#DEBUG {
-	border-bottom: 1px solid #aaa;
-	background: #fafafa;
-	color: #777;
-	font-size: 0.8em;
-	max-height: 150px;
-	overflow: scroll;
-	top: 0px;
-	width: 100%;
-}
-
-#DEBUG p {
-	padding: 0px 5px;
-}
-
-#DEBUG .error {
+.error {
 	color: red;
 }
 
 #apis {
-	overflow: scroll;
 	width: 100%;
 }
 
 #apis dt {
-	border-top: 1px solid #eee;
+	border-top: 1px solid #ccc;
 	clear: both;
 	cursor: pointer;
-	padding: 6px 5px;
+	padding: 8px 5px;
+}
+
+#apis > dt:first-child {
+	border-top: 0px;
+}
+
+#apis dt+dt:before {
 }
 
 #apis .clickable {
@@ -76,6 +68,10 @@ ul {
 	font-weight: bold;
 }
 
+#apis dt.action:before {
+	content: "*"
+}
+
 #apis dd {
 	margin: 0;
 	padding: 5px;
@@ -83,12 +79,6 @@ ul {
 
 #apis dd p {
 	margin: 5px 0;
-}
-
-#apis dd button.action {
-	margin: 5px 0;
-	padding: 6px;
-	width: 100%;
 }
 
 #apis span {
@@ -109,13 +99,38 @@ ul {
 }
 
 #apis dt.fail {
-	background: #fdd;
+/* background: #fdd; */
 }
-#reload {
-	margin: 5px 0;
-	padding: 8px;
-	width: 100%;
+
+#header-reload {
+	cursor: pointer;
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 0 6px;
+	background: transparent url("../img/toolbar/update.png");
+	text-indent: -9999px;
 }
+
+x-appbar #reload:before {
+	background-color: transparent
+}
+
+
+#header-settings {
+	cursor: pointer;
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 0 6px;
+	background: transparent url("../img/toolbar/menu.png");
+	text-indent: -9999px;
+}
+
+x-appbar #header-reload:before {
+	background-color: transparent
+}
+
 .hidden {
 	display: none;
 }
@@ -131,4 +146,25 @@ ul {
 #browser {
 	height: 1px;
 	border: 0;
+}
+
+.box {
+    position:relative;
+}
+.box:after {
+    position:absolute;
+    right:10px; /* Positioned some distance in from the left and right edges to avoid the box-shadow blur from peeking through on the sides of the box */
+    bottom:0px;
+    left:10px;
+    height:2px;
+    border-radius:0 0 50% 50% / 0 0 20px 20px;
+    box-shadow:0 5px 5px rgba(0, 0, 0, 0.5);
+    content:'';
+}
+/* The content needs to be in an element with a non-transparent background to cover parts of the drop shadow. */
+.box-content {
+    position: relative;
+    z-index: 1; /* Make sure it’s rendered on top of the pseudo-element */
+    padding-bottom: 10px;
+    background:#fff;
 }

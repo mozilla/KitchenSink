@@ -1,0 +1,62 @@
+x-appbar { 
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;  
+  color: white;
+  background-color: orange;
+  box-shadow: 0 2px 0px 0 rgba(0,0,0,0.3);
+  padding: 8px 0;
+  font-size: 1.2em;
+}
+
+x-appbar > * {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  vertical-align: center;
+  position: relative;
+  padding: 4px 6px;
+  display: inline-block;
+  background: none;
+  border: none;  
+}
+
+x-appbar > *:first-child:before {
+  display: none;
+}
+
+x-appbar > header {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;  
+}
+
+x-appbar > header:after {
+  padding-left: 6px;
+  font-size: 50%;
+  content: attr(subheading);
+}
+
+/* Spacer style */
+x-appbar > *:before {
+  background-color: rgba(0,0,0,0.25);
+  width: 1px;
+  content: " ";
+  position: absolute;
+  left: 0px;  
+  top: 3px;
+  bottom: 3px;
+}

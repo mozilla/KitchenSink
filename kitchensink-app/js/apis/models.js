@@ -70,7 +70,7 @@ define(function(require) {
     render: function(parentEl) {
       // build the content
       var itemHTML = '<dt id="{id}">{name}</dt>'
-                   + '<dd class="hidden">'
+                   + '<dd class="hidden box">'
                    + '<p>{description}</p>'
                    + '</dd>';
       parentEl.append(itemHTML.format(this));
@@ -87,7 +87,8 @@ define(function(require) {
       }
       // assign action to onclick event
       if (this.action) {
-        descriptionElement.before('<button class="action">RUN</button>');
+        this.apiElement.addClass('action');
+        descriptionElement.before('<button>RUN</button>');
         var actionElement = this.contentElement.find('button');
         actionElement.on('click', this.action.bind(this));
       }
@@ -100,6 +101,9 @@ define(function(require) {
           );
         });
       }
+      // wrap dd content to create a nice looking dropshadow
+      // http://www.456bereastreet.com/archive/201304/responsive_drop_shadows/
+      this.contentElement.wrapInner('<div class="box-content">');
     },
 
     toggle: function() {
@@ -138,7 +142,7 @@ define(function(require) {
           this.apiElement.addClass('success');
         } else {
           if (this.tests) {
-            log.debug(this.name + ' is not prepared (tests not run)');
+            log.debug(this.name + ' is not prepared (tests not run)', this.contentElement);
           }
           this.apiElement.addClass('fail');
         }
@@ -146,7 +150,7 @@ define(function(require) {
         // it should be prepared but no isPrepared method
         this.apiElement.append('<span class="notest">' + signs.nopreparation + '</span>');
         this.apiElement.addClass('notest');
-        log.error('No test for ' + this.name);
+        log.error('No test for ' + this.name, this.contentElement);
       } else {
         this.prepared = true;
       }
@@ -165,14 +169,14 @@ define(function(require) {
         );
         self.apiElement.addClass((result ? 'success' : 'fail')); 
         if (!result) {
-          var response = '[FAIL] ' + self.name + '.';
+          var response = self.name + '.';
           if (testName) {
             response += testName;
             if (message) {
               response += ': ' + message;
             }
           }
-          log.info(response);
+          log.error(response, self.contentElement);
         }
       };
       
