@@ -5,9 +5,11 @@ define(function(require) {
   return new API({
     id: 'filehandleapi',
     name: 'FileHandle API',
-    description: 'Writable files with locking.',
+    description: 'Provide the ability to write to a file, as well the '
+               + 'locking mechanisms needed to allow writing safely. '
+               + 'FileHandle is also known as low-level file-CRUD support.',
     bugs: [726593],
-    info: 'FileHandle API',
+    info: 'https://wiki.mozilla.org/WebAPI/FileHandleAPI',
     noPreparation: true,
     tests: [
       function(callback) {

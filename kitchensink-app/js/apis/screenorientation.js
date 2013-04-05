@@ -11,6 +11,8 @@ define(function(require) {
     isPrepared: function() {
       return ('ondeviceorientation' in window);
     },
+    // TODO: add an ability to test screen orientation as well 
+    // https://dvcs.w3.org/hg/screen-orientation/raw-file/tip/Overview.html
     tests: [
       function(callback) {
         var test = 'value of the orientation attribute';
