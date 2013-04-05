@@ -1,45 +1,45 @@
 html, body, form {
-	width: 100%;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 h1 {
-	font-size: 1.2em;
-	padding: 5px;
-	margin: 0;
 	background: #fafafa;
+	font-size: 1.2em;
+	margin: 0;
+	padding: 5px;
 }
 
 input {
+	display: inline-block;
 	font-size: 1.1em;
 	-moz-box-sizing: border-box;
 	padding: 0.6em 0.4em;
 	width: 100%;
-	display: inline-block;
 }
 
 ul {
+	padding: 0;
 	list-style: none;
 	margin: 0;
-	padding: 0;
 }
 
-ul a {
-	font-size: 1.1em;
+#apis > li > a {
 	display: block;
+	font-size: 1.1em;
 	margin: 0.6em 0.4em;
 }
 
 #DEBUG {
-	color: #777;
 	border-bottom: 1px solid #aaa;
 	background: #fafafa;
-	width: 100%;
+	color: #777;
+	font-size: 0.8em;
 	max-height: 150px;
 	overflow: scroll;
-	font-size: 0.8em;
 	top: 0px;
+	width: 100%;
 }
 
 #DEBUG p {
@@ -51,28 +51,49 @@ ul a {
 }
 
 #apis {
-	width: 100%;
 	overflow: scroll;
+	width: 100%;
 }
 
-#apis li {
-	clear: both;
-	padding: 3px 5px;
+#apis dt {
 	border-top: 1px solid #eee;
+	clear: both;
+	cursor: pointer;
+	padding: 6px 5px;
 }
 
-#apis li.clickable {
+#apis .clickable {
 	background: #dfd;
 }
 
-#apis li.certified {
+#apis .certified {
 	color: #777;
 	background-color: #fafafa;
 }
 
+#apis .open {
+	border-top: 2px solid #ccc;
+	font-weight: bold;
+}
+
+#apis dd {
+	margin: 0;
+	padding: 5px;
+}
+
+#apis dd p {
+	margin: 5px 0;
+}
+
+#apis dd button.action {
+	margin: 5px 0;
+	padding: 6px;
+	width: 100%;
+}
+
 #apis span {
-	margin-left: 3px;
 	float: right;
+	margin-left: 3px;
 }
 
 #apis span.fail {
@@ -83,15 +104,27 @@ ul a {
 	color: green;
 }
 
-#apis li.notest {
+#apis dt.notest {
 	background: #ffd;
 }
 
-#apis li.fail {
+#apis dt.fail {
 	background: #fdd;
 }
 #reload {
-	width: 100%;
-	padding: 8px;
 	margin: 5px 0;
+	padding: 8px;
+	width: 100%;
+}
+.hidden {
+	display: none;
+}
+#apis .bugs li {
+	display: inline;
+}
+#apis .bugs li+li:before {
+	content: ", ";
+}
+#apis .bugs > li:before {
+	content: "";
 }
