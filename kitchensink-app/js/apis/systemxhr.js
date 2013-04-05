@@ -5,6 +5,8 @@ define(function(require) {
   return new API({
     id: 'systemxhr',
     name: 'System XHR',
+    description: 'Allows anonymous (no cookies) cross-origin XHR without the target site having CORS enabled.',
+    info: 'https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#Non-standard_properties',
     noPreparation: true,
     tests: [
       function(callback) {

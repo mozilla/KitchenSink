@@ -6,6 +6,7 @@ define(function(require) {
     id: 'tcpsocket',
     name: 'TCP Socket API',
     description: 'Low-level TCP socket API. Will also include SSL support.',
+    info: 'https://wiki.mozilla.org/WebAPI/Security/TCPSocket',
     bugs: [733573],
     isPrepared: function() {
       return ('TCPSocket' in window);

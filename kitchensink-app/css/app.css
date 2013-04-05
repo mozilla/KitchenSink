@@ -128,3 +128,7 @@ ul {
 #apis .bugs > li:before {
 	content: "";
 }
+#browser {
+	height: 1px;
+	border: 0;
+}

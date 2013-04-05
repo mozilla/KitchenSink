@@ -7,7 +7,7 @@ define(function(require) {
     name: 'Proximity sensor',
     description: 'Provides information about the distance of a nearby physical object using the proximity sensor of a device.',
     bugs: [738131],
-    info: 'http://www.w3.org/TR/2012/WD-proximity-20120712/',
+    info: 'http://www.w3.org/TR/proximity/',
     isPrepared: function() {
       return ('ondeviceproximity' in window);
     },

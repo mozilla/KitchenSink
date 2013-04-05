@@ -7,7 +7,7 @@ define(function(require) {
     name: 'Device Storage (sdcard)',
     description: 'Add/Read/Modify files stored on a central location on the device. For example the "pictures" folder on modern desktop platforms or the photo storage in mobile devices.',
     bugs: [717103],
-    info: 'https://wiki.mozilla.org/WebAPI/Security/DeviceStorage',
+    info: 'https://developer.mozilla.org/en-US/docs/WebAPI/Device_Storage',
     isPrepared: function() {
       return ('getDeviceStorage' in navigator);
     },

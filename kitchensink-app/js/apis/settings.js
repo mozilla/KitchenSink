@@ -12,18 +12,18 @@ define(function(require) {
     isPrepared: function() {
       return ('SettingsManager' in window && 'SettingsLock' in window);
     },
-    tests: [
-      /* 
-       * Check if SettingsManager isn't empty for privileged app
-       */
-      function(callback) {
-        var test = 'SettingsManager is empty';
+    // tests: [
+    //   /* 
+    //    * Check if SettingsManager isn't empty for privileged app
+    //    */
+    //   function(callback) {
+    //     var test = 'SettingsManager is empty';
 
-        if (Object.keys(window.SettingsManager).length > 0) {
-          return callback(false, test, 'keys found in object'); 
-        }
-        callback(true, test);
-      }
-    ]
+    //     if (Object.keys(window.SettingsManager).length > 0) {
+    //       return callback(false, test, 'keys found in object'); 
+    //     }
+    //     callback(true, test);
+    //   }
+    // ]
   });
 });

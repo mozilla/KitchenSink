@@ -5,7 +5,7 @@ define(function(require) {
   return new API({
     id: 'archive',
     name: 'Archive API',
-    description: 'Blob support for Zip file contents',
+    description: 'Read the content of an archive file through DOM File objects.',
     bugs: [772434],
     info: 'https://wiki.mozilla.org/WebAPI/ArchiveAPI',
     isPrepared: function() {

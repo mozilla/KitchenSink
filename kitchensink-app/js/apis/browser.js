@@ -3,11 +3,11 @@ define(function(require) {
   var API = require('./models').API;
 
   return new API({
-    id: 'browser',
+    id: 'browserapi',
     name: 'Browser API',
     description: 'Enables implementing a browser completely in web technologies.',
     bugs: [693515],
-    info: 'https://wiki.mozilla.org/WebAPI/BrowserAPI',
+    info: 'https://developer.mozilla.org/en-US/docs/DOM/Using_the_Browser_API',
     noPreparation: true,
     tests: [
       function(callback) {
@@ -15,8 +15,8 @@ define(function(require) {
         var failed = false;
         var fail = [];
         var methods = ['stop', 'reload', 'go', 'getScreenShot'];
-        $('body').append('<browser id="testBrowser">');
-        var browser = $('#testBrowser');
+        $('body').append('<iframe id="browser"></iframe>');
+        var browser = $('#browser');
 
         methods.forEach(function(method) {
           if (!(method in browser)) {

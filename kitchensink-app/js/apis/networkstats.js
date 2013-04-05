@@ -5,7 +5,7 @@ define(function(require) {
   return new API({
     id: 'networkstats',
     name: 'Network Stats API',
-    description: 'Monitor data usage and expose data to privileged apps',
+    description: 'Monitor data usage and expose data to privileged apps.',
     bugs: [746069],
     isCertified: true,
     isPrepared: function() {
