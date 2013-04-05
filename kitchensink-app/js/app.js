@@ -20,4 +20,19 @@ define(function(require) {
     // run tests if provided
     api.runTests();
   }
+
+  if ('MozActivity' in window) {
+    // change all links to webactivities
+    var viewUrl = function(event) {
+      event.stopPropagation();
+      new MozActivity({
+        name: 'view',
+        data: {
+            type: 'url', // Possibly text/html in future versions
+            url: event.target.href
+        }
+      });
+    };
+    $('a').on('click', viewUrl);
+  }
 });
