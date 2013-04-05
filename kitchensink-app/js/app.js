@@ -26,9 +26,9 @@ define(function(require) {
     var viewUrl = function(event) {
       event.stopPropagation();
       new MozActivity({
-        name: "view",
+        name: 'view',
         data: {
-            type: "url", // Possibly text/html in future versions
+            type: 'url', // Possibly text/html in future versions
             url: event.target.href
         }
       });

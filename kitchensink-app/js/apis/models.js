@@ -5,7 +5,6 @@
 define(function(require) {
   var prime = require('prime/index');
   var $ = require('zepto');
-  //var accordion = require('accordion');
   var log = require('logger');
 
   // definition of signs to display
@@ -97,7 +96,7 @@ define(function(require) {
         var bugsElement = this.contentElement.find('.bugs');
         this.bugs.forEach(function(bug) {
           bugsElement.append(
-            '<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id={bug}">{bug}'.format({bug: bug})
+            '<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id={bug}">{bug}</a></li>'.format({bug: bug})
           );
         });
       }
