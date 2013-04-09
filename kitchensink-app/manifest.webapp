@@ -47,9 +47,6 @@
     },
     "wifi-manage": {
       "description": "Testing"
-    },
-    "push": {
-      "description": "To receive notifications about the newest phone releases"
     }
   }
 }
