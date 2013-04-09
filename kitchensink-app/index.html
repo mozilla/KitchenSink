@@ -4,11 +4,17 @@
   <meta charset="UTF-8">
   <title>KitchenSink</title>
   <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/appbar.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <script type="text/javascript" src="js/lib/x-tag-core.js"></script>
+  <script type="text/javascript" src="js/lib/appbar.js"></script>
 </head>
 <body>
-  <div id="DEBUG"></div> 
-
-  <button id="reload">RELOAD</button>
+  <x-appbar>
+    <div id="header-settings">=</div>
+    <header>KitchenSink</header>
+    <div id="header-reload">r</div>
+  </x-appbar>
 
   <dl id="apis"></dl>
 

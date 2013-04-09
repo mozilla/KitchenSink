@@ -11,6 +11,5 @@ define(function(require) {
     // isPrepared: function() {
     //   return ('mozWifiManager' in navigator);
     // }
-    info: 'https://wiki.mozilla.org/WebAPI/Security/Wifi'
   });
 });
