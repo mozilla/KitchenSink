@@ -29,11 +29,11 @@ ul {
 #apis > dt > a {
 	display: block;
 	font-size: 1.1em;
-	margin: 0em 0.4em 0.6em;
+	margin: 0 0.4em 0.6em;
 }
 
 .error {
-	color: red;
+	color: #f00;
 }
 
 #apis {
