@@ -1,4 +1,6 @@
 define(function(require) {
+  var $ = require('elements');
+  var elements = require('utils').elements;
   var log = require('logger');
   var API = require('./models').API;
 
@@ -15,7 +17,7 @@ define(function(require) {
         var failed = false;
         var fail = [];
         var methods = ['stop', 'reload', 'go', 'getScreenShot'];
-        $('body').append('<iframe id="browser"></iframe>');
+        elements('<iframe id="browser"></iframe>').insert($('body'));
         var browser = $('#browser');
 
         methods.forEach(function(method) {

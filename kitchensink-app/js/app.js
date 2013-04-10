@@ -3,16 +3,23 @@
 
 define(function(require) {
 
-  var $ = require('zepto');
+  require('string'); // modifies String prototype
+  var $ = require('elements');
+  require('elements/events');       // used for .on()
+  require('elements/attributes');   // .html() in utils.js
+  require('elements/insertion');    // .insert() in logger and models.js
+  require('elements/traversal');    // $ searches elements using Slick
   var apis = require('./apis/index');
   var log = require('logger');
 
   // navigation
-  $('#reload').on('click', function() { window.location.reload(); });
+  $('#header-reload').on('click', function() { 
+    window.location.reload(); 
+  });
 
   for (var id in apis) {
     var api = apis[id];
-    // render <li> inside <ul id="apis">
+    // render <dt> and <dd> inside <dl id="apis">
     // assign action if provided
     api.render($('#apis'));
     // check if DOM is prepared

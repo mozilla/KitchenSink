@@ -1,5 +1,4 @@
 define(function(require) {
-  require('string'); // modifies String prototype
 
   var apis = [
     require('./webtelephony'),
