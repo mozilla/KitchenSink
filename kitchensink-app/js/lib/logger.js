@@ -1,14 +1,15 @@
 define(function(require) {
   // TODO: add ability to change the log level
 
-  var $ = require('zepto');
-  var debugElement = $('#DEBUG');
+  var $ = require('elements');
+  var elements = require('utils').elements;
 
-  var send = function(type, message, el) {
-    if (!el) {
-      el = debugElement;
-    }
-    el.append('<p class="' + type + '">' + type.toUpperCase() + ': ' + message + '</p>');
+  var send = function(type, message, element) {
+    elements('<p class="{type}">{Type}: {message}</p>'.format({
+      type: type,
+      Type: type.toUpperCase(),
+      message: message
+    })).insert(element);
   };
 
   var methods = {
