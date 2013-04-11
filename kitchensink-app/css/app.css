@@ -32,6 +32,10 @@ ul {
 	margin: 0 0.4em 0.6em;
 }
 
+#apis > :nth-child(4n - 1):not(.hidden) {
+	background: #f0f0f0;
+}
+
 .error {
 	color: #f00;
 }
@@ -41,26 +45,13 @@ ul {
 }
 
 #apis dt {
-	border-top: 1px solid #ccc;
 	clear: both;
 	cursor: pointer;
 	padding: 8px 5px;
 }
 
-#apis > dt:first-child {
-	border-top: 0px;
-}
-
-#apis dt+dt:before {
-}
-
-#apis .clickable {
-	background: #dfd;
-}
-
 #apis .certified {
 	color: #777;
-	background-color: #fafafa;
 }
 
 #apis .open {
@@ -75,6 +66,7 @@ ul {
 #apis dd {
 	margin: 0;
 	padding: 5px;
+	border-bottom: 1px solid #ccc;
 }
 
 #apis dd p {
@@ -92,14 +84,6 @@ ul {
 
 #apis span.success {
 	color: green;
-}
-
-#apis dt.notest {
-	background: #ffd;
-}
-
-#apis dt.fail {
-/* background: #fdd; */
 }
 
 #header-reload {
