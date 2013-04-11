@@ -1,0 +1,35 @@
+{
+  "name": "elements",
+  "description": "prime dom library",
+  "version": "0.1.0",
+  "license": "MIT (http://mootools.net/license.txt)",
+  "main": "./index.js",
+  "keywords": [
+    "dom",
+    "prime",
+    "html5"
+  ],
+  "homepage": "http://mootools.net",
+  "author": "Valerio Proietti <@kamicane> (http://mad4milk.net)",
+  "bugs": {
+    "url": "https://github.com/mootools/elements/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mootools/elements.git"
+  },
+  "dependencies": {
+    "prime": "0.1",
+    "slick": "1.10"
+  },
+  "devDependencies": {
+    "mocha": "1.8",
+    "mocha-phantomjs": "2.0",
+    "expect.js": "0.1",
+    "wrapup": "0.10",
+    "procs": "0.0.4"
+  },
+  "engines": {
+    "node": "*"
+  }
+}

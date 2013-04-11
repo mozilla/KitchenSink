@@ -1,0 +1,2753 @@
+info it worked if it ends with ok
+verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'wrapup', '-g' ]
+info using npm@1.1.4
+info using node@v0.6.19
+verbose config file /home/zalun/.npmrc
+verbose config file /usr/etc/npmrc
+verbose config file /usr/share/npm/npmrc
+silly exec /usr/bin/nodejs "/usr/share/npm/bin/npm-get-uid-gid.js" "nobody" 1000
+silly spawning [ '/usr/bin/nodejs',
+silly spawning   [ '/usr/share/npm/bin/npm-get-uid-gid.js', 'nobody', 1000 ],
+silly spawning   null ]
+silly output from getuid/gid {"uid":65534,"gid":1000}
+silly output from getuid/gid 
+verbose cache add [ 'wrapup', null ]
+silly cache add: name, spec, args [ undefined, 'wrapup', [ 'wrapup', null ] ]
+verbose parsed url { pathname: 'wrapup', path: 'wrapup', href: 'wrapup' }
+verbose addNamed [ 'wrapup', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'wrapup', '', false ]
+verbose raw, before any munging wrapup
+verbose url resolving [ 'https://registry.npmjs.org/', './wrapup' ]
+verbose url resolved https://registry.npmjs.org/wrapup
+http GET https://registry.npmjs.org/wrapup
+http 200 https://registry.npmjs.org/wrapup
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"5N6VO69XWQ37DFS42QCOBQO6F"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:00 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '96833' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/wrapup'
+verbose mkdir done: /home/zalun/.npm/wrapup 755
+silly name, range, hasData 2 [ 'wrapup', '', true ]
+silly versions [ 'wrapup',
+silly versions   [ '0.8.7',
+silly versions     '0.8.8',
+silly versions     '0.9.0',
+silly versions     '0.9.1',
+silly versions     '0.9.2',
+silly versions     '0.9.3',
+silly versions     '0.9.4',
+silly versions     '0.9.5',
+silly versions     '0.9.6',
+silly versions     '0.9.7',
+silly versions     '0.9.8',
+silly versions     '0.9.9',
+silly versions     '0.9.10',
+silly versions     '0.9.11',
+silly versions     '0.9.12',
+silly versions     '0.10.0',
+silly versions     '0.10.1',
+silly versions     '0.10.2',
+silly versions     '0.10.3',
+silly versions     '0.11.0',
+silly versions     '0.11.1',
+silly versions     '0.11.2',
+silly versions     '0.11.3' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: 'd6ddb36244d6b8f6521975d31f90faedb8f8e8cc',
+verbose bin dist     tarball: 'http://registry.npmjs.org/wrapup/-/wrapup-0.11.3.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/wrapup/-/wrapup-0.11.3.tgz',
+verbose addRemoteTarball   'd6ddb36244d6b8f6521975d31f90faedb8f8e8cc' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403'
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587157403-0.4142180606722832'
+verbose mkdir done: /tmp/npm-1365587157403/1365587157403-0.4142180606722832 755
+verbose fetch to /tmp/npm-1365587157403/1365587157403-0.4142180606722832/tmp.tgz
+http GET https://registry.npmjs.org/wrapup/-/wrapup-0.11.3.tgz
+http 200 https://registry.npmjs.org/wrapup/-/wrapup-0.11.3.tgz
+silly updated sha bytes 14571
+info shasum d6ddb36244d6b8f6521975d31f90faedb8f8e8cc
+info shasum /tmp/npm-1365587157403/1365587157403-0.4142180606722832/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm'
+verbose mkdir done: /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1365587157403/1365587157403-0.4142180606722832/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/license.txt
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/README.md
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/.travis.yml
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/.npmignore
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/.jshintrc
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/test.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/includes
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/includes/browser-wrapper.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/includes/amd-module.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/includes/browser-named.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/includes/var-named.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/includes/browser-nameless.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/includes/browser-module.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/bin
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/bin/wrup.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/lib
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/lib/util.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/lib/errors.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/lib/main.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/lib/wrapup.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/lib/output
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/lib/output/amd.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/lib/output/browser.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/lib/output/index.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/lib/output/graph.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/__amd
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/__amd/test
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/__amd/test/fixtures
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/__amd/test/fixtures/up.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/__amd/test/fixtures/e.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package/__amd/test/fixtures/up1.js
+verbose gunzed /tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package
+verbose rm'ed /tmp/npm-1365587157403/1365587157403-0.4142180606722832/package
+verbose renamed [ '/tmp/npm-1365587157403/1365587157403-0.4142180606722832/___package.npm/package',
+verbose renamed   '/tmp/npm-1365587157403/1365587157403-0.4142180606722832/package' ]
+verbose caching /tmp/npm-1365587157403/1365587157403-0.4142180606722832/package/package.json
+verbose loadDefaults wrapup@0.11.3
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1365587157403/1365587157403-0.4142180606722832/package/package.json
+verbose pack /tmp/npm-1365587157403/1365587157403-0.4142180606722832/package
+verbose pack /tmp/npm-1365587157403/1365587157403-0.4142180606722832/package /home/zalun/.npm/wrapup/0.11.3/package.tgz
+silly makeList /tmp/npm-1365587157403/1365587157403-0.4142180606722832/package
+silly dir, dirLen [ '/tmp/npm-1365587157403/1365587157403-0.4142180606722832/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/zalun/.npm/wrapup/0.11.3/package.tgz
+verbose parent /tmp/npm-1365587157403/1365587157403-0.4142180606722832/package
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/wrapup/0.11.3/___package.npm'
+verbose mkdir done: /home/zalun/.npm/wrapup/0.11.3/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/zalun/.npm/wrapup/0.11.3/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/.travis.yml
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/README.md
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/package.json
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/.jshintrc
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/license.txt
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/test.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/.npmignore
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/bin
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/bin/wrup.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/includes
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/includes/browser-wrapper.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/includes/var-named.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/includes/browser-module.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/includes/browser-named.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/includes/browser-nameless.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/includes/amd-module.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/lib
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/lib/util.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/lib/main.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/lib/errors.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/lib/wrapup.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/lib/output
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/lib/output/index.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/lib/output/amd.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/lib/output/browser.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/lib/output/graph.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/__amd
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/__amd/test
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/__amd/test/fixtures
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/__amd/test/fixtures/up1.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/__amd/test/fixtures/up.js
+silly asyncMap in gTP /home/zalun/.npm/wrapup/0.11.3/___package.npm/package/__amd/test/fixtures/e.js
+verbose gunzed /home/zalun/.npm/wrapup/0.11.3/___package.npm/package
+verbose rm'ed /home/zalun/.npm/wrapup/0.11.3/package
+verbose renamed [ '/home/zalun/.npm/wrapup/0.11.3/___package.npm/package',
+verbose renamed   '/home/zalun/.npm/wrapup/0.11.3/package' ]
+verbose caching /home/zalun/.npm/wrapup/0.11.3/package/package.json
+verbose loadDefaults wrapup@0.11.3
+silly updated sha bytes 14770
+info shasum b2cd66d2f2f13121c738ba5ed90c4308d7e1a119
+info shasum /home/zalun/.npm/wrapup/0.11.3/package.tgz
+verbose from cache /home/zalun/.npm/wrapup/0.11.3/package/package.json
+verbose chmod /home/zalun/.npm/wrapup/0.11.3/package.tgz 644
+verbose chown [ '/home/zalun/.npm/wrapup/0.11.3/package.tgz', 1000, 1000 ]
+silly resolved [ { name: 'wrapup',
+silly resolved     description: 'wraps up node packages for web development',
+silly resolved     version: '0.11.3',
+silly resolved     license: 'MIT (http://mootools.net/license.txt)',
+silly resolved     main: './lib/main.js',
+silly resolved     bin: { wrup: './bin/wrup.js' },
+silly resolved     keywords: 
+silly resolved      [ 'wrap',
+silly resolved        'wrapper',
+silly resolved        'wrapup',
+silly resolved        'wrup',
+silly resolved        'packager',
+silly resolved        'browser',
+silly resolved        'package manager' ],
+silly resolved     homepage: 'http://github.com/mootools/wrapup',
+silly resolved     author: 
+silly resolved      { name: 'Valerio Proietti',
+silly resolved        email: '@kamicane',
+silly resolved        url: 'http://mad4milk.net' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'Arian Stolwijk',
+silly resolved          email: '@arian',
+silly resolved          url: 'http://aryweb.nl' } ],
+silly resolved     bugs: { url: 'https://github.com/mootools/wrapup/issues' },
+silly resolved     repository: { type: 'git', url: 'git://github.com/mootools/wrapup.git' },
+silly resolved     dependencies: 
+silly resolved      { async: '0.1',
+silly resolved        colors: '*',
+silly resolved        clint: '0.0.6',
+silly resolved        prime: '0.1',
+silly resolved        esprima: '1.0',
+silly resolved        escodegen: '0.0.15',
+silly resolved        esmangle: '0.0.9',
+silly resolved        graphviz: '0.0.x',
+silly resolved        mkdirp: '0.3' },
+silly resolved     devDependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '>=0.6' },
+silly resolved     scripts: { test: 'node ./test/run.js' },
+silly resolved     _id: 'wrapup@0.11.3',
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: 'b2cd66d2f2f13121c738ba5ed90c4308d7e1a119' },
+silly resolved     _from: 'wrapup' } ]
+info into /usr/local/lib wrapup@0.11.3
+info installOne wrapup@0.11.3
+verbose from cache /home/zalun/.npm/wrapup/0.11.3/package/package.json
+info unbuild /usr/local/lib/node_modules/wrapup
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/___wrapup.npm'
+verbose mkdir done: /usr/local/lib/node_modules/___wrapup.npm 755
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/wrapup
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/license.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/README.md
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/.travis.yml
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/.npmignore
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/.jshintrc
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/includes
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/includes/browser-wrapper.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/includes/amd-module.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/includes/browser-named.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/includes/var-named.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/includes/browser-nameless.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/includes/browser-module.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/bin
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/bin/wrup.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/lib
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/lib/util.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/lib/errors.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/lib/main.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/lib/wrapup.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/lib/output
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/lib/output/browser.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/lib/output/amd.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/lib/output/index.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/lib/output/graph.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/__amd
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/__amd/test
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/__amd/test/fixtures
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/__amd/test/fixtures/up.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/__amd/test/fixtures/e.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___wrapup.npm/package/__amd/test/fixtures/up1.js
+verbose gunzed /usr/local/lib/node_modules/___wrapup.npm/package
+verbose rm'ed /usr/local/lib/node_modules/wrapup
+verbose renamed [ '/usr/local/lib/node_modules/___wrapup.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/wrapup' ]
+verbose caching /usr/local/lib/node_modules/wrapup/package.json
+verbose loadDefaults wrapup@0.11.3
+info preinstall wrapup@0.11.3
+verbose from cache /usr/local/lib/node_modules/wrapup/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/wrapup/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'async@0.1', null ]
+silly cache add: name, spec, args [ undefined, 'async@0.1', [ 'async@0.1', null ] ]
+verbose parsed url { pathname: 'async@0.1', path: 'async@0.1', href: 'async@0.1' }
+silly cache add: name, spec, args [ 'async', '0.1', [ 'async', '0.1' ] ]
+verbose parsed url { pathname: '0.1', path: '0.1', href: '0.1' }
+verbose addNamed [ 'async', '0.1' ]
+verbose addNamed [ null, '>=0.1.0- <0.2.0-' ]
+silly name, range, hasData [ 'async', '>=0.1.0- <0.2.0-', false ]
+verbose cache add [ 'colors@*', null ]
+silly cache add: name, spec, args [ undefined, 'colors@*', [ 'colors@*', null ] ]
+verbose parsed url { pathname: 'colors@*', path: 'colors@*', href: 'colors@*' }
+silly cache add: name, spec, args [ 'colors', '*', [ 'colors', '*' ] ]
+verbose parsed url { pathname: '*', path: '*', href: '*' }
+verbose addNamed [ 'colors', '*' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'colors', '', false ]
+verbose raw, before any munging async
+verbose url resolving [ 'https://registry.npmjs.org/', './async' ]
+verbose url resolved https://registry.npmjs.org/async
+http GET https://registry.npmjs.org/async
+verbose raw, before any munging colors
+verbose url resolving [ 'https://registry.npmjs.org/', './colors' ]
+verbose url resolved https://registry.npmjs.org/colors
+http GET https://registry.npmjs.org/colors
+verbose cache add [ 'clint@0.0.6', null ]
+silly cache add: name, spec, args [ undefined, 'clint@0.0.6', [ 'clint@0.0.6', null ] ]
+verbose parsed url { pathname: 'clint@0.0.6',
+verbose parsed url   path: 'clint@0.0.6',
+verbose parsed url   href: 'clint@0.0.6' }
+silly cache add: name, spec, args [ 'clint', '0.0.6', [ 'clint', '0.0.6' ] ]
+verbose parsed url { pathname: '0.0.6', path: '0.0.6', href: '0.0.6' }
+verbose addNamed [ 'clint', '0.0.6' ]
+verbose addNamed [ '0.0.6', '0.0.6' ]
+verbose cache add [ 'prime@0.1', null ]
+silly cache add: name, spec, args [ undefined, 'prime@0.1', [ 'prime@0.1', null ] ]
+verbose parsed url { pathname: 'prime@0.1', path: 'prime@0.1', href: 'prime@0.1' }
+silly cache add: name, spec, args [ 'prime', '0.1', [ 'prime', '0.1' ] ]
+verbose parsed url { pathname: '0.1', path: '0.1', href: '0.1' }
+verbose addNamed [ 'prime', '0.1' ]
+verbose addNamed [ null, '>=0.1.0- <0.2.0-' ]
+silly name, range, hasData [ 'prime', '>=0.1.0- <0.2.0-', false ]
+verbose cache add [ 'esprima@1.0', null ]
+silly cache add: name, spec, args [ undefined, 'esprima@1.0', [ 'esprima@1.0', null ] ]
+verbose parsed url { pathname: 'esprima@1.0',
+verbose parsed url   path: 'esprima@1.0',
+verbose parsed url   href: 'esprima@1.0' }
+silly cache add: name, spec, args [ 'esprima', '1.0', [ 'esprima', '1.0' ] ]
+verbose parsed url { pathname: '1.0', path: '1.0', href: '1.0' }
+verbose addNamed [ 'esprima', '1.0' ]
+verbose addNamed [ null, '>=1.0.0- <1.1.0-' ]
+silly name, range, hasData [ 'esprima', '>=1.0.0- <1.1.0-', false ]
+verbose raw, before any munging clint/0.0.6
+verbose url resolving [ 'https://registry.npmjs.org/', './clint/0.0.6' ]
+verbose url resolved https://registry.npmjs.org/clint/0.0.6
+http GET https://registry.npmjs.org/clint/0.0.6
+verbose raw, before any munging esprima
+verbose url resolving [ 'https://registry.npmjs.org/', './esprima' ]
+verbose url resolved https://registry.npmjs.org/esprima
+http GET https://registry.npmjs.org/esprima
+verbose cache add [ 'escodegen@0.0.15', null ]
+silly cache add: name, spec, args [ undefined, 'escodegen@0.0.15', [ 'escodegen@0.0.15', null ] ]
+verbose parsed url { pathname: 'escodegen@0.0.15',
+verbose parsed url   path: 'escodegen@0.0.15',
+verbose parsed url   href: 'escodegen@0.0.15' }
+silly cache add: name, spec, args [ 'escodegen', '0.0.15', [ 'escodegen', '0.0.15' ] ]
+verbose parsed url { pathname: '0.0.15', path: '0.0.15', href: '0.0.15' }
+verbose addNamed [ 'escodegen', '0.0.15' ]
+verbose addNamed [ '0.0.15', '0.0.15' ]
+verbose cache add [ 'esmangle@0.0.9', null ]
+silly cache add: name, spec, args [ undefined, 'esmangle@0.0.9', [ 'esmangle@0.0.9', null ] ]
+verbose parsed url { pathname: 'esmangle@0.0.9',
+verbose parsed url   path: 'esmangle@0.0.9',
+verbose parsed url   href: 'esmangle@0.0.9' }
+silly cache add: name, spec, args [ 'esmangle', '0.0.9', [ 'esmangle', '0.0.9' ] ]
+verbose parsed url { pathname: '0.0.9', path: '0.0.9', href: '0.0.9' }
+verbose addNamed [ 'esmangle', '0.0.9' ]
+verbose addNamed [ '0.0.9', '0.0.9' ]
+verbose cache add [ 'graphviz@0.0.x', null ]
+silly cache add: name, spec, args [ undefined, 'graphviz@0.0.x', [ 'graphviz@0.0.x', null ] ]
+verbose parsed url { pathname: 'graphviz@0.0.x',
+verbose parsed url   path: 'graphviz@0.0.x',
+verbose parsed url   href: 'graphviz@0.0.x' }
+silly cache add: name, spec, args [ 'graphviz', '0.0.x', [ 'graphviz', '0.0.x' ] ]
+verbose parsed url { pathname: '0.0.x', path: '0.0.x', href: '0.0.x' }
+verbose addNamed [ 'graphviz', '0.0.x' ]
+verbose addNamed [ null, '>=0.0.0- <0.1.0-' ]
+silly name, range, hasData [ 'graphviz', '>=0.0.0- <0.1.0-', false ]
+verbose cache add [ 'mkdirp@0.3', null ]
+silly cache add: name, spec, args [ undefined, 'mkdirp@0.3', [ 'mkdirp@0.3', null ] ]
+verbose parsed url { pathname: 'mkdirp@0.3',
+verbose parsed url   path: 'mkdirp@0.3',
+verbose parsed url   href: 'mkdirp@0.3' }
+silly cache add: name, spec, args [ 'mkdirp', '0.3', [ 'mkdirp', '0.3' ] ]
+verbose parsed url { pathname: '0.3', path: '0.3', href: '0.3' }
+verbose addNamed [ 'mkdirp', '0.3' ]
+verbose addNamed [ null, '>=0.3.0- <0.4.0-' ]
+silly name, range, hasData [ 'mkdirp', '>=0.3.0- <0.4.0-', false ]
+verbose raw, before any munging escodegen/0.0.15
+verbose url resolving [ 'https://registry.npmjs.org/', './escodegen/0.0.15' ]
+verbose url resolved https://registry.npmjs.org/escodegen/0.0.15
+http GET https://registry.npmjs.org/escodegen/0.0.15
+verbose raw, before any munging esmangle/0.0.9
+verbose url resolving [ 'https://registry.npmjs.org/', './esmangle/0.0.9' ]
+verbose url resolved https://registry.npmjs.org/esmangle/0.0.9
+http GET https://registry.npmjs.org/esmangle/0.0.9
+verbose raw, before any munging graphviz
+verbose url resolving [ 'https://registry.npmjs.org/', './graphviz' ]
+verbose url resolved https://registry.npmjs.org/graphviz
+http GET https://registry.npmjs.org/graphviz
+verbose raw, before any munging mkdirp
+verbose url resolving [ 'https://registry.npmjs.org/', './mkdirp' ]
+verbose url resolved https://registry.npmjs.org/mkdirp
+http GET https://registry.npmjs.org/mkdirp
+verbose raw, before any munging prime
+verbose url resolving [ 'https://registry.npmjs.org/', './prime' ]
+verbose url resolved https://registry.npmjs.org/prime
+verbose etag "1D0200QV8OPQ2DCH4EYZEVIHN"
+http GET https://registry.npmjs.org/prime
+http 200 https://registry.npmjs.org/esprima
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"C5L770Y2HXRSZP0L2M4XRZIVL"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:15 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '33691' } ]
+verbose mkdir done: /home/zalun/.npm/esprima 755
+silly name, range, hasData 2 [ 'esprima', '>=1.0.0- <1.1.0-', true ]
+silly versions [ 'esprima',
+silly versions   [ '0.7.0',
+silly versions     '0.8.0',
+silly versions     '0.8.1',
+silly versions     '0.8.2',
+silly versions     '0.9.0',
+silly versions     '0.9.1',
+silly versions     '0.9.2',
+silly versions     '0.9.3',
+silly versions     '0.9.4',
+silly versions     '0.9.5',
+silly versions     '0.9.6',
+silly versions     '0.9.7',
+silly versions     '0.9.8',
+silly versions     '0.9.9',
+silly versions     '1.0.0',
+silly versions     '1.0.1',
+silly versions     '1.0.2' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: '8039bf9ceac4d9d2c15f623264fb292b5502ceaf',
+verbose bin dist     tarball: 'http://registry.npmjs.org/esprima/-/esprima-1.0.2.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/esprima/-/esprima-1.0.2.tgz',
+verbose addRemoteTarball   '8039bf9ceac4d9d2c15f623264fb292b5502ceaf' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587172288-0.9148056039121002'
+verbose mkdir done: /tmp/npm-1365587157403/1365587172288-0.9148056039121002 755
+verbose fetch to /tmp/npm-1365587157403/1365587172288-0.9148056039121002/tmp.tgz
+http GET https://registry.npmjs.org/esprima/-/esprima-1.0.2.tgz
+http 200 https://registry.npmjs.org/clint/0.0.6
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"9AXBMKEM2XZSLI01GIBDL1714"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:16 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '991' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/clint'
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/clint/0.0.6'
+verbose mkdir done: /home/zalun/.npm/clint/0.0.6 755
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: 'e388a653dc87eedec8374f0ddb76b709b46e61f1',
+verbose bin dist     tarball: 'http://registry.npmjs.org/clint/-/clint-0.0.6.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/clint/-/clint-0.0.6.tgz',
+verbose addRemoteTarball   'e388a653dc87eedec8374f0ddb76b709b46e61f1' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587172423-0.4746818277053535'
+verbose mkdir done: /tmp/npm-1365587157403/1365587172423-0.4746818277053535 755
+verbose fetch to /tmp/npm-1365587157403/1365587172423-0.4746818277053535/tmp.tgz
+http GET https://registry.npmjs.org/clint/-/clint-0.0.6.tgz
+http 200 https://registry.npmjs.org/colors
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"KCK6UZL5VFB9DV4DOIXHQVKT"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:16 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '4746' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/colors'
+verbose mkdir done: /home/zalun/.npm/colors 755
+silly name, range, hasData 2 [ 'colors', '', true ]
+silly versions [ 'colors', [ '0.3.0', '0.5.0', '0.5.1', '0.6.0', '0.6.0-1' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: '6dbb68ceb8bc60f2b313dcc5ce1599f06d19e67a',
+verbose bin dist     tarball: 'http://registry.npmjs.org/colors/-/colors-0.6.0-1.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/colors/-/colors-0.6.0-1.tgz',
+verbose addRemoteTarball   '6dbb68ceb8bc60f2b313dcc5ce1599f06d19e67a' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587172616-0.3786481819115579'
+verbose mkdir done: /tmp/npm-1365587157403/1365587172616-0.3786481819115579 755
+verbose fetch to /tmp/npm-1365587157403/1365587172616-0.3786481819115579/tmp.tgz
+http GET https://registry.npmjs.org/colors/-/colors-0.6.0-1.tgz
+http 200 https://registry.npmjs.org/esmangle/0.0.9
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"4THXXYAVEGZIEGB1JJ7U5CFI9"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:16 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '4315' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/esmangle'
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/esmangle/0.0.9'
+verbose mkdir done: /home/zalun/.npm/esmangle/0.0.9 755
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: '2134658cb63c92694c75fd1fec41abb6932aeaf1',
+verbose bin dist     tarball: 'http://registry.npmjs.org/esmangle/-/esmangle-0.0.9.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/esmangle/-/esmangle-0.0.9.tgz',
+verbose addRemoteTarball   '2134658cb63c92694c75fd1fec41abb6932aeaf1' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587172649-0.547750081634149'
+verbose mkdir done: /tmp/npm-1365587157403/1365587172649-0.547750081634149 755
+verbose fetch to /tmp/npm-1365587157403/1365587172649-0.547750081634149/tmp.tgz
+http GET https://registry.npmjs.org/esmangle/-/esmangle-0.0.9.tgz
+http 200 https://registry.npmjs.org/graphviz
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"3IZJ1D1JCKAMFZ57PF5D4GCRL"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:16 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '7149' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/graphviz'
+verbose mkdir done: /home/zalun/.npm/graphviz 755
+silly name, range, hasData 2 [ 'graphviz', '>=0.0.0- <0.1.0-', true ]
+silly versions [ 'graphviz',
+silly versions   [ '0.0.2', '0.0.3', '0.0.5', '0.0.6', '0.0.7', '0.0.8' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: 'e599e40733ef80e1653bfe89a5f031ecf2aa4aaa',
+verbose bin dist     tarball: 'http://registry.npmjs.org/graphviz/-/graphviz-0.0.8.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/graphviz/-/graphviz-0.0.8.tgz',
+verbose addRemoteTarball   'e599e40733ef80e1653bfe89a5f031ecf2aa4aaa' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587172776-0.9877726512495428'
+verbose mkdir done: /tmp/npm-1365587157403/1365587172776-0.9877726512495428 755
+verbose fetch to /tmp/npm-1365587157403/1365587172776-0.9877726512495428/tmp.tgz
+http GET https://registry.npmjs.org/graphviz/-/graphviz-0.0.8.tgz
+http 304 https://registry.npmjs.org/prime
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"1D0200QV8OPQ2DCH4EYZEVIHN"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:16 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag prime from cache
+silly name, range, hasData 2 [ 'prime', '>=0.1.0- <0.2.0-', true ]
+silly versions [ 'prime',
+silly versions   [ '0.0.1-alpha',
+silly versions     '0.0.2-alpha',
+silly versions     '0.0.3-alpha',
+silly versions     '0.0.4-alpha',
+silly versions     '0.0.5-alpha',
+silly versions     '0.0.6',
+silly versions     '0.1.0' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: 'd8eb5f4a3cbb06bb7919c01bf003581632279939',
+verbose bin dist     tarball: 'http://registry.npmjs.org/prime/-/prime-0.1.0.tgz' } ]
+verbose caching /home/zalun/.npm/prime/0.1.0/package/package.json
+verbose loadDefaults prime@0.1.0
+http 200 https://registry.npmjs.org/esprima/-/esprima-1.0.2.tgz
+http 200 https://registry.npmjs.org/mkdirp
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"4LI448CFBSCG3XUYU69RZGXOM"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:16 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '17863' } ]
+http 200 https://registry.npmjs.org/clint/-/clint-0.0.6.tgz
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/mkdirp'
+verbose mkdir done: /home/zalun/.npm/mkdirp 755
+silly name, range, hasData 2 [ 'mkdirp', '>=0.3.0- <0.4.0-', true ]
+silly versions [ 'mkdirp',
+silly versions   [ '0.0.1',
+silly versions     '0.0.2',
+silly versions     '0.0.3',
+silly versions     '0.0.4',
+silly versions     '0.0.5',
+silly versions     '0.0.6',
+silly versions     '0.0.7',
+silly versions     '0.1.0',
+silly versions     '0.2.0',
+silly versions     '0.2.1',
+silly versions     '0.2.2',
+silly versions     '0.3.0',
+silly versions     '0.3.1',
+silly versions     '0.3.2',
+silly versions     '0.3.3',
+silly versions     '0.3.4',
+silly versions     '0.3.5' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: 'de3e5f8961c88c787ee1368df849ac4413eca8d7',
+verbose bin dist     tarball: 'http://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz',
+verbose addRemoteTarball   'de3e5f8961c88c787ee1368df849ac4413eca8d7' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587173046-0.5769128131214529'
+verbose mkdir done: /tmp/npm-1365587157403/1365587173046-0.5769128131214529 755
+verbose fetch to /tmp/npm-1365587157403/1365587173046-0.5769128131214529/tmp.tgz
+http GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+silly updated sha bytes 1530
+info shasum e388a653dc87eedec8374f0ddb76b709b46e61f1
+info shasum /tmp/npm-1365587157403/1365587172423-0.4746818277053535/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587172423-0.4746818277053535/___package.npm'
+verbose mkdir done: /tmp/npm-1365587157403/1365587172423-0.4746818277053535/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1365587157403/1365587172423-0.4746818277053535/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172423-0.4746818277053535/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172423-0.4746818277053535/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172423-0.4746818277053535/___package.npm/package/.npmignore
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172423-0.4746818277053535/___package.npm/package/clint.js
+verbose gunzed /tmp/npm-1365587157403/1365587172423-0.4746818277053535/___package.npm/package
+verbose rm'ed /tmp/npm-1365587157403/1365587172423-0.4746818277053535/package
+verbose renamed [ '/tmp/npm-1365587157403/1365587172423-0.4746818277053535/___package.npm/package',
+verbose renamed   '/tmp/npm-1365587157403/1365587172423-0.4746818277053535/package' ]
+verbose caching /tmp/npm-1365587157403/1365587172423-0.4746818277053535/package/package.json
+verbose loadDefaults clint@0.0.6
+http 200 https://registry.npmjs.org/colors/-/colors-0.6.0-1.tgz
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1365587157403/1365587172423-0.4746818277053535/package/package.json
+verbose pack /tmp/npm-1365587157403/1365587172423-0.4746818277053535/package
+verbose pack /tmp/npm-1365587157403/1365587172423-0.4746818277053535/package /home/zalun/.npm/clint/0.0.6/package.tgz
+silly makeList /tmp/npm-1365587157403/1365587172423-0.4746818277053535/package
+silly dir, dirLen [ '/tmp/npm-1365587157403/1365587172423-0.4746818277053535/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/zalun/.npm/clint/0.0.6/package.tgz
+verbose parent /tmp/npm-1365587157403/1365587172423-0.4746818277053535/package
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/clint/0.0.6/___package.npm'
+verbose mkdir done: /home/zalun/.npm/clint/0.0.6/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/zalun/.npm/clint/0.0.6/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/zalun/.npm/clint/0.0.6/___package.npm/package
+silly asyncMap in gTP /home/zalun/.npm/clint/0.0.6/___package.npm/package/clint.js
+silly asyncMap in gTP /home/zalun/.npm/clint/0.0.6/___package.npm/package/package.json
+silly asyncMap in gTP /home/zalun/.npm/clint/0.0.6/___package.npm/package/.npmignore
+verbose gunzed /home/zalun/.npm/clint/0.0.6/___package.npm/package
+verbose rm'ed /home/zalun/.npm/clint/0.0.6/package
+verbose renamed [ '/home/zalun/.npm/clint/0.0.6/___package.npm/package',
+verbose renamed   '/home/zalun/.npm/clint/0.0.6/package' ]
+verbose caching /home/zalun/.npm/clint/0.0.6/package/package.json
+verbose loadDefaults clint@0.0.6
+silly updated sha bytes 1532
+info shasum 819f21aee1663b0ffdf93c1a0d1756fd2ac58b3b
+info shasum /home/zalun/.npm/clint/0.0.6/package.tgz
+verbose from cache /home/zalun/.npm/clint/0.0.6/package/package.json
+verbose chmod /home/zalun/.npm/clint/0.0.6/package.tgz 644
+verbose chown [ '/home/zalun/.npm/clint/0.0.6/package.tgz', 1000, 1000 ]
+http 200 https://registry.npmjs.org/esmangle/-/esmangle-0.0.9.tgz
+silly updated sha bytes 10240
+info shasum 6dbb68ceb8bc60f2b313dcc5ce1599f06d19e67a
+info shasum /tmp/npm-1365587157403/1365587172616-0.3786481819115579/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587172616-0.3786481819115579/___package.npm'
+verbose mkdir done: /tmp/npm-1365587157403/1365587172616-0.3786481819115579/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1365587157403/1365587172616-0.3786481819115579/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172616-0.3786481819115579/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172616-0.3786481819115579/___package.npm/package/colors.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172616-0.3786481819115579/___package.npm/package/ReadMe.md
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172616-0.3786481819115579/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172616-0.3786481819115579/___package.npm/package/example.html
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172616-0.3786481819115579/___package.npm/package/example.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172616-0.3786481819115579/___package.npm/package/MIT-LICENSE.txt
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172616-0.3786481819115579/___package.npm/package/test.js
+verbose gunzed /tmp/npm-1365587157403/1365587172616-0.3786481819115579/___package.npm/package
+verbose rm'ed /tmp/npm-1365587157403/1365587172616-0.3786481819115579/package
+verbose renamed [ '/tmp/npm-1365587157403/1365587172616-0.3786481819115579/___package.npm/package',
+verbose renamed   '/tmp/npm-1365587157403/1365587172616-0.3786481819115579/package' ]
+verbose caching /tmp/npm-1365587157403/1365587172616-0.3786481819115579/package/package.json
+verbose loadDefaults colors@0.6.0-1
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1365587157403/1365587172616-0.3786481819115579/package/package.json
+verbose pack /tmp/npm-1365587157403/1365587172616-0.3786481819115579/package
+verbose pack /tmp/npm-1365587157403/1365587172616-0.3786481819115579/package /home/zalun/.npm/colors/0.6.0-1/package.tgz
+silly makeList /tmp/npm-1365587157403/1365587172616-0.3786481819115579/package
+silly dir, dirLen [ '/tmp/npm-1365587157403/1365587172616-0.3786481819115579/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/zalun/.npm/colors/0.6.0-1/package.tgz
+verbose parent /tmp/npm-1365587157403/1365587172616-0.3786481819115579/package
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/colors/0.6.0-1/___package.npm'
+verbose mkdir done: /home/zalun/.npm/colors/0.6.0-1/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/zalun/.npm/colors/0.6.0-1/package
+silly gunzTarPerm modes [ '755', '644' ]
+http 200 https://registry.npmjs.org/async
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"CVQO4RK6OH9PWHFFSND22FN3T"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:15 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '585464' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/async'
+verbose mkdir done: /home/zalun/.npm/async 755
+silly name, range, hasData 2 [ 'async', '>=0.1.0- <0.2.0-', true ]
+silly versions [ 'async',
+silly versions   [ '0.1.0',
+silly versions     '0.1.1',
+silly versions     '0.1.2',
+silly versions     '0.1.3',
+silly versions     '0.1.4',
+silly versions     '0.1.5',
+silly versions     '0.1.6',
+silly versions     '0.1.7',
+silly versions     '0.1.8',
+silly versions     '0.1.9',
+silly versions     '0.1.10',
+silly versions     '0.1.11',
+silly versions     '0.1.12',
+silly versions     '0.1.13',
+silly versions     '0.1.14',
+silly versions     '0.1.15',
+silly versions     '0.1.16',
+silly versions     '0.1.17',
+silly versions     '0.1.18',
+silly versions     '0.1.19',
+silly versions     '0.1.20',
+silly versions     '0.1.21',
+silly versions     '0.1.22',
+silly versions     '0.2.0',
+silly versions     '0.2.1',
+silly versions     '0.2.2',
+silly versions     '0.2.3',
+silly versions     '0.2.4',
+silly versions     '0.2.5',
+silly versions     '0.2.6',
+silly versions     '0.2.7' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: '0fc1aaa088a0e3ef0ebe2d8831bab0dcf8845061',
+verbose bin dist     tarball: 'http://registry.npmjs.org/async/-/async-0.1.22.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/async/-/async-0.1.22.tgz',
+verbose addRemoteTarball   '0fc1aaa088a0e3ef0ebe2d8831bab0dcf8845061' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587173743-0.49410424032248557'
+verbose mkdir done: /tmp/npm-1365587157403/1365587173743-0.49410424032248557 755
+verbose fetch to /tmp/npm-1365587157403/1365587173743-0.49410424032248557/tmp.tgz
+http GET https://registry.npmjs.org/async/-/async-0.1.22.tgz
+http 200 https://registry.npmjs.org/graphviz/-/graphviz-0.0.8.tgz
+silly afterUntar ok
+silly asyncMap in gTP /home/zalun/.npm/colors/0.6.0-1/___package.npm/package
+silly asyncMap in gTP /home/zalun/.npm/colors/0.6.0-1/___package.npm/package/colors.js
+silly asyncMap in gTP /home/zalun/.npm/colors/0.6.0-1/___package.npm/package/MIT-LICENSE.txt
+silly asyncMap in gTP /home/zalun/.npm/colors/0.6.0-1/___package.npm/package/ReadMe.md
+silly asyncMap in gTP /home/zalun/.npm/colors/0.6.0-1/___package.npm/package/example.html
+silly asyncMap in gTP /home/zalun/.npm/colors/0.6.0-1/___package.npm/package/example.js
+silly asyncMap in gTP /home/zalun/.npm/colors/0.6.0-1/___package.npm/package/package.json
+silly asyncMap in gTP /home/zalun/.npm/colors/0.6.0-1/___package.npm/package/test.js
+verbose gunzed /home/zalun/.npm/colors/0.6.0-1/___package.npm/package
+verbose rm'ed /home/zalun/.npm/colors/0.6.0-1/package
+verbose renamed [ '/home/zalun/.npm/colors/0.6.0-1/___package.npm/package',
+verbose renamed   '/home/zalun/.npm/colors/0.6.0-1/package' ]
+verbose caching /home/zalun/.npm/colors/0.6.0-1/package/package.json
+verbose loadDefaults colors@0.6.0-1
+silly updated sha bytes 5388
+info shasum bacb0a53ba3a3bf5b37f9398c0e69967fd2fbbcd
+info shasum /home/zalun/.npm/colors/0.6.0-1/package.tgz
+verbose from cache /home/zalun/.npm/colors/0.6.0-1/package/package.json
+verbose chmod /home/zalun/.npm/colors/0.6.0-1/package.tgz 644
+verbose chown [ '/home/zalun/.npm/colors/0.6.0-1/package.tgz', 1000, 1000 ]
+http 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 26803
+info shasum 8039bf9ceac4d9d2c15f623264fb292b5502ceaf
+info shasum /tmp/npm-1365587157403/1365587172288-0.9148056039121002/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm'
+verbose mkdir done: /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1365587157403/1365587172288-0.9148056039121002/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 2054
+info shasum 2134658cb63c92694c75fd1fec41abb6932aeaf1
+info shasum /tmp/npm-1365587157403/1365587172649-0.547750081634149/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm'
+verbose mkdir done: /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1365587157403/1365587172649-0.547750081634149/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly updated sha bytes 4162
+info shasum de3e5f8961c88c787ee1368df849ac4413eca8d7
+info shasum /tmp/npm-1365587157403/1365587173046-0.5769128131214529/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm'
+verbose mkdir done: /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1365587157403/1365587173046-0.5769128131214529/package
+silly gunzTarPerm modes [ '755', '644' ]
+http 200 https://registry.npmjs.org/async/-/async-0.1.22.tgz
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/readme.markdown
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/index.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/LICENSE
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/.travis.yml
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/.npmignore
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/examples
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/examples/pow.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test/mkdirp.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test/return_sync.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test/return.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test/perm.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test/chmod.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test/umask_sync.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test/root.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test/clobber.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test/perm_sync.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test/race.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test/umask.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test/sync.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package/test/rel.js
+verbose gunzed /tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package
+verbose rm'ed /tmp/npm-1365587157403/1365587173046-0.5769128131214529/package
+verbose renamed [ '/tmp/npm-1365587157403/1365587173046-0.5769128131214529/___package.npm/package',
+verbose renamed   '/tmp/npm-1365587157403/1365587173046-0.5769128131214529/package' ]
+verbose caching /tmp/npm-1365587157403/1365587173046-0.5769128131214529/package/package.json
+verbose loadDefaults mkdirp@0.3.5
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1365587157403/1365587173046-0.5769128131214529/package/package.json
+verbose pack /tmp/npm-1365587157403/1365587173046-0.5769128131214529/package
+verbose pack /tmp/npm-1365587157403/1365587173046-0.5769128131214529/package /home/zalun/.npm/mkdirp/0.3.5/package.tgz
+silly makeList /tmp/npm-1365587157403/1365587173046-0.5769128131214529/package
+silly dir, dirLen [ '/tmp/npm-1365587157403/1365587173046-0.5769128131214529/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/zalun/.npm/mkdirp/0.3.5/package.tgz
+verbose parent /tmp/npm-1365587157403/1365587173046-0.5769128131214529/package
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/mkdirp/0.3.5/___package.npm'
+verbose mkdir done: /home/zalun/.npm/mkdirp/0.3.5/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/zalun/.npm/mkdirp/0.3.5/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly updated sha bytes 12287
+info shasum 0fc1aaa088a0e3ef0ebe2d8831bab0dcf8845061
+info shasum /tmp/npm-1365587157403/1365587173743-0.49410424032248557/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm'
+verbose mkdir done: /tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1365587157403/1365587173743-0.49410424032248557/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/index.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/.travis.yml
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/readme.markdown
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/LICENSE
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/package.json
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/.npmignore
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/examples
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/examples/pow.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test/perm.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test/perm_sync.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test/chmod.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test/return.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test/race.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test/umask_sync.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test/umask.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test/rel.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test/clobber.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test/sync.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test/mkdirp.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test/return_sync.js
+silly asyncMap in gTP /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package/test/root.js
+verbose gunzed /home/zalun/.npm/mkdirp/0.3.5/___package.npm/package
+verbose rm'ed /home/zalun/.npm/mkdirp/0.3.5/package
+verbose renamed [ '/home/zalun/.npm/mkdirp/0.3.5/___package.npm/package',
+verbose renamed   '/home/zalun/.npm/mkdirp/0.3.5/package' ]
+verbose caching /home/zalun/.npm/mkdirp/0.3.5/package/package.json
+verbose loadDefaults mkdirp@0.3.5
+silly updated sha bytes 4217
+info shasum 1b76e26fa0e9534988ce32e4e5c9eeedf848244a
+info shasum /home/zalun/.npm/mkdirp/0.3.5/package.tgz
+verbose from cache /home/zalun/.npm/mkdirp/0.3.5/package/package.json
+verbose chmod /home/zalun/.npm/mkdirp/0.3.5/package.tgz 644
+verbose chown [ '/home/zalun/.npm/mkdirp/0.3.5/package.tgz', 1000, 1000 ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm/package/README.md
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm/package/index.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm/package/LICENSE
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm/package/.gitmodules
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm/package/.npmignore
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm/package/Makefile
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm/package/lib
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm/package/lib/async.js
+verbose gunzed /tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm/package
+verbose rm'ed /tmp/npm-1365587157403/1365587173743-0.49410424032248557/package
+verbose renamed [ '/tmp/npm-1365587157403/1365587173743-0.49410424032248557/___package.npm/package',
+verbose renamed   '/tmp/npm-1365587157403/1365587173743-0.49410424032248557/package' ]
+verbose caching /tmp/npm-1365587157403/1365587173743-0.49410424032248557/package/package.json
+verbose loadDefaults async@0.1.22
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1365587157403/1365587173743-0.49410424032248557/package/package.json
+verbose pack /tmp/npm-1365587157403/1365587173743-0.49410424032248557/package
+verbose pack /tmp/npm-1365587157403/1365587173743-0.49410424032248557/package /home/zalun/.npm/async/0.1.22/package.tgz
+silly makeList /tmp/npm-1365587157403/1365587173743-0.49410424032248557/package
+silly dir, dirLen [ '/tmp/npm-1365587157403/1365587173743-0.49410424032248557/package',
+silly dir, dirLen   65 ]
+verbose tarball /home/zalun/.npm/async/0.1.22/package.tgz
+verbose parent /tmp/npm-1365587157403/1365587173743-0.49410424032248557/package
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/LICENSE.BSD
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/README.md
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/build
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/build/esmangle.min.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/build/esmangle.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/bin
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/bin/esmangle.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/query.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/evaluator.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/common.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/map.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/esmangle.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/annotate-directive.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/transform-to-compound-assignment.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/reordering-function-declarations.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/remove-empty-statement.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/transform-immediate-function-call.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/transform-logical-association.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/hoist-variable-to-arguments.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/remove-side-effect-free-expressions.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/transform-to-sequence-expression.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/remove-context-sensitive-expressions.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/transform-typeof-undefined.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/remove-unreachable-branch.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/transform-branch-to-expression.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/reduce-branch-jump.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/reduce-sequence-expression.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/transform-dynamic-to-static-property-definition.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/reduce-multiple-if-statements.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/tree-based-constant-folding.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/dead-code-elimination.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/transform-dynamic-to-static-property-access.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/remove-unused-label.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/drop-variable-definition.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/pass/remove-wasted-blocks.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/post
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/post/transform-static-to-dynamic-property-access.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/post/transform-infinity.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/post/rewrite-conditional-expression.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package/lib/post/rewrite-boolean.js
+verbose gunzed /tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package
+verbose rm'ed /tmp/npm-1365587157403/1365587172649-0.547750081634149/package
+verbose renamed [ '/tmp/npm-1365587157403/1365587172649-0.547750081634149/___package.npm/package',
+verbose renamed   '/tmp/npm-1365587157403/1365587172649-0.547750081634149/package' ]
+verbose caching /tmp/npm-1365587157403/1365587172649-0.547750081634149/package/package.json
+verbose loadDefaults esmangle@0.0.9
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1365587157403/1365587172649-0.547750081634149/package/package.json
+verbose pack /tmp/npm-1365587157403/1365587172649-0.547750081634149/package
+verbose pack /tmp/npm-1365587157403/1365587172649-0.547750081634149/package /home/zalun/.npm/esmangle/0.0.9/package.tgz
+silly makeList /tmp/npm-1365587157403/1365587172649-0.547750081634149/package
+silly dir, dirLen [ '/tmp/npm-1365587157403/1365587172649-0.547750081634149/package',
+silly dir, dirLen   63 ]
+verbose tarball /home/zalun/.npm/esmangle/0.0.9/package.tgz
+verbose parent /tmp/npm-1365587157403/1365587172649-0.547750081634149/package
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/async/0.1.22/___package.npm'
+verbose mkdir done: /home/zalun/.npm/async/0.1.22/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/zalun/.npm/async/0.1.22/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/zalun/.npm/async/0.1.22/___package.npm/package
+silly asyncMap in gTP /home/zalun/.npm/async/0.1.22/___package.npm/package/index.js
+silly asyncMap in gTP /home/zalun/.npm/async/0.1.22/___package.npm/package/README.md
+silly asyncMap in gTP /home/zalun/.npm/async/0.1.22/___package.npm/package/LICENSE
+silly asyncMap in gTP /home/zalun/.npm/async/0.1.22/___package.npm/package/package.json
+silly asyncMap in gTP /home/zalun/.npm/async/0.1.22/___package.npm/package/Makefile
+silly asyncMap in gTP /home/zalun/.npm/async/0.1.22/___package.npm/package/.gitmodules
+silly asyncMap in gTP /home/zalun/.npm/async/0.1.22/___package.npm/package/.npmignore
+silly asyncMap in gTP /home/zalun/.npm/async/0.1.22/___package.npm/package/lib
+silly asyncMap in gTP /home/zalun/.npm/async/0.1.22/___package.npm/package/lib/async.js
+verbose gunzed /home/zalun/.npm/async/0.1.22/___package.npm/package
+verbose rm'ed /home/zalun/.npm/async/0.1.22/package
+verbose renamed [ '/home/zalun/.npm/async/0.1.22/___package.npm/package',
+verbose renamed   '/home/zalun/.npm/async/0.1.22/package' ]
+verbose caching /home/zalun/.npm/async/0.1.22/package/package.json
+verbose loadDefaults async@0.1.22
+silly updated sha bytes 12289
+info shasum 2f400a9f88020f0cfb5f72a5a784b9152dc2db47
+info shasum /home/zalun/.npm/async/0.1.22/package.tgz
+verbose from cache /home/zalun/.npm/async/0.1.22/package/package.json
+verbose chmod /home/zalun/.npm/async/0.1.22/package.tgz 644
+verbose chown [ '/home/zalun/.npm/async/0.1.22/package.tgz', 1000, 1000 ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/esmangle/0.0.9/___package.npm'
+verbose mkdir done: /home/zalun/.npm/esmangle/0.0.9/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/zalun/.npm/esmangle/0.0.9/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/esprima.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/LICENSE.BSD
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/README.md
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/index.html
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/ChangeLog
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/component.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/.npmignore
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/examples
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/examples/findbooleantrap.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/examples/detectnestedternary.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/examples/tokendist.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/run.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/module.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/benchmarks.html
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/coverage.header.html
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/compat.html
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/compat.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/index.html
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/compare.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/runner.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/module.html
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/reflect.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/coverage.html
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/compare.html
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/benchmarks.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/test.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/test/coverage.footer.html
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/bin
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/bin/esvalidate.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/bin/esparse.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/doc
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package/doc/index.html
+verbose gunzed /tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package
+verbose rm'ed /tmp/npm-1365587157403/1365587172288-0.9148056039121002/package
+verbose renamed [ '/tmp/npm-1365587157403/1365587172288-0.9148056039121002/___package.npm/package',
+verbose renamed   '/tmp/npm-1365587157403/1365587172288-0.9148056039121002/package' ]
+verbose caching /tmp/npm-1365587157403/1365587172288-0.9148056039121002/package/package.json
+verbose loadDefaults esprima@1.0.2
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1365587157403/1365587172288-0.9148056039121002/package/package.json
+verbose pack /tmp/npm-1365587157403/1365587172288-0.9148056039121002/package
+verbose pack /tmp/npm-1365587157403/1365587172288-0.9148056039121002/package /home/zalun/.npm/esprima/1.0.2/package.tgz
+silly makeList /tmp/npm-1365587157403/1365587172288-0.9148056039121002/package
+silly dir, dirLen [ '/tmp/npm-1365587157403/1365587172288-0.9148056039121002/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/zalun/.npm/esprima/1.0.2/package.tgz
+verbose parent /tmp/npm-1365587157403/1365587172288-0.9148056039121002/package
+silly afterUntar ok
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/README.md
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/package.json
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/LICENSE.BSD
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/bin
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/bin/esmangle.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/evaluator.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/map.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/query.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/esmangle.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/annotate-directive.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/common.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/transform-logical-association.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/transform-immediate-function-call.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/remove-side-effect-free-expressions.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/transform-dynamic-to-static-property-definition.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/reduce-branch-jump.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/remove-unreachable-branch.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/tree-based-constant-folding.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/reordering-function-declarations.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/dead-code-elimination.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/remove-wasted-blocks.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/transform-typeof-undefined.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/drop-variable-definition.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/transform-branch-to-expression.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/reduce-sequence-expression.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/reduce-multiple-if-statements.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/transform-to-compound-assignment.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/hoist-variable-to-arguments.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/remove-unused-label.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/transform-dynamic-to-static-property-access.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/remove-empty-statement.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/transform-to-sequence-expression.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/pass/remove-context-sensitive-expressions.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/post
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/post/transform-static-to-dynamic-property-access.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/post/rewrite-conditional-expression.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/post/transform-infinity.js
+silly asyncMap in gTP /home/zalun/.npm/esmangle/0.0.9/___package.npm/package/lib/post/rewrite-boolean.js
+verbose gunzed /home/zalun/.npm/esmangle/0.0.9/___package.npm/package
+verbose rm'ed /home/zalun/.npm/esmangle/0.0.9/package
+verbose renamed [ '/home/zalun/.npm/esmangle/0.0.9/___package.npm/package',
+verbose renamed   '/home/zalun/.npm/esmangle/0.0.9/package' ]
+verbose caching /home/zalun/.npm/esmangle/0.0.9/package/package.json
+verbose loadDefaults esmangle@0.0.9
+silly updated sha bytes 28966
+info shasum f6015f0490dae0cc439c0e6f3b0f75038a23af9f
+info shasum /home/zalun/.npm/esmangle/0.0.9/package.tgz
+verbose from cache /home/zalun/.npm/esmangle/0.0.9/package/package.json
+verbose chmod /home/zalun/.npm/esmangle/0.0.9/package.tgz 644
+verbose chown [ '/home/zalun/.npm/esmangle/0.0.9/package.tgz', 1000, 1000 ]
+silly updated sha bytes 16384
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 20732
+info shasum e599e40733ef80e1653bfe89a5f031ecf2aa4aaa
+info shasum /tmp/npm-1365587157403/1365587172776-0.9877726512495428/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm'
+verbose mkdir done: /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1365587157403/1365587172776-0.9877726512495428/package
+silly gunzTarPerm modes [ '755', '644' ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/esprima/1.0.2/___package.npm'
+verbose mkdir done: /home/zalun/.npm/esprima/1.0.2/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/zalun/.npm/esprima/1.0.2/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/Jakefile.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/LICENCE.txt
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/documentation.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/.npmignore
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/README.rdoc
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/Makefile
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/lib
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/lib/graphviz.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/lib/ext
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/lib/ext/gvpr
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/lib/ext/gvpr/dot2js.g
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/lib/deps
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/lib/deps/attributs.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/lib/deps/edge.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/lib/deps/graph.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/lib/deps/node.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/lib/deps/core_ext
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/lib/deps/core_ext/hash.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/lib/deps/core_ext/fs-ext.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/switch.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/fdpclust.png
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/hello.png
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/compound.png
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/switch.png
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/parse.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/hello.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/hello_world.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/fdpclust.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/memory.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/hello_world.png
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/cluster.png
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/cluster.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/cluster.dot
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/memory.png
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/compound.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/server
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/server/app.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/server/views
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/server/views/index.ejs
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/server/views/layout.ejs
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/server/static
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package/tests/server/static/dotgraph.js
+verbose gunzed /tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package
+verbose rm'ed /tmp/npm-1365587157403/1365587172776-0.9877726512495428/package
+verbose renamed [ '/tmp/npm-1365587157403/1365587172776-0.9877726512495428/___package.npm/package',
+verbose renamed   '/tmp/npm-1365587157403/1365587172776-0.9877726512495428/package' ]
+verbose caching /tmp/npm-1365587157403/1365587172776-0.9877726512495428/package/package.json
+verbose loadDefaults graphviz@0.0.8
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1365587157403/1365587172776-0.9877726512495428/package/package.json
+verbose pack /tmp/npm-1365587157403/1365587172776-0.9877726512495428/package
+verbose pack /tmp/npm-1365587157403/1365587172776-0.9877726512495428/package /home/zalun/.npm/graphviz/0.0.8/package.tgz
+silly makeList /tmp/npm-1365587157403/1365587172776-0.9877726512495428/package
+silly dir, dirLen [ '/tmp/npm-1365587157403/1365587172776-0.9877726512495428/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/zalun/.npm/graphviz/0.0.8/package.tgz
+verbose parent /tmp/npm-1365587157403/1365587172776-0.9877726512495428/package
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/graphviz/0.0.8/___package.npm'
+verbose mkdir done: /home/zalun/.npm/graphviz/0.0.8/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/zalun/.npm/graphviz/0.0.8/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/component.json
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/index.html
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/README.md
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/ChangeLog
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/package.json
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/esprima.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/.npmignore
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/LICENSE.BSD
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/module.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/compare.html
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/coverage.header.html
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/index.html
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/coverage.footer.html
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/compat.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/reflect.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/benchmarks.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/coverage.html
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/compat.html
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/compare.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/module.html
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/runner.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/run.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/benchmarks.html
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/test/test.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/examples
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/examples/tokendist.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/examples/detectnestedternary.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/examples/findbooleantrap.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/bin
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/bin/esparse.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/bin/esvalidate.js
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/doc
+silly asyncMap in gTP /home/zalun/.npm/esprima/1.0.2/___package.npm/package/doc/index.html
+verbose gunzed /home/zalun/.npm/esprima/1.0.2/___package.npm/package
+verbose rm'ed /home/zalun/.npm/esprima/1.0.2/package
+verbose renamed [ '/home/zalun/.npm/esprima/1.0.2/___package.npm/package',
+verbose renamed   '/home/zalun/.npm/esprima/1.0.2/package' ]
+verbose caching /home/zalun/.npm/esprima/1.0.2/package/package.json
+verbose loadDefaults esprima@1.0.2
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 27636
+info shasum 93a322c538898f8184cb3b1e12b36a5ec9d11350
+info shasum /home/zalun/.npm/esprima/1.0.2/package.tgz
+verbose from cache /home/zalun/.npm/esprima/1.0.2/package/package.json
+verbose chmod /home/zalun/.npm/esprima/1.0.2/package.tgz 644
+verbose chown [ '/home/zalun/.npm/esprima/1.0.2/package.tgz', 1000, 1000 ]
+silly afterUntar ok
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/Jakefile.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/LICENCE.txt
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/README.rdoc
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/package.json
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/Makefile
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/documentation.json
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/.npmignore
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/lib
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/lib/graphviz.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/lib/ext
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/lib/ext/gvpr
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/lib/ext/gvpr/dot2js.g
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/lib/deps
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/lib/deps/node.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/lib/deps/attributs.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/lib/deps/graph.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/lib/deps/edge.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/lib/deps/core_ext
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/lib/deps/core_ext/fs-ext.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/lib/deps/core_ext/hash.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/switch.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/fdpclust.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/cluster.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/hello.png
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/compound.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/parse.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/memory.png
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/compound.png
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/memory.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/cluster.dot
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/hello.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/cluster.png
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/hello_world.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/fdpclust.png
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/switch.png
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/hello_world.png
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/server
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/server/app.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/server/static
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/server/static/dotgraph.js
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/server/views
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/server/views/index.ejs
+silly asyncMap in gTP /home/zalun/.npm/graphviz/0.0.8/___package.npm/package/tests/server/views/layout.ejs
+verbose gunzed /home/zalun/.npm/graphviz/0.0.8/___package.npm/package
+verbose rm'ed /home/zalun/.npm/graphviz/0.0.8/package
+verbose renamed [ '/home/zalun/.npm/graphviz/0.0.8/___package.npm/package',
+verbose renamed   '/home/zalun/.npm/graphviz/0.0.8/package' ]
+verbose caching /home/zalun/.npm/graphviz/0.0.8/package/package.json
+verbose loadDefaults graphviz@0.0.8
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 38399
+info shasum f8b284ea2bd263bbbee21f417342c0fc4e44b4bb
+info shasum /home/zalun/.npm/graphviz/0.0.8/package.tgz
+verbose from cache /home/zalun/.npm/graphviz/0.0.8/package/package.json
+verbose chmod /home/zalun/.npm/graphviz/0.0.8/package.tgz 644
+verbose chown [ '/home/zalun/.npm/graphviz/0.0.8/package.tgz', 1000, 1000 ]
+http 200 https://registry.npmjs.org/escodegen/0.0.15
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"3JOMSJF0FD6U6WI80M3R2VJ3P"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:21 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '5292' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/escodegen'
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/escodegen/0.0.15'
+verbose mkdir done: /home/zalun/.npm/escodegen/0.0.15 755
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: 'ffda9cb26b70b34f7cc19f1d88756539afb543bd',
+verbose bin dist     tarball: 'http://registry.npmjs.org/escodegen/-/escodegen-0.0.15.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/escodegen/-/escodegen-0.0.15.tgz',
+verbose addRemoteTarball   'ffda9cb26b70b34f7cc19f1d88756539afb543bd' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587177988-0.37329538189806044'
+verbose mkdir done: /tmp/npm-1365587157403/1365587177988-0.37329538189806044 755
+verbose fetch to /tmp/npm-1365587157403/1365587177988-0.37329538189806044/tmp.tgz
+http GET https://registry.npmjs.org/escodegen/-/escodegen-0.0.15.tgz
+http 200 https://registry.npmjs.org/escodegen/-/escodegen-0.0.15.tgz
+silly updated sha bytes 18449
+info shasum ffda9cb26b70b34f7cc19f1d88756539afb543bd
+info shasum /tmp/npm-1365587157403/1365587177988-0.37329538189806044/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587177988-0.37329538189806044/___package.npm'
+verbose mkdir done: /tmp/npm-1365587157403/1365587177988-0.37329538189806044/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1365587157403/1365587177988-0.37329538189806044/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587177988-0.37329538189806044/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587177988-0.37329538189806044/___package.npm/package/LICENSE.BSD
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587177988-0.37329538189806044/___package.npm/package/README.md
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587177988-0.37329538189806044/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587177988-0.37329538189806044/___package.npm/package/LICENSE.source-map
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587177988-0.37329538189806044/___package.npm/package/escodegen.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587177988-0.37329538189806044/___package.npm/package/bin
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587177988-0.37329538189806044/___package.npm/package/bin/escodegen.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587177988-0.37329538189806044/___package.npm/package/bin/esgenerate.js
+silly chmod LICENSE.BSD 644
+silly chmod README.md 644
+silly chmod package.json 644
+silly chmod LICENSE.source-map 644
+silly chmod escodegen.js 644
+silly chmod escodegen.js 755
+silly chmod esgenerate.js 755
+verbose gunzed /tmp/npm-1365587157403/1365587177988-0.37329538189806044/___package.npm/package
+verbose rm'ed /tmp/npm-1365587157403/1365587177988-0.37329538189806044/package
+verbose renamed [ '/tmp/npm-1365587157403/1365587177988-0.37329538189806044/___package.npm/package',
+verbose renamed   '/tmp/npm-1365587157403/1365587177988-0.37329538189806044/package' ]
+verbose caching /tmp/npm-1365587157403/1365587177988-0.37329538189806044/package/package.json
+verbose loadDefaults escodegen@0.0.15
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1365587157403/1365587177988-0.37329538189806044/package/package.json
+verbose pack /tmp/npm-1365587157403/1365587177988-0.37329538189806044/package
+verbose pack /tmp/npm-1365587157403/1365587177988-0.37329538189806044/package /home/zalun/.npm/escodegen/0.0.15/package.tgz
+silly makeList /tmp/npm-1365587157403/1365587177988-0.37329538189806044/package
+silly dir, dirLen [ '/tmp/npm-1365587157403/1365587177988-0.37329538189806044/package',
+silly dir, dirLen   65 ]
+verbose tarball /home/zalun/.npm/escodegen/0.0.15/package.tgz
+verbose parent /tmp/npm-1365587157403/1365587177988-0.37329538189806044/package
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/escodegen/0.0.15/___package.npm'
+verbose mkdir done: /home/zalun/.npm/escodegen/0.0.15/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/zalun/.npm/escodegen/0.0.15/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/zalun/.npm/escodegen/0.0.15/___package.npm/package
+silly asyncMap in gTP /home/zalun/.npm/escodegen/0.0.15/___package.npm/package/escodegen.js
+silly asyncMap in gTP /home/zalun/.npm/escodegen/0.0.15/___package.npm/package/LICENSE.source-map
+silly asyncMap in gTP /home/zalun/.npm/escodegen/0.0.15/___package.npm/package/README.md
+silly asyncMap in gTP /home/zalun/.npm/escodegen/0.0.15/___package.npm/package/package.json
+silly asyncMap in gTP /home/zalun/.npm/escodegen/0.0.15/___package.npm/package/LICENSE.BSD
+silly asyncMap in gTP /home/zalun/.npm/escodegen/0.0.15/___package.npm/package/bin
+silly asyncMap in gTP /home/zalun/.npm/escodegen/0.0.15/___package.npm/package/bin/escodegen.js
+silly asyncMap in gTP /home/zalun/.npm/escodegen/0.0.15/___package.npm/package/bin/esgenerate.js
+verbose gunzed /home/zalun/.npm/escodegen/0.0.15/___package.npm/package
+verbose rm'ed /home/zalun/.npm/escodegen/0.0.15/package
+verbose renamed [ '/home/zalun/.npm/escodegen/0.0.15/___package.npm/package',
+verbose renamed   '/home/zalun/.npm/escodegen/0.0.15/package' ]
+verbose caching /home/zalun/.npm/escodegen/0.0.15/package/package.json
+verbose loadDefaults escodegen@0.0.15
+silly updated sha bytes 18243
+info shasum 2b1b03f42aac36cd93d02acb31ff986ac38d9ae9
+info shasum /home/zalun/.npm/escodegen/0.0.15/package.tgz
+verbose from cache /home/zalun/.npm/escodegen/0.0.15/package/package.json
+verbose chmod /home/zalun/.npm/escodegen/0.0.15/package.tgz 644
+verbose chown [ '/home/zalun/.npm/escodegen/0.0.15/package.tgz', 1000, 1000 ]
+silly resolved [ { name: 'prime',
+silly resolved     homepage: 'https://github.com/mootools/prime',
+silly resolved     version: '0.1.0',
+silly resolved     main: './index.js',
+silly resolved     description: 'prime, an OOP javascript library for node and the web.',
+silly resolved     keywords: [ 'library', 'framework', 'es5', 'class', 'array', 'object' ],
+silly resolved     author: 
+silly resolved      { name: 'Valerio Proietti',
+silly resolved        email: '@kamicane',
+silly resolved        url: 'http://mad4milk.net' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'Arian Stolwijk',
+silly resolved          email: '@arian',
+silly resolved          url: 'http://aryweb.nl' },
+silly resolved        { name: 'Cristian Carlesso',
+silly resolved          email: '@kentaromiura',
+silly resolved          url: 'http://github.com/kentaromiura' } ],
+silly resolved     bugs: { url: 'https://github.com/mootools/prime/issues' },
+silly resolved     license: 'MIT (http://mootools.net/license.txt)',
+silly resolved     repository: { type: 'git', url: 'git://github.com/mootools/prime.git' },
+silly resolved     dependencies: {},
+silly resolved     devDependencies: 
+silly resolved      { mocha: '1.8',
+silly resolved        'expect.js': '0.1',
+silly resolved        wrapup: '0.10',
+silly resolved        procs: '0.0.4' },
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _id: 'prime@0.1.0',
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'prime@0.1',
+silly resolved     scripts: {} },
+silly resolved   { name: 'clint',
+silly resolved     description: 'event driven options parser',
+silly resolved     version: '0.0.6',
+silly resolved     license: 'MIT (http://mootools.net/license.txt)',
+silly resolved     main: './clint.js',
+silly resolved     keywords: 
+silly resolved      [ 'command line helper',
+silly resolved        'command-line',
+silly resolved        'options parser',
+silly resolved        'args parser' ],
+silly resolved     homepage: 'http://github.com/kamicane/clint',
+silly resolved     author: 
+silly resolved      { name: 'Valerio Proietti',
+silly resolved        email: '@kamicane',
+silly resolved        url: 'http://mad4milk.net' },
+silly resolved     bugs: { url: 'https://github.com/kamicane/clint/issues' },
+silly resolved     dependencies: { prime: '0.0.5-alpha' },
+silly resolved     repository: { type: 'git', url: 'git://github.com/kamicane/clint.git' },
+silly resolved     devDependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _id: 'clint@0.0.6',
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '819f21aee1663b0ffdf93c1a0d1756fd2ac58b3b' },
+silly resolved     _from: 'clint@0.0.6',
+silly resolved     scripts: {} },
+silly resolved   { name: 'colors',
+silly resolved     description: 'get colors in your node.js console like what',
+silly resolved     version: '0.6.0-1',
+silly resolved     author: { name: 'Marak Squires' },
+silly resolved     repository: { type: 'git', url: 'git://github.com/Marak/colors.js.git' },
+silly resolved     engines: { node: '>=0.1.90' },
+silly resolved     main: 'colors',
+silly resolved     _id: 'colors@0.6.0-1',
+silly resolved     dependencies: {},
+silly resolved     devDependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: 'bacb0a53ba3a3bf5b37f9398c0e69967fd2fbbcd' },
+silly resolved     _from: 'colors@*',
+silly resolved     scripts: {} },
+silly resolved   { name: 'mkdirp',
+silly resolved     description: 'Recursively mkdir, like `mkdir -p`',
+silly resolved     version: '0.3.5',
+silly resolved     author: 
+silly resolved      { name: 'James Halliday',
+silly resolved        email: 'mail@substack.net',
+silly resolved        url: 'http://substack.net' },
+silly resolved     main: './index',
+silly resolved     keywords: [ 'mkdir', 'directory' ],
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/substack/node-mkdirp.git' },
+silly resolved     scripts: { test: 'tap test/*.js' },
+silly resolved     devDependencies: { tap: '~0.4.0' },
+silly resolved     license: 'MIT',
+silly resolved     _id: 'mkdirp@0.3.5',
+silly resolved     dependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '1b76e26fa0e9534988ce32e4e5c9eeedf848244a' },
+silly resolved     _from: 'mkdirp@0.3' },
+silly resolved   { name: 'async',
+silly resolved     description: 'Higher-order functions and common patterns for asynchronous code',
+silly resolved     main: './index',
+silly resolved     author: { name: 'Caolan McMahon' },
+silly resolved     version: '0.1.22',
+silly resolved     repository: { type: 'git', url: 'git://github.com/caolan/async.git' },
+silly resolved     bugs: { url: 'http://github.com/caolan/async/issues' },
+silly resolved     licenses: 
+silly resolved      [ { type: 'MIT',
+silly resolved          url: 'http://github.com/caolan/async/raw/master/LICENSE' } ],
+silly resolved     devDependencies: { nodeunit: '>0.0.0', 'uglify-js': '1.2.x', nodelint: '>0.0.0' },
+silly resolved     _id: 'async@0.1.22',
+silly resolved     dependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '2f400a9f88020f0cfb5f72a5a784b9152dc2db47' },
+silly resolved     _from: 'async@0.1',
+silly resolved     scripts: {} },
+silly resolved   { name: 'esmangle',
+silly resolved     description: 'ECMAScript code mangler / minifier',
+silly resolved     homepage: 'http://github.com/Constellation/esmangle.html',
+silly resolved     main: 'lib/esmangle.js',
+silly resolved     bin: { esmangle: './bin/esmangle.js' },
+silly resolved     version: '0.0.9',
+silly resolved     engines: { node: '>=0.4.0' },
+silly resolved     directories: { lib: './lib' },
+silly resolved     maintainers: 
+silly resolved      [ { name: 'Yusuke Suzuki',
+silly resolved          email: 'utatane.tea@gmail.com',
+silly resolved          url: 'http://github.com/Constellation' } ],
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/Constellation/esmangle.git' },
+silly resolved     dependencies: 
+silly resolved      { esprima: '~ 1.0.2',
+silly resolved        escope: '~ 0.0.11',
+silly resolved        escodegen: '~ 0.0.15',
+silly resolved        estraverse: '~ 0.0.3',
+silly resolved        'source-map': '~ 0.1.8',
+silly resolved        optimist: '*' },
+silly resolved     devDependencies: { mocha: '*', chai: '*', browserify: '*' },
+silly resolved     licenses: 
+silly resolved      [ { type: 'BSD',
+silly resolved          url: 'http://github.com/Constellation/esmangle/raw/master/LICENSE.BSD' } ],
+silly resolved     scripts: 
+silly resolved      { test: './node_modules/.bin/mocha',
+silly resolved        build: 'mkdir -p build && ./node_modules/.bin/browserify tools/entry.js > build/esmangle.js && bin/esmangle.js build/esmangle.js > build/esmangle.min.js' },
+silly resolved     _id: 'esmangle@0.0.9',
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: 'f6015f0490dae0cc439c0e6f3b0f75038a23af9f' },
+silly resolved     _from: 'esmangle@0.0.9' },
+silly resolved   { name: 'esprima',
+silly resolved     description: 'ECMAScript parsing infrastructure for multipurpose analysis',
+silly resolved     homepage: 'http://esprima.org',
+silly resolved     main: 'esprima.js',
+silly resolved     bin: 
+silly resolved      { esparse: './bin/esparse.js',
+silly resolved        esvalidate: './bin/esvalidate.js' },
+silly resolved     version: '1.0.2',
+silly resolved     engines: { node: '>=0.4.0' },
+silly resolved     maintainers: 
+silly resolved      [ { name: 'Ariya Hidayat',
+silly resolved          email: 'ariya.hidayat@gmail.com',
+silly resolved          url: 'http://ariya.ofilabs.com' } ],
+silly resolved     repository: { type: 'git', url: 'git://github.com/ariya/esprima.git' },
+silly resolved     licenses: 
+silly resolved      [ { type: 'BSD',
+silly resolved          url: 'http://github.com/ariya/esprima/raw/master/LICENSE.BSD' } ],
+silly resolved     scripts: 
+silly resolved      { test: 'node test/run.js',
+silly resolved        benchmark: 'node test/benchmarks.js',
+silly resolved        'benchmark-quick': 'node test/benchmarks.js quick' },
+silly resolved     _id: 'esprima@1.0.2',
+silly resolved     dependencies: {},
+silly resolved     devDependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '93a322c538898f8184cb3b1e12b36a5ec9d11350' },
+silly resolved     _from: 'esprima@1.0' },
+silly resolved   { name: 'graphviz',
+silly resolved     version: '0.0.8',
+silly resolved     author: 
+silly resolved      { name: 'Gregoire Lejeune',
+silly resolved        email: 'gregoire.lejeune@free.fr',
+silly resolved        url: 'http://algorithmique.net/' },
+silly resolved     description: 'Node.js interface to the GraphViz graphing tool',
+silly resolved     homepage: 'http://algorithmique.net/',
+silly resolved     contributors: 
+silly resolved      [ { name: 'Gregoire Lejeune', url: 'http://algorithmique.net' },
+silly resolved        { name: 'Mathieu Ravaux', url: 'http://mathieuravaux.com' } ],
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/glejeune/node-graphviz.git' },
+silly resolved     keywords: [ 'graphviz', 'dot' ],
+silly resolved     directories: { lib: './lib' },
+silly resolved     main: 'lib/graphviz',
+silly resolved     engines: { node: '>=0.6.8' },
+silly resolved     dependencies: { temp: '~0.4.0' },
+silly resolved     devDependencies: {},
+silly resolved     _id: 'graphviz@0.0.8',
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: 'f8b284ea2bd263bbbee21f417342c0fc4e44b4bb' },
+silly resolved     _from: 'graphviz@0.0.x',
+silly resolved     scripts: {} },
+silly resolved   { name: 'escodegen',
+silly resolved     description: 'ECMAScript code generator',
+silly resolved     homepage: 'http://github.com/Constellation/escodegen.html',
+silly resolved     main: 'escodegen.js',
+silly resolved     bin: 
+silly resolved      { esgenerate: './bin/esgenerate.js',
+silly resolved        escodegen: './bin/escodegen.js' },
+silly resolved     version: '0.0.15',
+silly resolved     engines: { node: '>=0.4.0' },
+silly resolved     maintainers: 
+silly resolved      [ { name: 'Yusuke Suzuki',
+silly resolved          email: 'utatane.tea@gmail.com',
+silly resolved          url: 'http://github.com/Constellation' } ],
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/Constellation/escodegen.git' },
+silly resolved     dependencies: { esprima: '>= 1.0.0', 'source-map': '>= 0.1.2' },
+silly resolved     optionalDependencies: { 'source-map': '>= 0.1.2' },
+silly resolved     devDependencies: { 'esprima-moz': '*' },
+silly resolved     licenses: 
+silly resolved      [ { type: 'BSD',
+silly resolved          url: 'http://github.com/Constellation/escodegen/raw/master/LICENSE.BSD' } ],
+silly resolved     scripts: { test: 'node test/run.js' },
+silly resolved     _id: 'escodegen@0.0.15',
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '2b1b03f42aac36cd93d02acb31ff986ac38d9ae9' },
+silly resolved     _from: 'escodegen@0.0.15' } ]
+info into /usr/local/lib/node_modules/wrapup prime@0.1.0
+info into /usr/local/lib/node_modules/wrapup clint@0.0.6
+info into /usr/local/lib/node_modules/wrapup colors@0.6.0-1
+info into /usr/local/lib/node_modules/wrapup mkdirp@0.3.5
+info into /usr/local/lib/node_modules/wrapup async@0.1.22
+info into /usr/local/lib/node_modules/wrapup esmangle@0.0.9
+info into /usr/local/lib/node_modules/wrapup esprima@1.0.2
+info into /usr/local/lib/node_modules/wrapup graphviz@0.0.8
+info into /usr/local/lib/node_modules/wrapup escodegen@0.0.15
+info installOne prime@0.1.0
+info installOne clint@0.0.6
+info installOne colors@0.6.0-1
+info installOne mkdirp@0.3.5
+info installOne async@0.1.22
+info installOne esmangle@0.0.9
+info installOne esprima@1.0.2
+info installOne graphviz@0.0.8
+info installOne escodegen@0.0.15
+verbose from cache /home/zalun/.npm/prime/0.1.0/package/package.json
+info unbuild /usr/local/lib/node_modules/wrapup/node_modules/prime
+verbose from cache /home/zalun/.npm/clint/0.0.6/package/package.json
+info unbuild /usr/local/lib/node_modules/wrapup/node_modules/clint
+verbose from cache /home/zalun/.npm/colors/0.6.0-1/package/package.json
+info unbuild /usr/local/lib/node_modules/wrapup/node_modules/colors
+verbose from cache /home/zalun/.npm/mkdirp/0.3.5/package/package.json
+info unbuild /usr/local/lib/node_modules/wrapup/node_modules/mkdirp
+verbose from cache /home/zalun/.npm/async/0.1.22/package/package.json
+info unbuild /usr/local/lib/node_modules/wrapup/node_modules/async
+verbose from cache /home/zalun/.npm/esmangle/0.0.9/package/package.json
+info unbuild /usr/local/lib/node_modules/wrapup/node_modules/esmangle
+verbose from cache /home/zalun/.npm/esprima/1.0.2/package/package.json
+info unbuild /usr/local/lib/node_modules/wrapup/node_modules/esprima
+verbose from cache /home/zalun/.npm/graphviz/0.0.8/package/package.json
+info unbuild /usr/local/lib/node_modules/wrapup/node_modules/graphviz
+verbose from cache /home/zalun/.npm/escodegen/0.0.15/package/package.json
+info unbuild /usr/local/lib/node_modules/wrapup/node_modules/escodegen
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules/___prime.npm'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules/___clint.npm'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules/___colors.npm'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules/___async.npm'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules/___escodegen.npm'
+verbose mkdir done: /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm 755
+verbose mkdir done: /usr/local/lib/node_modules/wrapup/node_modules/___clint.npm 755
+verbose mkdir done: /usr/local/lib/node_modules/wrapup/node_modules/___colors.npm 755
+verbose mkdir done: /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm 755
+verbose mkdir done: /usr/local/lib/node_modules/wrapup/node_modules/___async.npm 755
+verbose mkdir done: /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm 755
+verbose mkdir done: /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm 755
+verbose mkdir done: /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm 755
+verbose mkdir done: /usr/local/lib/node_modules/wrapup/node_modules/___escodegen.npm 755
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/wrapup/node_modules/prime
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/wrapup/node_modules/clint
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/wrapup/node_modules/colors
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/wrapup/node_modules/mkdirp
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/wrapup/node_modules/async
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/wrapup/node_modules/esmangle
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/wrapup/node_modules/esprima
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/wrapup/node_modules/graphviz
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/wrapup/node_modules/escodegen
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___clint.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___clint.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___clint.npm/package/.npmignore
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___clint.npm/package/clint.js
+verbose gunzed /usr/local/lib/node_modules/wrapup/node_modules/___clint.npm/package
+verbose rm'ed /usr/local/lib/node_modules/wrapup/node_modules/clint
+verbose renamed [ '/usr/local/lib/node_modules/wrapup/node_modules/___clint.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/wrapup/node_modules/clint' ]
+verbose caching /usr/local/lib/node_modules/wrapup/node_modules/clint/package.json
+verbose loadDefaults clint@0.0.6
+info preinstall clint@0.0.6
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/clint/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/clint/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'prime@0.0.5-alpha', null ]
+silly cache add: name, spec, args [ undefined, 'prime@0.0.5-alpha', [ 'prime@0.0.5-alpha', null ] ]
+verbose parsed url { pathname: 'prime@0.0.5-alpha',
+verbose parsed url   path: 'prime@0.0.5-alpha',
+verbose parsed url   href: 'prime@0.0.5-alpha' }
+silly cache add: name, spec, args [ 'prime', '0.0.5-alpha', [ 'prime', '0.0.5-alpha' ] ]
+verbose parsed url { pathname: '0.0.5-alpha',
+verbose parsed url   path: '0.0.5-alpha',
+verbose parsed url   href: '0.0.5-alpha' }
+verbose addNamed [ 'prime', '0.0.5-alpha' ]
+verbose addNamed [ '0.0.5-alpha', '0.0.5-alpha' ]
+verbose raw, before any munging prime/0.0.5-alpha
+verbose url resolving [ 'https://registry.npmjs.org/', './prime/0.0.5-alpha' ]
+verbose url resolved https://registry.npmjs.org/prime/0.0.5-alpha
+http GET https://registry.npmjs.org/prime/0.0.5-alpha
+silly afterUntar ok
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___colors.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___colors.npm/package/colors.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___colors.npm/package/ReadMe.md
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___colors.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___colors.npm/package/example.html
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___colors.npm/package/example.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___colors.npm/package/MIT-LICENSE.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___colors.npm/package/test.js
+verbose gunzed /usr/local/lib/node_modules/wrapup/node_modules/___colors.npm/package
+verbose rm'ed /usr/local/lib/node_modules/wrapup/node_modules/colors
+verbose renamed [ '/usr/local/lib/node_modules/wrapup/node_modules/___colors.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/wrapup/node_modules/colors' ]
+verbose caching /usr/local/lib/node_modules/wrapup/node_modules/colors/package.json
+verbose loadDefaults colors@0.6.0-1
+info preinstall colors@0.6.0-1
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/colors/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/colors/package.json
+verbose readDependencies: using package.json deps
+silly resolved []
+verbose about to build /usr/local/lib/node_modules/wrapup/node_modules/colors
+info build /usr/local/lib/node_modules/wrapup/node_modules/colors
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/colors/package.json
+verbose linkStuff [ true,
+verbose linkStuff   '/usr/local/lib/node_modules',
+verbose linkStuff   false,
+verbose linkStuff   '/usr/local/lib/node_modules/wrapup/node_modules' ]
+info linkStuff colors@0.6.0-1
+verbose linkBins colors@0.6.0-1
+verbose linkMans colors@0.6.0-1
+verbose rebuildBundles colors@0.6.0-1
+info install colors@0.6.0-1
+info postinstall colors@0.6.0-1
+verbose installOne cb colors@0.6.0-1
+silly afterUntar ok
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___async.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___async.npm/package/README.md
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___async.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___async.npm/package/index.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___async.npm/package/LICENSE
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___async.npm/package/.gitmodules
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___async.npm/package/.npmignore
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___async.npm/package/Makefile
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___async.npm/package/lib
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___async.npm/package/lib/async.js
+verbose gunzed /usr/local/lib/node_modules/wrapup/node_modules/___async.npm/package
+verbose rm'ed /usr/local/lib/node_modules/wrapup/node_modules/async
+verbose renamed [ '/usr/local/lib/node_modules/wrapup/node_modules/___async.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/wrapup/node_modules/async' ]
+silly afterUntar ok
+verbose caching /usr/local/lib/node_modules/wrapup/node_modules/async/package.json
+verbose loadDefaults async@0.1.22
+info preinstall async@0.1.22
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/async/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/readme.markdown
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/index.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/LICENSE
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/.travis.yml
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/.npmignore
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/examples
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/examples/pow.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test/mkdirp.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test/return_sync.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test/return.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test/perm.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test/chmod.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test/umask_sync.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test/root.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test/clobber.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test/perm_sync.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test/race.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test/umask.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test/sync.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package/test/rel.js
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/async/package.json
+verbose readDependencies: using package.json deps
+silly resolved []
+verbose about to build /usr/local/lib/node_modules/wrapup/node_modules/async
+info build /usr/local/lib/node_modules/wrapup/node_modules/async
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/async/package.json
+verbose linkStuff [ true,
+verbose linkStuff   '/usr/local/lib/node_modules',
+verbose linkStuff   false,
+verbose linkStuff   '/usr/local/lib/node_modules/wrapup/node_modules' ]
+info linkStuff async@0.1.22
+verbose linkBins async@0.1.22
+verbose linkMans async@0.1.22
+verbose rebuildBundles async@0.1.22
+info install async@0.1.22
+verbose gunzed /usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package
+info postinstall async@0.1.22
+verbose rm'ed /usr/local/lib/node_modules/wrapup/node_modules/mkdirp
+verbose renamed [ '/usr/local/lib/node_modules/wrapup/node_modules/___mkdirp.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/wrapup/node_modules/mkdirp' ]
+verbose installOne cb async@0.1.22
+verbose caching /usr/local/lib/node_modules/wrapup/node_modules/mkdirp/package.json
+verbose loadDefaults mkdirp@0.3.5
+info preinstall mkdirp@0.3.5
+silly afterUntar ok
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/mkdirp/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/mkdirp/package.json
+verbose readDependencies: using package.json deps
+silly resolved []
+verbose about to build /usr/local/lib/node_modules/wrapup/node_modules/mkdirp
+info build /usr/local/lib/node_modules/wrapup/node_modules/mkdirp
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/mkdirp/package.json
+verbose linkStuff [ true,
+verbose linkStuff   '/usr/local/lib/node_modules',
+verbose linkStuff   false,
+verbose linkStuff   '/usr/local/lib/node_modules/wrapup/node_modules' ]
+info linkStuff mkdirp@0.3.5
+verbose linkBins mkdirp@0.3.5
+verbose linkMans mkdirp@0.3.5
+verbose rebuildBundles mkdirp@0.3.5
+info install mkdirp@0.3.5
+info postinstall mkdirp@0.3.5
+verbose installOne cb mkdirp@0.3.5
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/README.md
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/type.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/shell.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/index.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/emitter.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/.npmignore
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/map.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/es5
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/es5/date.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/es5/string.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/es5/function.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/es5/regexp.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/es5/number.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/es5/object.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/es5/array.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/shell
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/shell/date.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/shell/string.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/shell/function.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/shell/regexp.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/shell/number.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/shell/object.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package/shell/array.js
+verbose gunzed /usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package
+verbose rm'ed /usr/local/lib/node_modules/wrapup/node_modules/prime
+verbose renamed [ '/usr/local/lib/node_modules/wrapup/node_modules/___prime.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/wrapup/node_modules/prime' ]
+silly afterUntar ok
+verbose caching /usr/local/lib/node_modules/wrapup/node_modules/prime/package.json
+verbose loadDefaults prime@0.1.0
+info preinstall prime@0.1.0
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___escodegen.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___escodegen.npm/package/LICENSE.BSD
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___escodegen.npm/package/README.md
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___escodegen.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___escodegen.npm/package/LICENSE.source-map
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___escodegen.npm/package/escodegen.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___escodegen.npm/package/bin
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___escodegen.npm/package/bin/esgenerate.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___escodegen.npm/package/bin/escodegen.js
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/prime/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/prime/package.json
+verbose readDependencies: using package.json deps
+silly resolved []
+verbose about to build /usr/local/lib/node_modules/wrapup/node_modules/prime
+info build /usr/local/lib/node_modules/wrapup/node_modules/prime
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/prime/package.json
+verbose linkStuff [ true,
+verbose linkStuff   '/usr/local/lib/node_modules',
+verbose linkStuff   false,
+verbose linkStuff   '/usr/local/lib/node_modules/wrapup/node_modules' ]
+info linkStuff prime@0.1.0
+verbose linkBins prime@0.1.0
+verbose linkMans prime@0.1.0
+verbose rebuildBundles prime@0.1.0
+info install prime@0.1.0
+verbose gunzed /usr/local/lib/node_modules/wrapup/node_modules/___escodegen.npm/package
+verbose rm'ed /usr/local/lib/node_modules/wrapup/node_modules/escodegen
+info postinstall prime@0.1.0
+verbose renamed [ '/usr/local/lib/node_modules/wrapup/node_modules/___escodegen.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/wrapup/node_modules/escodegen' ]
+verbose installOne cb prime@0.1.0
+verbose caching /usr/local/lib/node_modules/wrapup/node_modules/escodegen/package.json
+verbose loadDefaults escodegen@0.0.15
+info preinstall escodegen@0.0.15
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/escodegen/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/escodegen/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'source-map@>= 0.1.2', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'source-map@>= 0.1.2',
+silly cache add: name, spec, args   [ 'source-map@>= 0.1.2', null ] ]
+verbose parsed url { pathname: 'source-map@',
+verbose parsed url   path: 'source-map@',
+verbose parsed url   href: 'source-map@' }
+silly cache add: name, spec, args [ 'source-map', '>= 0.1.2', [ 'source-map', '>= 0.1.2' ] ]
+verbose parsed url { pathname: '=', path: '=', href: '=' }
+verbose addNamed [ 'source-map', '>= 0.1.2' ]
+verbose addNamed [ null, '>=0.1.2' ]
+silly name, range, hasData [ 'source-map', '>=0.1.2', false ]
+verbose raw, before any munging source-map
+verbose url resolving [ 'https://registry.npmjs.org/', './source-map' ]
+verbose url resolved https://registry.npmjs.org/source-map
+http GET https://registry.npmjs.org/source-map
+silly afterUntar ok
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/LICENSE.BSD
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/README.md
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/bin
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/bin/esmangle.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/query.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/evaluator.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/common.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/map.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/esmangle.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/annotate-directive.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/transform-to-compound-assignment.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/reordering-function-declarations.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/remove-empty-statement.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/transform-immediate-function-call.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/transform-logical-association.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/hoist-variable-to-arguments.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/remove-side-effect-free-expressions.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/transform-to-sequence-expression.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/remove-context-sensitive-expressions.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/transform-typeof-undefined.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/remove-unreachable-branch.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/transform-branch-to-expression.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/reduce-branch-jump.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/reduce-sequence-expression.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/transform-dynamic-to-static-property-definition.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/reduce-multiple-if-statements.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/tree-based-constant-folding.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/dead-code-elimination.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/transform-dynamic-to-static-property-access.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/remove-unused-label.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/drop-variable-definition.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/pass/remove-wasted-blocks.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/post
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/post/transform-static-to-dynamic-property-access.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/post/transform-infinity.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/post/rewrite-conditional-expression.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package/lib/post/rewrite-boolean.js
+verbose gunzed /usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package
+verbose rm'ed /usr/local/lib/node_modules/wrapup/node_modules/esmangle
+verbose renamed [ '/usr/local/lib/node_modules/wrapup/node_modules/___esmangle.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/wrapup/node_modules/esmangle' ]
+verbose caching /usr/local/lib/node_modules/wrapup/node_modules/esmangle/package.json
+verbose loadDefaults esmangle@0.0.9
+info preinstall esmangle@0.0.9
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/esmangle/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/esmangle/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'escope@~ 0.0.11', null ]
+silly cache add: name, spec, args [ undefined, 'escope@~ 0.0.11', [ 'escope@~ 0.0.11', null ] ]
+verbose parsed url { pathname: 'escope@~', path: 'escope@~', href: 'escope@~' }
+silly cache add: name, spec, args [ 'escope', '~ 0.0.11', [ 'escope', '~ 0.0.11' ] ]
+verbose parsed url { pathname: '~', path: '~', href: '~' }
+verbose addNamed [ 'escope', '~ 0.0.11' ]
+verbose addNamed [ null, '>=0.0.11- <0.1.0-' ]
+silly name, range, hasData [ 'escope', '>=0.0.11- <0.1.0-', false ]
+verbose cache add [ 'estraverse@~ 0.0.3', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'estraverse@~ 0.0.3',
+silly cache add: name, spec, args   [ 'estraverse@~ 0.0.3', null ] ]
+verbose parsed url { pathname: 'estraverse@~',
+verbose parsed url   path: 'estraverse@~',
+verbose parsed url   href: 'estraverse@~' }
+silly cache add: name, spec, args [ 'estraverse', '~ 0.0.3', [ 'estraverse', '~ 0.0.3' ] ]
+verbose parsed url { pathname: '~', path: '~', href: '~' }
+verbose addNamed [ 'estraverse', '~ 0.0.3' ]
+verbose addNamed [ null, '>=0.0.3- <0.1.0-' ]
+silly name, range, hasData [ 'estraverse', '>=0.0.3- <0.1.0-', false ]
+verbose cache add [ 'source-map@~ 0.1.8', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'source-map@~ 0.1.8',
+silly cache add: name, spec, args   [ 'source-map@~ 0.1.8', null ] ]
+verbose parsed url { pathname: 'source-map@~',
+verbose parsed url   path: 'source-map@~',
+verbose parsed url   href: 'source-map@~' }
+silly cache add: name, spec, args [ 'source-map', '~ 0.1.8', [ 'source-map', '~ 0.1.8' ] ]
+verbose parsed url { pathname: '~', path: '~', href: '~' }
+verbose addNamed [ 'source-map', '~ 0.1.8' ]
+verbose addNamed [ null, '>=0.1.8- <0.2.0-' ]
+silly name, range, hasData [ 'source-map', '>=0.1.8- <0.2.0-', false ]
+verbose cache add [ 'optimist@*', null ]
+silly cache add: name, spec, args [ undefined, 'optimist@*', [ 'optimist@*', null ] ]
+verbose parsed url { pathname: 'optimist@*',
+verbose parsed url   path: 'optimist@*',
+verbose parsed url   href: 'optimist@*' }
+silly cache add: name, spec, args [ 'optimist', '*', [ 'optimist', '*' ] ]
+verbose parsed url { pathname: '*', path: '*', href: '*' }
+verbose addNamed [ 'optimist', '*' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'optimist', '', false ]
+verbose raw, before any munging escope
+verbose url resolving [ 'https://registry.npmjs.org/', './escope' ]
+verbose url resolved https://registry.npmjs.org/escope
+http GET https://registry.npmjs.org/escope
+verbose raw, before any munging estraverse
+verbose url resolving [ 'https://registry.npmjs.org/', './estraverse' ]
+verbose url resolved https://registry.npmjs.org/estraverse
+http GET https://registry.npmjs.org/estraverse
+verbose raw, before any munging source-map
+verbose url resolving [ 'https://registry.npmjs.org/', './source-map' ]
+verbose url resolved https://registry.npmjs.org/source-map
+http GET https://registry.npmjs.org/source-map
+verbose raw, before any munging optimist
+verbose url resolving [ 'https://registry.npmjs.org/', './optimist' ]
+verbose url resolved https://registry.npmjs.org/optimist
+http GET https://registry.npmjs.org/optimist
+silly afterUntar ok
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/Jakefile.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/LICENCE.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/documentation.json
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/.npmignore
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/README.rdoc
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/Makefile
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/lib
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/lib/graphviz.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/lib/ext
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/lib/ext/gvpr
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/lib/ext/gvpr/dot2js.g
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/lib/deps
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/lib/deps/attributs.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/lib/deps/edge.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/lib/deps/graph.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/lib/deps/node.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/lib/deps/core_ext
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/lib/deps/core_ext/hash.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/lib/deps/core_ext/fs-ext.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/switch.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/fdpclust.png
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/hello.png
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/compound.png
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/parse.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/switch.png
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/hello.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/hello_world.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/fdpclust.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/memory.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/hello_world.png
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/cluster.png
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/cluster.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/cluster.dot
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/memory.png
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/compound.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/server
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/server/app.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/server/views
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/server/views/index.ejs
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/server/views/layout.ejs
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/server/static
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package/tests/server/static/dotgraph.js
+verbose gunzed /usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package
+verbose rm'ed /usr/local/lib/node_modules/wrapup/node_modules/graphviz
+verbose renamed [ '/usr/local/lib/node_modules/wrapup/node_modules/___graphviz.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/wrapup/node_modules/graphviz' ]
+verbose caching /usr/local/lib/node_modules/wrapup/node_modules/graphviz/package.json
+verbose loadDefaults graphviz@0.0.8
+info preinstall graphviz@0.0.8
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/graphviz/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/graphviz/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'temp@~0.4.0', null ]
+silly cache add: name, spec, args [ undefined, 'temp@~0.4.0', [ 'temp@~0.4.0', null ] ]
+verbose parsed url { pathname: 'temp@~0.4.0',
+verbose parsed url   path: 'temp@~0.4.0',
+verbose parsed url   href: 'temp@~0.4.0' }
+silly cache add: name, spec, args [ 'temp', '~0.4.0', [ 'temp', '~0.4.0' ] ]
+verbose parsed url { pathname: '~0.4.0', path: '~0.4.0', href: '~0.4.0' }
+verbose addNamed [ 'temp', '~0.4.0' ]
+verbose addNamed [ null, '>=0.4.0- <0.5.0-' ]
+silly name, range, hasData [ 'temp', '>=0.4.0- <0.5.0-', false ]
+verbose raw, before any munging temp
+verbose url resolving [ 'https://registry.npmjs.org/', './temp' ]
+verbose url resolved https://registry.npmjs.org/temp
+http GET https://registry.npmjs.org/temp
+silly afterUntar ok
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/esprima.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/LICENSE.BSD
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/README.md
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/index.html
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/ChangeLog
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/component.json
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/.npmignore
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/examples
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/examples/findbooleantrap.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/examples/detectnestedternary.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/examples/tokendist.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/run.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/module.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/benchmarks.html
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/coverage.header.html
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/compat.html
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/compat.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/index.html
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/compare.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/runner.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/module.html
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/reflect.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/coverage.html
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/compare.html
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/benchmarks.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/test/coverage.footer.html
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/bin
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/bin/esvalidate.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/bin/esparse.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/doc
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package/doc/index.html
+verbose gunzed /usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package
+verbose rm'ed /usr/local/lib/node_modules/wrapup/node_modules/esprima
+verbose renamed [ '/usr/local/lib/node_modules/wrapup/node_modules/___esprima.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/wrapup/node_modules/esprima' ]
+verbose caching /usr/local/lib/node_modules/wrapup/node_modules/esprima/package.json
+verbose loadDefaults esprima@1.0.2
+info preinstall esprima@1.0.2
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/esprima/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/esprima/package.json
+verbose readDependencies: using package.json deps
+silly resolved []
+verbose about to build /usr/local/lib/node_modules/wrapup/node_modules/esprima
+info build /usr/local/lib/node_modules/wrapup/node_modules/esprima
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/esprima/package.json
+verbose linkStuff [ true,
+verbose linkStuff   '/usr/local/lib/node_modules',
+verbose linkStuff   false,
+verbose linkStuff   '/usr/local/lib/node_modules/wrapup/node_modules' ]
+info linkStuff esprima@1.0.2
+verbose linkBins esprima@1.0.2
+verbose bins linking [ { esparse: './bin/esparse.js',
+verbose bins linking     esvalidate: './bin/esvalidate.js' },
+verbose bins linking   '/usr/local/lib/node_modules/wrapup/node_modules/.bin',
+verbose bins linking   false ]
+verbose linkMans esprima@1.0.2
+verbose rebuildBundles esprima@1.0.2
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules/.bin'
+verbose mkdir done: /usr/local/lib/node_modules/wrapup/node_modules/.bin 755
+info install esprima@1.0.2
+info postinstall esprima@1.0.2
+verbose installOne cb esprima@1.0.2
+http 200 https://registry.npmjs.org/estraverse
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"6RO8VHI97Y7NF11WR43TONQ7"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:30 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '21267' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/estraverse'
+verbose mkdir done: /home/zalun/.npm/estraverse 755
+silly name, range, hasData 2 [ 'estraverse', '>=0.0.3- <0.1.0-', true ]
+silly versions [ 'estraverse',
+silly versions   [ '0.0.1', '0.0.2', '0.0.3', '0.0.4', '1.0.0', '1.1.0', '1.1.1' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: '01a0932dfee574684a598af5a67c3bf9b6428db2',
+verbose bin dist     tarball: 'http://registry.npmjs.org/estraverse/-/estraverse-0.0.4.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/estraverse/-/estraverse-0.0.4.tgz',
+verbose addRemoteTarball   '01a0932dfee574684a598af5a67c3bf9b6428db2' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587186826-0.6684047731105238'
+verbose mkdir done: /tmp/npm-1365587157403/1365587186826-0.6684047731105238 755
+verbose fetch to /tmp/npm-1365587157403/1365587186826-0.6684047731105238/tmp.tgz
+http GET https://registry.npmjs.org/estraverse/-/estraverse-0.0.4.tgz
+http 200 https://registry.npmjs.org/escope
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"AOI590NMULTESK10KM2TBARAG"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:30 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '36860' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/escope'
+verbose mkdir done: /home/zalun/.npm/escope 755
+silly name, range, hasData 2 [ 'escope', '>=0.0.11- <0.1.0-', true ]
+silly versions [ 'escope',
+silly versions   [ '0.0.1',
+silly versions     '0.0.2',
+silly versions     '0.0.3',
+silly versions     '0.0.4',
+silly versions     '0.0.5',
+silly versions     '0.0.6',
+silly versions     '0.0.7',
+silly versions     '0.0.8',
+silly versions     '0.0.9',
+silly versions     '0.0.10',
+silly versions     '0.0.11',
+silly versions     '0.0.12',
+silly versions     '0.0.13' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: 'd18480a231ddfeb7785de1e8b0cb0af63e6dac61',
+verbose bin dist     tarball: 'http://registry.npmjs.org/escope/-/escope-0.0.13.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/escope/-/escope-0.0.13.tgz',
+verbose addRemoteTarball   'd18480a231ddfeb7785de1e8b0cb0af63e6dac61' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587187303-0.5136645955499262'
+verbose mkdir done: /tmp/npm-1365587157403/1365587187303-0.5136645955499262 755
+verbose fetch to /tmp/npm-1365587157403/1365587187303-0.5136645955499262/tmp.tgz
+http GET https://registry.npmjs.org/escope/-/escope-0.0.13.tgz
+http 200 https://registry.npmjs.org/optimist
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"DLEBSHBFEQLANMLJXWBR48CQT"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:30 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '64259' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/optimist'
+verbose mkdir done: /home/zalun/.npm/optimist 755
+silly name, range, hasData 2 [ 'optimist', '', true ]
+silly versions [ 'optimist',
+silly versions   [ '0.0.1',
+silly versions     '0.0.2',
+silly versions     '0.0.4',
+silly versions     '0.0.5',
+silly versions     '0.0.6',
+silly versions     '0.0.7',
+silly versions     '0.1.0',
+silly versions     '0.1.1',
+silly versions     '0.1.2',
+silly versions     '0.1.3',
+silly versions     '0.1.4',
+silly versions     '0.1.5',
+silly versions     '0.1.6',
+silly versions     '0.1.7',
+silly versions     '0.1.8',
+silly versions     '0.1.9',
+silly versions     '0.0.3',
+silly versions     '0.2.0',
+silly versions     '0.2.1',
+silly versions     '0.2.2',
+silly versions     '0.2.3',
+silly versions     '0.2.4',
+silly versions     '0.2.5',
+silly versions     '0.2.6',
+silly versions     '0.2.7',
+silly versions     '0.2.8',
+silly versions     '0.3.0',
+silly versions     '0.3.1',
+silly versions     '0.3.3',
+silly versions     '0.3.4',
+silly versions     '0.3.5',
+silly versions     '0.3.6',
+silly versions     '0.3.7' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: 'c90941ad59e4273328923074d2cf2e7cbc6ec0d9',
+verbose bin dist     tarball: 'http://registry.npmjs.org/optimist/-/optimist-0.3.7.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/optimist/-/optimist-0.3.7.tgz',
+verbose addRemoteTarball   'c90941ad59e4273328923074d2cf2e7cbc6ec0d9' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587187456-0.827565171290189'
+verbose mkdir done: /tmp/npm-1365587157403/1365587187456-0.827565171290189 755
+verbose fetch to /tmp/npm-1365587157403/1365587187456-0.827565171290189/tmp.tgz
+http GET https://registry.npmjs.org/optimist/-/optimist-0.3.7.tgz
+http 200 https://registry.npmjs.org/estraverse/-/estraverse-0.0.4.tgz
+http 200 https://registry.npmjs.org/temp
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"CJ88SZ7YWV0E4BIGBZJJ0IJR"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:31 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '9596' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/temp'
+verbose mkdir done: /home/zalun/.npm/temp 755
+silly name, range, hasData 2 [ 'temp', '>=0.4.0- <0.5.0-', true ]
+silly versions [ 'temp', [ '0.2.0', '0.3.0', '0.4.0', '0.5.0' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: '671ad63d57be0fe9d7294664b3fc400636678a60',
+verbose bin dist     tarball: 'http://registry.npmjs.org/temp/-/temp-0.4.0.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/temp/-/temp-0.4.0.tgz',
+verbose addRemoteTarball   '671ad63d57be0fe9d7294664b3fc400636678a60' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587187678-0.6381178414449096'
+verbose mkdir done: /tmp/npm-1365587157403/1365587187678-0.6381178414449096 755
+verbose fetch to /tmp/npm-1365587157403/1365587187678-0.6381178414449096/tmp.tgz
+http GET https://registry.npmjs.org/temp/-/temp-0.4.0.tgz
+silly updated sha bytes 3562
+info shasum 01a0932dfee574684a598af5a67c3bf9b6428db2
+info shasum /tmp/npm-1365587157403/1365587186826-0.6684047731105238/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587186826-0.6684047731105238/___package.npm'
+verbose mkdir done: /tmp/npm-1365587157403/1365587186826-0.6684047731105238/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1365587157403/1365587186826-0.6684047731105238/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587186826-0.6684047731105238/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587186826-0.6684047731105238/___package.npm/package/estraverse.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587186826-0.6684047731105238/___package.npm/package/LICENSE.BSD
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587186826-0.6684047731105238/___package.npm/package/README.md
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587186826-0.6684047731105238/___package.npm/package/package.json
+verbose gunzed /tmp/npm-1365587157403/1365587186826-0.6684047731105238/___package.npm/package
+verbose rm'ed /tmp/npm-1365587157403/1365587186826-0.6684047731105238/package
+verbose renamed [ '/tmp/npm-1365587157403/1365587186826-0.6684047731105238/___package.npm/package',
+verbose renamed   '/tmp/npm-1365587157403/1365587186826-0.6684047731105238/package' ]
+verbose caching /tmp/npm-1365587157403/1365587186826-0.6684047731105238/package/package.json
+verbose loadDefaults estraverse@0.0.4
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1365587157403/1365587186826-0.6684047731105238/package/package.json
+verbose pack /tmp/npm-1365587157403/1365587186826-0.6684047731105238/package
+verbose pack /tmp/npm-1365587157403/1365587186826-0.6684047731105238/package /home/zalun/.npm/estraverse/0.0.4/package.tgz
+silly makeList /tmp/npm-1365587157403/1365587186826-0.6684047731105238/package
+silly dir, dirLen [ '/tmp/npm-1365587157403/1365587186826-0.6684047731105238/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/zalun/.npm/estraverse/0.0.4/package.tgz
+verbose parent /tmp/npm-1365587157403/1365587186826-0.6684047731105238/package
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/estraverse/0.0.4/___package.npm'
+verbose mkdir done: /home/zalun/.npm/estraverse/0.0.4/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/zalun/.npm/estraverse/0.0.4/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/zalun/.npm/estraverse/0.0.4/___package.npm/package
+silly asyncMap in gTP /home/zalun/.npm/estraverse/0.0.4/___package.npm/package/README.md
+silly asyncMap in gTP /home/zalun/.npm/estraverse/0.0.4/___package.npm/package/package.json
+silly asyncMap in gTP /home/zalun/.npm/estraverse/0.0.4/___package.npm/package/estraverse.js
+silly asyncMap in gTP /home/zalun/.npm/estraverse/0.0.4/___package.npm/package/LICENSE.BSD
+verbose gunzed /home/zalun/.npm/estraverse/0.0.4/___package.npm/package
+verbose rm'ed /home/zalun/.npm/estraverse/0.0.4/package
+verbose renamed [ '/home/zalun/.npm/estraverse/0.0.4/___package.npm/package',
+verbose renamed   '/home/zalun/.npm/estraverse/0.0.4/package' ]
+verbose caching /home/zalun/.npm/estraverse/0.0.4/package/package.json
+verbose loadDefaults estraverse@0.0.4
+silly updated sha bytes 3586
+info shasum 4137bf03375276fe79624ad46d12d243ed619535
+info shasum /home/zalun/.npm/estraverse/0.0.4/package.tgz
+verbose from cache /home/zalun/.npm/estraverse/0.0.4/package/package.json
+verbose chmod /home/zalun/.npm/estraverse/0.0.4/package.tgz 644
+verbose chown [ '/home/zalun/.npm/estraverse/0.0.4/package.tgz', 1000, 1000 ]
+http 200 https://registry.npmjs.org/escope/-/escope-0.0.13.tgz
+http 200 https://registry.npmjs.org/optimist/-/optimist-0.3.7.tgz
+silly updated sha bytes 5532
+info shasum d18480a231ddfeb7785de1e8b0cb0af63e6dac61
+info shasum /tmp/npm-1365587157403/1365587187303-0.5136645955499262/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587187303-0.5136645955499262/___package.npm'
+verbose mkdir done: /tmp/npm-1365587157403/1365587187303-0.5136645955499262/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1365587157403/1365587187303-0.5136645955499262/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187303-0.5136645955499262/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187303-0.5136645955499262/___package.npm/package/LICENSE.BSD
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187303-0.5136645955499262/___package.npm/package/README.md
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187303-0.5136645955499262/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187303-0.5136645955499262/___package.npm/package/escope.js
+verbose gunzed /tmp/npm-1365587157403/1365587187303-0.5136645955499262/___package.npm/package
+verbose rm'ed /tmp/npm-1365587157403/1365587187303-0.5136645955499262/package
+verbose renamed [ '/tmp/npm-1365587157403/1365587187303-0.5136645955499262/___package.npm/package',
+verbose renamed   '/tmp/npm-1365587157403/1365587187303-0.5136645955499262/package' ]
+verbose caching /tmp/npm-1365587157403/1365587187303-0.5136645955499262/package/package.json
+verbose loadDefaults escope@0.0.13
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1365587157403/1365587187303-0.5136645955499262/package/package.json
+verbose pack /tmp/npm-1365587157403/1365587187303-0.5136645955499262/package
+verbose pack /tmp/npm-1365587157403/1365587187303-0.5136645955499262/package /home/zalun/.npm/escope/0.0.13/package.tgz
+silly makeList /tmp/npm-1365587157403/1365587187303-0.5136645955499262/package
+silly dir, dirLen [ '/tmp/npm-1365587157403/1365587187303-0.5136645955499262/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/zalun/.npm/escope/0.0.13/package.tgz
+verbose parent /tmp/npm-1365587157403/1365587187303-0.5136645955499262/package
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/escope/0.0.13/___package.npm'
+verbose mkdir done: /home/zalun/.npm/escope/0.0.13/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/zalun/.npm/escope/0.0.13/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/zalun/.npm/escope/0.0.13/___package.npm/package
+silly asyncMap in gTP /home/zalun/.npm/escope/0.0.13/___package.npm/package/README.md
+silly asyncMap in gTP /home/zalun/.npm/escope/0.0.13/___package.npm/package/package.json
+silly asyncMap in gTP /home/zalun/.npm/escope/0.0.13/___package.npm/package/LICENSE.BSD
+silly asyncMap in gTP /home/zalun/.npm/escope/0.0.13/___package.npm/package/escope.js
+verbose gunzed /home/zalun/.npm/escope/0.0.13/___package.npm/package
+verbose rm'ed /home/zalun/.npm/escope/0.0.13/package
+verbose renamed [ '/home/zalun/.npm/escope/0.0.13/___package.npm/package',
+verbose renamed   '/home/zalun/.npm/escope/0.0.13/package' ]
+verbose caching /home/zalun/.npm/escope/0.0.13/package/package.json
+verbose loadDefaults escope@0.0.13
+silly updated sha bytes 5520
+info shasum 0a6e78aa961292467f7f12631ec579e0c8868167
+info shasum /home/zalun/.npm/escope/0.0.13/package.tgz
+verbose from cache /home/zalun/.npm/escope/0.0.13/package/package.json
+verbose chmod /home/zalun/.npm/escope/0.0.13/package.tgz 644
+verbose chown [ '/home/zalun/.npm/escope/0.0.13/package.tgz', 1000, 1000 ]
+silly updated sha bytes 12549
+info shasum c90941ad59e4273328923074d2cf2e7cbc6ec0d9
+info shasum /tmp/npm-1365587157403/1365587187456-0.827565171290189/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm'
+verbose mkdir done: /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1365587157403/1365587187456-0.827565171290189/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/readme.markdown
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/index.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/LICENSE
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/.travis.yml
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/usage-options.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/line_count.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/default_singles.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/divide.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/short.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/boolean_double.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/boolean_single.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/bool.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/reflect.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/string.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/nonopt.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/line_count_wrap.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/default_hash.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/xup.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/example/line_count_options.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/test
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/test/usage.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/test/parse.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/test/_.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/test/_
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/test/_/argv.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package/test/_/bin.js
+verbose gunzed /tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package
+verbose rm'ed /tmp/npm-1365587157403/1365587187456-0.827565171290189/package
+verbose renamed [ '/tmp/npm-1365587157403/1365587187456-0.827565171290189/___package.npm/package',
+verbose renamed   '/tmp/npm-1365587157403/1365587187456-0.827565171290189/package' ]
+verbose caching /tmp/npm-1365587157403/1365587187456-0.827565171290189/package/package.json
+verbose loadDefaults optimist@0.3.7
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1365587157403/1365587187456-0.827565171290189/package/package.json
+verbose pack /tmp/npm-1365587157403/1365587187456-0.827565171290189/package
+verbose pack /tmp/npm-1365587157403/1365587187456-0.827565171290189/package /home/zalun/.npm/optimist/0.3.7/package.tgz
+silly makeList /tmp/npm-1365587157403/1365587187456-0.827565171290189/package
+silly dir, dirLen [ '/tmp/npm-1365587157403/1365587187456-0.827565171290189/package',
+silly dir, dirLen   63 ]
+verbose tarball /home/zalun/.npm/optimist/0.3.7/package.tgz
+verbose parent /tmp/npm-1365587157403/1365587187456-0.827565171290189/package
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/optimist/0.3.7/___package.npm'
+verbose mkdir done: /home/zalun/.npm/optimist/0.3.7/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/zalun/.npm/optimist/0.3.7/package
+silly gunzTarPerm modes [ '755', '644' ]
+http 200 https://registry.npmjs.org/temp/-/temp-0.4.0.tgz
+silly afterUntar ok
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/index.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/.travis.yml
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/readme.markdown
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/LICENSE
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/package.json
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/default_singles.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/divide.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/boolean_double.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/reflect.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/boolean_single.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/string.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/bool.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/nonopt.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/line_count_options.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/line_count_wrap.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/short.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/default_hash.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/usage-options.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/line_count.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/example/xup.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/test
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/test/parse.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/test/_.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/test/usage.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/test/_
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/test/_/argv.js
+silly asyncMap in gTP /home/zalun/.npm/optimist/0.3.7/___package.npm/package/test/_/bin.js
+verbose gunzed /home/zalun/.npm/optimist/0.3.7/___package.npm/package
+verbose rm'ed /home/zalun/.npm/optimist/0.3.7/package
+verbose renamed [ '/home/zalun/.npm/optimist/0.3.7/___package.npm/package',
+verbose renamed   '/home/zalun/.npm/optimist/0.3.7/package' ]
+verbose caching /home/zalun/.npm/optimist/0.3.7/package/package.json
+verbose loadDefaults optimist@0.3.7
+silly updated sha bytes 12554
+info shasum a25c22e493ed8433db407b2694eef5942675ab5b
+info shasum /home/zalun/.npm/optimist/0.3.7/package.tgz
+verbose from cache /home/zalun/.npm/optimist/0.3.7/package/package.json
+verbose chmod /home/zalun/.npm/optimist/0.3.7/package.tgz 644
+verbose chown [ '/home/zalun/.npm/optimist/0.3.7/package.tgz', 1000, 1000 ]
+silly updated sha bytes 10240
+info shasum 671ad63d57be0fe9d7294664b3fc400636678a60
+info shasum /tmp/npm-1365587157403/1365587187678-0.6381178414449096/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm'
+verbose mkdir done: /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1365587157403/1365587187678-0.6381178414449096/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package/.gitignore
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package/README.md
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package/LICENSE
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package/lib
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package/lib/temp.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package/examples
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package/examples/pdfcreator.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package/examples/grepcount.js
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package/test
+silly asyncMap in gTP /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package/test/temp-test.js
+verbose gunzed /tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package
+verbose rm'ed /tmp/npm-1365587157403/1365587187678-0.6381178414449096/package
+verbose renamed [ '/tmp/npm-1365587157403/1365587187678-0.6381178414449096/___package.npm/package',
+verbose renamed   '/tmp/npm-1365587157403/1365587187678-0.6381178414449096/package' ]
+verbose caching /tmp/npm-1365587157403/1365587187678-0.6381178414449096/package/package.json
+verbose loadDefaults temp@0.4.0
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1365587157403/1365587187678-0.6381178414449096/package/package.json
+verbose pack /tmp/npm-1365587157403/1365587187678-0.6381178414449096/package
+verbose pack /tmp/npm-1365587157403/1365587187678-0.6381178414449096/package /home/zalun/.npm/temp/0.4.0/package.tgz
+silly makeList /tmp/npm-1365587157403/1365587187678-0.6381178414449096/package
+silly dir, dirLen [ '/tmp/npm-1365587157403/1365587187678-0.6381178414449096/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/zalun/.npm/temp/0.4.0/package.tgz
+verbose parent /tmp/npm-1365587157403/1365587187678-0.6381178414449096/package
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/temp/0.4.0/___package.npm'
+verbose mkdir done: /home/zalun/.npm/temp/0.4.0/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/zalun/.npm/temp/0.4.0/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/zalun/.npm/temp/0.4.0/___package.npm/package
+silly asyncMap in gTP /home/zalun/.npm/temp/0.4.0/___package.npm/package/README.md
+silly asyncMap in gTP /home/zalun/.npm/temp/0.4.0/___package.npm/package/LICENSE
+silly asyncMap in gTP /home/zalun/.npm/temp/0.4.0/___package.npm/package/package.json
+silly asyncMap in gTP /home/zalun/.npm/temp/0.4.0/___package.npm/package/.npmignore
+silly asyncMap in gTP /home/zalun/.npm/temp/0.4.0/___package.npm/package/test
+silly asyncMap in gTP /home/zalun/.npm/temp/0.4.0/___package.npm/package/test/temp-test.js
+silly asyncMap in gTP /home/zalun/.npm/temp/0.4.0/___package.npm/package/lib
+silly asyncMap in gTP /home/zalun/.npm/temp/0.4.0/___package.npm/package/lib/temp.js
+silly asyncMap in gTP /home/zalun/.npm/temp/0.4.0/___package.npm/package/examples
+silly asyncMap in gTP /home/zalun/.npm/temp/0.4.0/___package.npm/package/examples/grepcount.js
+silly asyncMap in gTP /home/zalun/.npm/temp/0.4.0/___package.npm/package/examples/pdfcreator.js
+verbose gunzed /home/zalun/.npm/temp/0.4.0/___package.npm/package
+verbose rm'ed /home/zalun/.npm/temp/0.4.0/package
+verbose renamed [ '/home/zalun/.npm/temp/0.4.0/___package.npm/package',
+verbose renamed   '/home/zalun/.npm/temp/0.4.0/package' ]
+verbose caching /home/zalun/.npm/temp/0.4.0/package/package.json
+verbose loadDefaults temp@0.4.0
+silly updated sha bytes 4909
+info shasum 7b90cf5443f7aa44727850b358d72bc157a703ee
+info shasum /home/zalun/.npm/temp/0.4.0/package.tgz
+verbose from cache /home/zalun/.npm/temp/0.4.0/package/package.json
+verbose chmod /home/zalun/.npm/temp/0.4.0/package.tgz 644
+verbose chown [ '/home/zalun/.npm/temp/0.4.0/package.tgz', 1000, 1000 ]
+silly resolved [ { name: 'temp',
+silly resolved     description: 'Temporary files and directories',
+silly resolved     tags: 
+silly resolved      [ 'temporary',
+silly resolved        'temp',
+silly resolved        'tempfile',
+silly resolved        'tempdir',
+silly resolved        'tmpfile',
+silly resolved        'tmpdir',
+silly resolved        'security' ],
+silly resolved     version: '0.4.0',
+silly resolved     author: { name: 'Bruce Williams', email: 'bruce@codefluency.com' },
+silly resolved     directories: { lib: 'lib' },
+silly resolved     engines: [ 'node >=0.4.0', node: ' >=0.4.0' ],
+silly resolved     main: './lib/temp',
+silly resolved     dependencies: {},
+silly resolved     devDependencies: {},
+silly resolved     repository: { type: 'git', url: 'git://github.com/bruce/node-temp.git' },
+silly resolved     _id: 'temp@0.4.0',
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '7b90cf5443f7aa44727850b358d72bc157a703ee' },
+silly resolved     _from: 'temp@~0.4.0',
+silly resolved     scripts: {} } ]
+info into /usr/local/lib/node_modules/wrapup/node_modules/graphviz temp@0.4.0
+info installOne temp@0.4.0
+verbose from cache /home/zalun/.npm/temp/0.4.0/package/package.json
+info unbuild /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/temp
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm'
+verbose mkdir done: /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm 755
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/temp
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package/README.md
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package/LICENSE
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package/.npmignore
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package/lib
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package/lib/temp.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package/examples
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package/examples/pdfcreator.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package/examples/grepcount.js
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package/test
+silly asyncMap in gTP /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package/test/temp-test.js
+verbose gunzed /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package
+verbose rm'ed /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/temp
+verbose renamed [ '/usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/___temp.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/temp' ]
+verbose caching /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/temp/package.json
+verbose loadDefaults temp@0.4.0
+info preinstall temp@0.4.0
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/temp/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/temp/package.json
+verbose readDependencies: using package.json deps
+silly resolved []
+verbose about to build /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/temp
+info build /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/temp
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules/temp/package.json
+verbose linkStuff [ true,
+verbose linkStuff   '/usr/local/lib/node_modules',
+verbose linkStuff   false,
+verbose linkStuff   '/usr/local/lib/node_modules/wrapup/node_modules/graphviz/node_modules' ]
+info linkStuff temp@0.4.0
+verbose linkBins temp@0.4.0
+verbose linkMans temp@0.4.0
+verbose rebuildBundles temp@0.4.0
+info install temp@0.4.0
+info postinstall temp@0.4.0
+verbose installOne cb temp@0.4.0
+verbose about to build /usr/local/lib/node_modules/wrapup/node_modules/graphviz
+info build /usr/local/lib/node_modules/wrapup/node_modules/graphviz
+verbose from cache /usr/local/lib/node_modules/wrapup/node_modules/graphviz/package.json
+verbose linkStuff [ true,
+verbose linkStuff   '/usr/local/lib/node_modules',
+verbose linkStuff   false,
+verbose linkStuff   '/usr/local/lib/node_modules/wrapup/node_modules' ]
+info linkStuff graphviz@0.0.8
+verbose linkBins graphviz@0.0.8
+verbose linkMans graphviz@0.0.8
+verbose rebuildBundles graphviz@0.0.8
+verbose rebuildBundles [ 'temp' ]
+info install graphviz@0.0.8
+info postinstall graphviz@0.0.8
+verbose installOne cb graphviz@0.0.8
+http 200 https://registry.npmjs.org/prime/0.0.5-alpha
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"1D0200QV8OPQ2DCH4EYZEVIHN"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:36 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '1240' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/prime/0.0.5-alpha'
+verbose mkdir done: /home/zalun/.npm/prime/0.0.5-alpha 755
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: 'e4d49a657bed2eb30e513adc6e5dfb83622e90c1',
+verbose bin dist     tarball: 'http://registry.npmjs.org/prime/-/prime-0.0.5-alpha.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/prime/-/prime-0.0.5-alpha.tgz',
+verbose addRemoteTarball   'e4d49a657bed2eb30e513adc6e5dfb83622e90c1' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587192166-0.5287218252196908'
+verbose mkdir done: /tmp/npm-1365587157403/1365587192166-0.5287218252196908 755
+verbose fetch to /tmp/npm-1365587157403/1365587192166-0.5287218252196908/tmp.tgz
+http GET https://registry.npmjs.org/prime/-/prime-0.0.5-alpha.tgz
+http 200 https://registry.npmjs.org/source-map
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"477XQDVE0XX07CQWX42O1H96A"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:36 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '244465' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/zalun/.npm/source-map'
+verbose mkdir done: /home/zalun/.npm/source-map 755
+silly name, range, hasData 2 [ 'source-map', '>=0.1.2', true ]
+silly versions [ 'source-map',
+silly versions   [ '0.0.0', '0.1.0', '0.1.1', '0.1.2', '0.1.3' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: 'ed3165c4d0f0a6291e53e485cb95b5f1a0a25183',
+verbose bin dist     tarball: 'http://registry.npmjs.org/source-map/-/source-map-0.1.3.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/source-map/-/source-map-0.1.3.tgz',
+verbose addRemoteTarball   'ed3165c4d0f0a6291e53e485cb95b5f1a0a25183' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1365587157403/1365587193347-0.510477899806574'
+verbose mkdir done: /tmp/npm-1365587157403/1365587193347-0.510477899806574 755
+verbose fetch to /tmp/npm-1365587157403/1365587193347-0.510477899806574/tmp.tgz
+http GET https://registry.npmjs.org/source-map/-/source-map-0.1.3.tgz
+http 200 https://registry.npmjs.org/source-map
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"477XQDVE0XX07CQWX42O1H96A"',
+silly get cb     date: 'Wed, 10 Apr 2013 09:46:36 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '244465' } ]
+silly name, range, hasData 2 [ 'source-map', '>=0.1.8- <0.2.0-', true ]
