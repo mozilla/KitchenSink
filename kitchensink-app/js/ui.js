@@ -1,9 +1,11 @@
 define(function(require) {
-
   var $ = require('elements');
   require('elements/traversal');
 
-  var setStripes = function() {
+  /**
+   * resets even class to all dt's without hidden class
+   */
+  function setStripes() {
     var currentEven = $('.even');
     if (currentEven) {
       currentEven.removeClass('even');

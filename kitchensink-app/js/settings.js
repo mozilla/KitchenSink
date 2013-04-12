@@ -1,14 +1,16 @@
 define(function(require) {
-
   var $ = require('elements');
   require('elements/events');
-  require('elements/traversal');    // $ searches elements using Slick
+  require('elements/traversal');
   var setStripes = require('./ui').setStripes;
 
   // TODO: make this a setting
   var certifiedVisible = true;
 
-  var hideCertified = function() {
+  /**
+   * hides all certified dt and closes dd if opened
+   */
+  function hideCertified() {
     $('dt.certified').forEach(function(element) {
       element = $(element);
       element.addClass('hidden');
@@ -21,19 +23,26 @@ define(function(require) {
         model.hide();
       }
     });
+    setStripes();
   };
 
-  var showCertified = function() {
+  /**
+   * show all certified dt
+   */
+  function showCertified() {
     $('dt.certified').removeClass('hidden');
+    setStripes();
   }; 
 
-  var toggleCeritified = function() {
+  /**
+   * toggles certified dt's
+   */
+  function toggleCeritified() {
     if (certifiedVisible) {
       hideCertified();
     } else {
       showCertified();
     }
-    setStripes();
     certifiedVisible = !certifiedVisible;
   };
 
