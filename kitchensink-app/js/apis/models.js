@@ -77,6 +77,8 @@ define(function(require) {
                    + '</dd>';
       elements(itemHTML.format(this)).insert(parentEl);
       this.apiElement = $('#' + this.id);
+      // create a hook to the API object in the DOM element
+      this.apiElement._model = this;
       this.contentElement = this.apiElement.nextSibling();
       var descriptionElement = this.contentElement.find('p');
       if (this.isCertified) {

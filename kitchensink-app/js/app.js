@@ -9,10 +9,11 @@ define(function(require) {
   require('elements/attributes');   // .html() in utils.js
   require('elements/insertion');    // .insert() in logger and models.js
   require('elements/traversal');    // $ searches elements using Slick
+  require('./settings');
+  var setStripes = require('./ui').setStripes;
   var apis = require('./apis/index');
   var log = require('logger');
 
-  // navigation
   $('#header-reload').on('click', function() { 
     window.location.reload(); 
   });
@@ -27,6 +28,8 @@ define(function(require) {
     // run tests if provided
     api.runTests();
   }
+
+  setStripes();
 
   if ('MozActivity' in window) {
     // change all links to webactivities
