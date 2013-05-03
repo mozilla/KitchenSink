@@ -7,5 +7,5 @@ define(function(require) {
 
   return {
     elements: elements
-  }
+  };
 });

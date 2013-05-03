@@ -145,21 +145,36 @@ define(function(require) {
         if (!this.prepared && this.tests) {
           log.debug(this.name + ' is not prepared (tests not run)', this.contentElement);
         }
+        return (this.prepared ? 1 : 0);
       } else if (!this.noPreparation) {
         // it should be prepared but no isPrepared method
         elements('<span class="notest">{nopreparation}</span>'.format(signs)).insert(this.apiElement);
         this.apiElement.addClass('notest');
         log.error('No test for ' + this.name, this.contentElement);
+        return 0;
       } else {
         this.prepared = true;
+        return -1;
       }
     },
 
-    runTests: function() {
+    // runs the tests and calls back (always)
+    runTests: function(callback, collectedResult) {
       var self = this;
 
+      var testResults = {'api': this.id};
+      var callTimeout = window.setTimeout(
+          function() {
+            // some tests where not finished
+            collectedResult.timeout = 1;
+            callback(testResults, collectedResult);
+          }, 5000);
+      var testCount;
+      var calledBack = {};
+
       // callback for the tests
-      var showResult = function(result, testName, message) {
+      function showResult(result, testName, message) {
+        testResults[testName] = (result ? 1 : 0);
         elements(
           '<span class="{successClass}">{successSign}</span>'.format({
             successClass: (result ? 'success' : 'fail'),
@@ -177,12 +192,26 @@ define(function(require) {
           }
           log.error(response, self.contentElement);
         }
+        // record the fact that test had run
+        if (! testName in calledBack) {
+          calledBack[testName] = 0;
+        }
+        calledBack[testName]++;
+        // check if all tests run
+        if (Object.keys(calledBack).length == testCount) {
+          window.clearTimeout(callTimeout);
+          callback(testResults, collectedResult);
+        }
       };
       
       if (this.prepared && this.tests) {
+        testCount = this.tests.length;
         this.tests.forEach(function(test) {
           test.bind(self)(showResult);
         });
+      } else {
+        window.clearTimeout(callTimeout);
+        callback(testResults, collectedResult);
       }
     }
   });
