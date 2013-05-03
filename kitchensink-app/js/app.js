@@ -9,8 +9,7 @@ define(function(require) {
   require('elements/attributes');   // .html() in utils.js
   require('elements/insertion');    // .insert() in logger and models.js
   require('elements/traversal');    // $ searches elements using Slick
-  require('./settings');
-  var setStripes = require('./ui').setStripes;
+  var renderCertified = require('./ui').renderCertified;
   var apis = require('./apis/index');
   var log = require('logger');
 
@@ -29,7 +28,7 @@ define(function(require) {
     api.runTests();
   }
 
-  setStripes();
+  renderCertified();
 
   if ('MozActivity' in window) {
     // change all links to webactivities

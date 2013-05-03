@@ -1,5 +1,7 @@
 define(function(require) {
+  var settings = require('settings');
   var $ = require('elements');
+  require('elements/events');
   require('elements/traversal');
 
   /**
@@ -15,9 +17,61 @@ define(function(require) {
         $(element).addClass('even');
       }
     });
-  };
+  }
+
+  /**
+   * hides all certified dt and closes dd if opened
+   */
+  function hideCertified() {
+    $('dt.certified').forEach(function(element) {
+      element = $(element);
+      element.addClass('hidden');
+      // hide description if opened
+      var model = element._model;
+      if (model.visible) {
+        model.visible = false;
+        // XXX this will need to be changed if any animation will be
+        // implemented to hide
+        model.hide();
+      }
+    });
+    setStripes();
+  }
+
+  /**
+   * show all certified dt
+   */
+  function showCertified() {
+    $('dt.certified').removeClass('hidden');
+    setStripes();
+  } 
+
+  /**
+   * toggles certified dt's
+   */
+  function toggleCeritified() {
+    settings.set('certifiedVisible', !settings.get('certifiedVisible'));
+  }
+
+  /**
+   * show hide certified regarding the setting
+   */
+  function renderCertified() {
+    if (settings.get('certifiedVisible')) {
+      showCertified();
+    } else {
+      hideCertified();
+    }
+  }
+
+  // TODO: make it a proper setting
+  $('#header-settings').on('click', toggleCeritified);
+
+  // render certified on change of the setting
+  settings.on('certifiedVisible', renderCertified);
 
   return {
-    setStripes: setStripes
+    setStripes: setStripes,
+    renderCertified: renderCertified
   };
 });
