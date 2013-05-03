@@ -10,13 +10,18 @@
   <script type="text/javascript" src="js/lib/appbar.js"></script>
 </head>
 <body>
-  <x-appbar>
-    <div id="header-settings">=</div>
-    <header>KitchenSink</header>
-    <div id="header-reload">r</div>
-  </x-appbar>
-
-  <dl id="apis"></dl>
+  <section id="body-settings" class="hidden dark">
+    <p>Show certified <input type="checkbox" id="certifiedVisible"/></p>
+    <button id="settings-done">Done</button>
+  </section>
+  <section id="body-content">
+    <x-appbar>
+      <div id="header-settings">=</div>
+      <header>KitchenSink</header>
+      <div id="header-reload">r</div>
+    </x-appbar>
+    <dl id="apis"></dl>
+  </section>
 
   <script type="text/javascript" data-main="js/init.js" src="js/lib/require.js"></script>
 </body>
