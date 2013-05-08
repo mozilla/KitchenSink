@@ -2,6 +2,7 @@ define(function(require) {
   var settings = require('settings');
   var $ = require('elements');
   require('elements/events');
+  require('elements/attributes');
   require('elements/traversal');
 
   /**
@@ -63,9 +64,6 @@ define(function(require) {
       hideCertified();
     }
   }
-
-  // TODO: make it a proper setting
-  $('#header-settings').on('click', toggleCeritified);
 
   // render certified on change of the setting
   settings.on('certifiedVisible', renderCertified);
