@@ -17,6 +17,16 @@ define(function(require) {
     window.location.reload(); 
   });
 
+  // TODO: find out some more fancy way of showing the settings
+  $('#header-settings').on('click', function() {
+      $('#body-content').addClass('hidden');
+      $('#body-settings').removeClass('hidden');
+  });
+  $('#settings-done').on('click', function() {
+      $('#body-content').removeClass('hidden');
+      $('#body-settings').addClass('hidden');
+  });
+
   for (var id in apis) {
     var api = apis[id];
     // render <dt> and <dd> inside <dl id="apis">

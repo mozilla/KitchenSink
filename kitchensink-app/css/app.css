@@ -152,3 +152,25 @@ x-appbar #header-reload:before {
     padding-bottom: 10px;
     background:#fff;
 }
+
+/* settings section */
+#body-settings {
+	background: #333;
+	color: #fafafa;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#body-settings p {
+	padding: 5px 5%;
+}
+
+#body-settings #settings-done {
+	position: absolute;
+	bottom: 5px;
+	width: 90%;
+	margin-left: 5%;
+}

@@ -33,6 +33,16 @@ a[role="button"],
   outline: none;
 }
 
+.dark button,
+.dark a[role="button"],
+.dark .button {
+  background-image: url(buttons/images/ui/recommend.png);
+  background-color: #00caf2;
+  border-color: #008eab;
+  color: #333;
+}
+
+
 /* Press (default & recommend) */
 button:active,
 a[role="button"]:active,
