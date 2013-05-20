@@ -11,7 +11,14 @@
 </head>
 <body>
   <section id="body-settings" class="hidden dark">
-    <p>Show certified <input type="checkbox" id="certifiedVisible"/></p>
+    <p>
+      <input type="checkbox" id="certified-visible" name="certified-visible"/>
+      <label for="certified-visible">Show certified</label>
+    </p>
+    <p>
+      <input type="checkbox" id="send-results" name="send-results"/>
+      <label for="send-results">Send test results to Mozilla</label>
+    </p>
     <button id="settings-done">Done</button>
   </section>
   <section id="body-content">

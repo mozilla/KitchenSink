@@ -34,11 +34,11 @@ define(function(require) {
       function(callback) {
         var dischargingTime = navigator.battery.dischargingTime;
         var isValid = (dischargingTime === Infinity || parseInt(dischargingTime, 10));
-        callback(!!isValid, 'battery', 'Battery Status API', 'check discharging time value');
+        callback(!!isValid, 'Battery discharging time', 'check discharging time value');
       },
       function(callback) {
         var level = navigator.battery.level * 100;
-        callback(!!parseInt(level, 10), 'battery', 'Battery Status API', 'check level value', level);
+        callback(!!parseInt(level, 10), 'Battery level value', 'check level value' + level);
       }
     ]
   });

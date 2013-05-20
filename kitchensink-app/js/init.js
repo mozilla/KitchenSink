@@ -13,6 +13,10 @@ require.config({
       { 
         name: 'elements',
         main: 'index'
+      },
+      { 
+        name: 'agent',
+        main: 'index'
       }
     ]
 });
