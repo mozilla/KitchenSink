@@ -14,14 +14,14 @@ define(function(require) {
         // do not display certified apps by default
         value: false,
         // update setting from element
-        updateFrom: 'certifiedVisible',
+        updateFrom: 'certified-visible',
         isBoolean: true
       },
       sendResults: {
         // do not send results to the server by default
         value: false,
         // update setting from element
-        updateFrom: 'sendResults',
+        updateFrom: 'send-results',
         isBoolean: true
       },
       deviceModel: {

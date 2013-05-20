@@ -9,6 +9,10 @@ define(function(require) {
   var log = require('logger');
   var elements = require('utils').elements;
 
+  var NOTAPPLICABLE = -1;
+  var FAIL = 0;
+  var SUCCESS = 1;
+
   // definition of signs to display
   var signs = {
     certified: '[C]',
@@ -145,16 +149,16 @@ define(function(require) {
         if (!this.prepared && this.tests) {
           log.debug(this.name + ' is not prepared (tests not run)', this.contentElement);
         }
-        return (this.prepared ? 1 : 0);
+        return (this.prepared ? SUCCESS : FAIL);
       } else if (!this.noPreparation) {
         // it should be prepared but no isPrepared method
         elements('<span class="notest">{nopreparation}</span>'.format(signs)).insert(this.apiElement);
         this.apiElement.addClass('notest');
         log.error('No test for ' + this.name, this.contentElement);
-        return 0;
+        return FAIL;
       } else {
         this.prepared = true;
-        return -1;
+        return NOTAPPLICABLE;
       }
     },
 
@@ -162,19 +166,19 @@ define(function(require) {
     runTests: function(callback, collectedResult) {
       var self = this;
 
-      var testResults = {'api': this.id};
+      var testResults = {api: this.id};
       var callTimeout = window.setTimeout(
-          function() {
-            // some tests where not finished
-            collectedResult.timeout = 1;
-            callback(testResults, collectedResult);
-          }, 5000);
+        function() {
+          // some tests were not finished
+          collectedResult.timeout = 1;
+          callback(testResults, collectedResult);
+        }, 5000);
       var testCount;
       var calledBack = {};
 
       // callback for the tests
       function showResult(result, testName, message) {
-        testResults[testName] = (result ? 1 : 0);
+        testResults[testName] = (result ? SUCCESS : FAIL);
         elements(
           '<span class="{successClass}">{successSign}</span>'.format({
             successClass: (result ? 'success' : 'fail'),
@@ -193,16 +197,16 @@ define(function(require) {
           log.error(response, self.contentElement);
         }
         // record the fact that test had run
-        if (! testName in calledBack) {
+        if (!(testName in calledBack)) {
           calledBack[testName] = 0;
         }
         calledBack[testName]++;
         // check if all tests run
-        if (Object.keys(calledBack).length == testCount) {
+        if (Object.keys(calledBack).length === testCount) {
           window.clearTimeout(callTimeout);
           callback(testResults, collectedResult);
         }
-      };
+      }
       
       if (this.prepared && this.tests) {
         testCount = this.tests.length;

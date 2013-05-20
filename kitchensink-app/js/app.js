@@ -14,8 +14,6 @@ define(function(require) {
   var apis = require('./apis/index');
   var log = require('logger');
 
-
-
   $('#header-reload').on('click', function() { 
     window.location.reload(); 
   });
@@ -59,7 +57,7 @@ define(function(require) {
     collectedResult.tests = currentResult;
     results[apiId] = collectedResult; 
 
-    if (collectedApi == apis.length) {
+    if (collectedApi === apis.length) {
       collection.sendResults(results);
     }
   }

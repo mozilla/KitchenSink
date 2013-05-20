@@ -71,7 +71,7 @@ define(function(require) {
 
       this.setPhoneResourceUri(function() {
         delete allCallbacks[allCallbacks.indexOf('phone')];
-        if (allCallbacks.length === 0) {
+        if (!allCallbacks) {
           this.emit('ready');
         }
       });

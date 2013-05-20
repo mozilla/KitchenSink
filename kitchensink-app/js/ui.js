@@ -48,27 +48,6 @@ define(function(require) {
   } 
 
   /**
-   * sets the checkbox as the setting
-   */
-  function setCertifiedCheckBox() {
-    certifiedCheckBox = $('#certifiedVisible');
-    if (settings.get('certifiedVisible')) {
-      certifiedCheckBox.check();
-    } else {
-      certifiedCheckBox.uncheck();
-    }
-  }
-
-  /**
-   * sets the setting according to the checkbox state
-   */
-  function setCertified() {
-    // read checkbox
-    certifiedCheckBox = $('#certifiedVisible').checked();
-    settings.set('certifiedVisible', certifiedCheckBox);
-  }
-
-  /**
    * toggles certified dt's
    */
   function toggleCeritified() {
@@ -88,9 +67,6 @@ define(function(require) {
 
   // render certified on change of the setting
   settings.on('certifiedVisible', renderCertified);
-
-  // set the box as the setting
-  setCertifiedCheckBox();
 
   return {
     setStripes: setStripes,
