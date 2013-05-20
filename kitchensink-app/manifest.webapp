@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
+  "version": "0.3.0",
   "name": "KitchenSink",
   "description": "Tests and report APIs available on the device",
   "launch_path": "/index.html",
@@ -43,9 +43,6 @@
       "description": "Testing"
     },
     "tcp-socket": {
-      "description": "Testing"
-    },
-    "wifi-manage": {
       "description": "Testing"
     }
   }

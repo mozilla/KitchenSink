@@ -165,7 +165,7 @@ x-appbar #header-reload:before {
 }
 
 #body-settings p {
-	padding: 5px 5%;
+	padding: 5px 5% 0;
 }
 
 #body-settings #settings-done {
