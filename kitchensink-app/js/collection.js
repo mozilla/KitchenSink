@@ -107,8 +107,8 @@ define(function(require) {
       }
       // retrieve phoneResourceUri from collection server
       new CORSRequest('post', this.collectionServer + this.apiPrefix + '/phone/', 
-          {}, function() {
-            var data = JSON.parse(this.responseText);
+          {}, function getPhoneResourceUriCallback(responseText) {
+            var data = JSON.parse(responseText);
             callback(data.resource_uri);
           }
       );
