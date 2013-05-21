@@ -32,7 +32,8 @@ define(function(require) {
         value: null
       },
       collectionServer: {
-        value: 'http://127.0.0.1:8093'
+        value: 'http://127.0.0.1:8093',
+        doNotStore: true
       }
     },
 
@@ -54,7 +55,9 @@ define(function(require) {
 
     set: function(key, value) {
       this.options[key].value = value;
-      this.store();
+      if (!this.options[key].doNotStore) {
+        this.store();
+      }
       this.emit(key);
     },
 
