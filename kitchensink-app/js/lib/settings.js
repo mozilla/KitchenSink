@@ -32,6 +32,8 @@ define(function(require) {
         value: null
       },
       collectionServer: {
+        // clone and run https://github.com/mozilla/KitchenSinkServer
+        // TODO: make it available for public use
         value: 'http://127.0.0.1:8093',
         doNotStore: true
       }
