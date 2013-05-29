@@ -9,16 +9,16 @@ define(function(require) {
     name: 'Browser API',
     description: 'Enables implementing a browser completely in web technologies.',
     bugs: [693515],
-    info: 'https://developer.mozilla.org/en-US/docs/DOM/Using_the_Browser_API',
+    info: 'https://developer.mozilla.org/en-US/docs/WebAPI/Browser',
     noPreparation: true,
     tests: [
       function(callback) {
-        var test = 'methods present in browser tag';
+        var test = 'methods present in browser element';
         var failed = false;
         var fail = [];
-        var methods = ['stop', 'reload', 'go', 'getScreenShot'];
-        elements('<iframe id="browser"></iframe>').insert($('body'));
-        var browser = $('#browser');
+        var methods = ['stop', 'reload', 'goForward', 'goBack'];
+        elements('<iframe id="browser" mozbrowser></iframe>').insert($('body'));
+        var browser = document.getElementById('browser');
 
         methods.forEach(function(method) {
           if (!(method in browser)) {
@@ -27,7 +27,7 @@ define(function(require) {
           }
         });
         callback(!failed, test, fail.join(', '));
-        browser.remove();
+        browser.parentNode.removeChild(browser);
       }
     ]
   });
