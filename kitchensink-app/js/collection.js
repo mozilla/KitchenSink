@@ -40,6 +40,10 @@ define(function(require) {
         self.emit('success', this.responseText); 
       };
 
+      this.request.onerror = function(e) {
+        self.emit('error', self.request.status);
+      };
+
       if (callback) {
         this.send(callback);
       }
